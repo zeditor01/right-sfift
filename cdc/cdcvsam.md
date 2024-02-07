@@ -1,4 +1,4 @@
-[Back to main document](https://github.com/zeditor01/cdc_examples/blob/main/create_scale_sustain_cdc_systems.md).
+[Back to main document](https://github.com/zeditor01/right-shift/blob/main/cdc/cdcpattern.md).
 
 # Setting Up Classic CDC for VSAM - Worked Example
 This chapter is a worked example of setting up Classic CDC for VSAM. 
