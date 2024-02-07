@@ -120,7 +120,7 @@ the following high-level strategies (some obvious, other less so) may form part 
 CDC solutions, in theory, have a complex set of moving parts to co-ordinate, but are easy to manage with the centralised control plane. 
 A simple architectecture diagram might look like this.
 
-![cdc_in_theory](/images/cdc_in_theory.JPG)
+![cdc_in_theory](./images/cdc_in_theory.JPG)
 
 ## 3. CDC Implementation (Real World)
 
@@ -129,7 +129,7 @@ And whilst all the technical integration points use standards-based patterns, it
 that will be the most demanding aspect of project management for a heterogeneous data replication project. 
 Review the representations of the different teams (the green boxes) and map this example to your own organisational structures.
 
-![cdc_in_practice](/images/cdc_in_practice.JPG)
+![cdc_in_practice](./images/cdc_in_practice.JPG)
 
 ## 4. Common Constraints that will make things difficult
 
@@ -158,7 +158,7 @@ Regarding the first implementation in test, my advice is to establish a test env
 
 An example of a staged approach to CDC implementation is illustrated in the diagram below. Implementing CDC between the z/OS agents as a first phase can defer managing the complexity of the downstream environment until after the core z/OS CDC services are bedded down and understood.
 
-![staged_dc](/images/staged_cdc.JPG)
+![staged_dc](./images/staged_cdc.JPG)
 
 Other examples of a staged approach will depend on the deployment environment, but might include
 * getting CDC working in the clear before configuring the environment to support network encryption
@@ -170,7 +170,7 @@ Cast your mind back to the diagram representing a real-world perspective of CDC 
 Project Management warning flags should be waving vigorously with the number of separate teams that need to be involved in a project of this type.
 Now, zoom into the teams that are involved in ongoing devops to promote database structure changes though that database and network layers.
 
-![cdc_crux](/images/cdc_crux.JPG)
+![cdc_crux](./images/cdc_crux.JPG)
 
 Any organisational inefficiencies in ongoing devops will incur an ***ongoing*** cost for the life of the replication solution. 
 
@@ -190,7 +190,7 @@ One way of reducing the friction that can arise from multiple different operatio
 
 IBM has produced remote agents for CDC capture from Db2 z/OS and VSAM. This allows the capture and apply agents to both be deployed on linux for intel, and even on the same Linux server. 
 
-![cdc_shiftright](/images/cdc_shiftright.JPG)
+![cdc_shiftright](./images/cdc_shiftright.JPG)
 
 There is a relatively small benefit in reducing the z/OS cpu consumption for the capture agent, compared with running the capture agent on z/OS. 
 The cpu saving is small because the logs are still read on z/OS (using a stored procedure) and 
@@ -203,7 +203,7 @@ If you want to establish CDC operational support in a single team, and the skill
 
 IBM supports CDC software whether deployed natievly on an OS, in a virtual machine, or in a software container. In all cases, you are responsible for the correct deployment in the chosen environment, and after that point IBM Support will provide support for your chosen deployment environment.
 
-![cdc_shiftleft](/images/cdc_shiftleft.JPG)
+![cdc_shiftleft](./images/cdc_shiftleft.JPG)
 
 z/OS V2.4 or later supports software containers via a licensed feature called zCX (z/OS container extensions). Put simply, zCX allows docker containers (compiled for the s390 chip architecture) to be deployed inside z/OS. Once deployed as a docker container within zCX it is indistinguishable from a CDC agent deployed on Linux or within a VM images.
 
