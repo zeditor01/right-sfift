@@ -7,6 +7,8 @@ in near realtime to various targets (Kafka, LUW RDBMS's) for use cases such as d
 ![typical_cdc](/images/typical_cdc.JPG)
 
 
+
+
 ## Abstract
 This github repository is dedicated to addressing the practical aspects of implementing sustainable CDC data replication solutions, primarily 
 through the use of documenting worked examples of how to build CDC solutions that are easy to operate, manage and maintain.
