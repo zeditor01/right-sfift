@@ -4,7 +4,7 @@ The diagram below is representative of a typical deployment of Infosphere CDC in
 with transactional databases on IBM Z. Data from sources such as IMS, Db2 and VSAM may be streamed
 in near realtime to various targets (Kafka, LUW RDBMS's) for use cases such as data science, analytics or data integration.
 
-![typical_cdc](/images/typical_cdc.JPG)
+![typical_cdc](./images/typical_cdc.JPG)
 
 
 
