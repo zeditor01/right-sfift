@@ -1,0 +1,1416 @@
+1                         J E S 2  J O B  L O G  --  S Y S T E M  A S G 1  --  N O D E  N 1
+0
+ 13.19.37 JOB00964 ---- WEDNESDAY, 07 FEB 2024 ----
+ 13.19.37 JOB00964  IRR010I  USERID IBM019   IS ASSIGNED TO THIS JOB.
+ 13.19.37 JOB00964  ICH70001I IBM019   LAST ACCESS AT 13:14:59 ON WEDNESDAY, FEBRUARY 7, 2024
+ 13.19.37 JOB00964  $HASP373 CECCDVCD STARTED - INIT 2    - CLASS A        - SYS ASG1
+ 13.19.37 JOB00964  IEF403I CECCDVCD - STARTED - TIME=13.19.37
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  398
+    398               CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+    398               WARNING: RESOURCE NOT PROTECTED
+    398               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  399
+    399               CDV113.CAC.INST1.VSAM.EMPLOYEE CL(DATASET ) VOL(*BLANK)
+    399               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  400
+    400               CDV113.CAC.INST1.VSAM.EMPLOYEE CL(DATASET ) VOL(SGS016)
+    400               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  401
+    401               CDV113.CAC.SCACSAMP CL(DATASET ) VOL(SGS009)
+    401               WARNING: RESOURCE NOT PROTECTED
+    401               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  402
+    402               CDV113.CAC.INST1.VSAM.EMPLOYEE CL(DATASET ) VOL(SGS016)
+    402               WARNING: RESOURCE NOT PROTECTED
+    402               ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ 13.19.37 JOB00964  -                                              --TIMINGS (MINS.)--            -----PAGING COUNTS----
+ 13.19.37 JOB00964  -STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 13.19.37 JOB00964  -RUNCAC   CACEMP1     00     72     11    .00    .00     .0    535  BATCH        0     0     0     0
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  406
+    406               CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+    406               WARNING: RESOURCE NOT PROTECTED
+    406               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  407
+    407               CDV113.CAC.SCACMSGS CL(DATASET ) VOL(SGS003)
+    407               WARNING: RESOURCE NOT PROTECTED
+    407               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  408
+    408               CDV113.CAC.INST1.USERCONF CL(DATASET ) VOL(SGS013)
+    408               WARNING: RESOURCE NOT PROTECTED
+    408               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  409
+    409               CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+    409               WARNING: RESOURCE NOT PROTECTED
+    409               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  -RUNCAC   METAU1      00    841     33    .00    .00     .0   1704  BATCH        0     0     0     0
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  411
+    411               CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+    411               WARNING: RESOURCE NOT PROTECTED
+    411               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  412
+    412               CDV113.CAC.SCACMSGS CL(DATASET ) VOL(SGS003)
+    412               WARNING: RESOURCE NOT PROTECTED
+    412               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  413
+    413               CDV113.CAC.INST1.USERCONF CL(DATASET ) VOL(SGS013)
+    413               WARNING: RESOURCE NOT PROTECTED
+    413               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  414
+    414               CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+    414               WARNING: RESOURCE NOT PROTECTED
+    414               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  -RUNCAC   METAU2      04    851     34    .00    .00     .0   1489  BATCH        0     0     0     0
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  416
+    416               CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+    416               WARNING: RESOURCE NOT PROTECTED
+    416               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  417
+    417               CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+    417               WARNING: RESOURCE NOT PROTECTED
+    417               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  418
+    418               CDV113.CAC.INST1.USERCONF CL(DATASET ) VOL(SGS013)
+    418               WARNING: RESOURCE NOT PROTECTED
+    418               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  419
+    419               CDV113.CAC.SCACMSGS CL(DATASET ) VOL(SGS003)
+    419               WARNING: RESOURCE NOT PROTECTED
+    419               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  +CAC00106I LOG: TERMINATING
+ 13.19.37 JOB00964  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  421
+    421               CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+    421               WARNING: RESOURCE NOT PROTECTED
+    421               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 13.19.37 JOB00964  -RUNCAC   RUNCLNT     00    800     33    .00    .00     .0   1617  BATCH        0     0     0     0
+ 13.19.37 JOB00964  IEF404I CECCDVCD - ENDED - TIME=13.19.37
+ 13.19.37 JOB00964  -CECCDVCD ENDED.  NAME-CLASSIC JOB          TOTAL TCB CPU TIME=    .00 TOTAL ELAPSED TIME=    .0
+ 13.19.37 JOB00964  ASG107I JOB ENDED:  CECCDVCD CLASSIC JOB
+ 13.19.37 JOB00964  $HASP395 CECCDVCD ENDED - RC=0004
+0------ JES2 JOB STATISTICS ------
+-  07 FEB 2024 JOB EXECUTION DATE
+-          106 CARDS READ
+-        1,424 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           93 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //CECCDVCD  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,             JOB00964
+           //     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+           //********************************************************************
+           //*                                                                  *
+           //* LICENSED MATERIALS - PROPERTY OF IBM                             *
+           //* 5655-IM1                                                         *
+           //* 5655-IM4                                                         *
+           //* 5655-IM5                                                         *
+           //* 5655-Y18                                                         *
+           //*                                                                  *
+           //* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+           //* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+           //* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+           //* CONTRACT WITH IBM CORP.                                          *
+           //* DISCLAIMER OF WARRANTIES:                                        *
+           //*                                                                  *
+           //* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+           //* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+           //* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+           //* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+           //*                                                                  *
+           //* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+           //* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+           //* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+           //* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+           //* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+           //* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+           //* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+           //* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+           //* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+           //* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+           //* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+           //* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+           //* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+           //* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+           //*                                                                  *
+           //********************************************************************
+           //*                                                                  *
+           //*   CECCDVCD                                                       *
+           //*                                                                  *
+           //*   CLASSIC CDC VALIDATION PROCESS                                 *
+           //*                                                                  *
+           //*      THIS JOB EXECUTES THE FOLLOWING STEPS.  A COMPLETION CODE   *
+           //*      OF 4 OR LESS FOR EACH STEP INDICATES THAT THE SERVER IS     *
+           //*      INSTALLED AND FUNCTIONING PROPERLY.                         *
+           //*                                                                  *
+           //*      *  RUNS THE METADATA UTILITY TO GRANT SYSADM TO THE USER    *
+           //*          SPECIFIED FOR THE KEYWORD CDCADMUS IN THE CACCUSPC      *
+           //*          FILE                                                    *
+           //*      *  CREATE AND POPULATE SAMPLE VSAM DATASET                  *
+           //*      *  RUNS THE METADATA UTILTIY TO CREATE THE SAMPLE           *
+           //*          NATIVE VSAM TABLE                                       *
+           //*      *  RUNS THE CACSAMP CLIENT TO ACCESS THE DATASERVER AND     *
+           //*          DISPLAY THE CONTENTS OF THE SYSIBM.SYSTABLES            *
+           //*          AND THE SAMPLE VSAM TABLE                               *
+           //*                                                                  *
+           //********************************************************************
+           IEFC653I SUBSTITUTION JCL - (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,MSGLEVEL=(1,1),NOTIFY=IBM019
+         2 //CECCDVCD  PROC CAC='CDV113.CAC',
+           //             USRHLQ='CDV113.CAC.INST1',
+           //             SOUT='*'
+           //*
+           //***************************************
+           //*    CREATE SAMPLE VSAM DATASET       *
+           //***************************************
+           //CACEMP1 EXEC PGM=IDCAMS
+           //CACEDATA DD DISP=SHR,DSN=&CAC..SCACSAMP(CACEDATA)
+           //SYSPRINT  DD SYSOUT=&SOUT
+           //SYSIN    DD DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEVSAM)
+           //*
+           //***************************************
+           //*    GRANT SYSADM                     *
+           //***************************************
+           //METAU1   EXEC PGM=CACMETA,REGION=4M
+           //STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           //MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           //SYSOUT   DD  SYSOUT=&SOUT
+           //SYSPRINT DD  SYSOUT=&SOUT
+           //SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACMUCON)
+           //         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CACGRSYS)
+           //*
+           //***************************************
+           //*    CREATE SAMPLE TABLE              *
+           //***************************************
+           //METAU2   EXEC PGM=CACMETA,REGION=4M
+           //STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           //MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           //SYSOUT   DD  SYSOUT=&SOUT
+           //SYSPRINT DD  SYSOUT=&SOUT
+           //SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACMUCON)
+           //         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEMPVT)
+           //*
+           //***************************************
+           //*    QUERY SAMPLE TABLES              *
+           //***************************************
+           //RUNCLNT EXEC PGM=CACSAMP
+           //STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           //VHSCONF  DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACINIZ)
+           //SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CACQRSYS)
+           //         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEMPVQ)
+           //MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           //CACLOG   DD  DUMMY
+           //SYSOUT   DD  SYSOUT=&SOUT
+           //SYSPRINT DD  SYSOUT=&SOUT
+           //SYSOUT   DD  SYSOUT=&SOUT
+           //         PEND
+         3 //RUNCAC   EXEC CECCDVCD
+         4 ++CECCDVCD  PROC CAC='CDV113.CAC',
+           ++             USRHLQ='CDV113.CAC.INST1',
+           ++             SOUT='*'
+           ++*
+           ++***************************************
+           ++*    CREATE SAMPLE VSAM DATASET       *
+           ++***************************************
+         5 ++CACEMP1 EXEC PGM=IDCAMS
+         6 ++CACEDATA DD DISP=SHR,DSN=&CAC..SCACSAMP(CACEDATA)
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACSAMP(CACEDATA)
+         7 ++SYSPRINT  DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+         8 ++SYSIN    DD DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEVSAM)
+           ++*
+           ++***************************************
+           ++*    GRANT SYSADM                     *
+           ++***************************************
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.USERSAMP(CECEVSAM)
+         9 ++METAU1   EXEC PGM=CACMETA,REGION=4M
+        10 ++STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACLOAD
+        11 ++MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACMSGS
+        12 ++SYSOUT   DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        13 ++SYSPRINT DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        14 ++SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACMUCON)
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.USERCONF(CACMUCON)
+        15 ++         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CACGRSYS)
+           ++*
+           ++***************************************
+           ++*    CREATE SAMPLE TABLE              *
+           ++***************************************
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.USERSAMP(CACGRSYS)
+        16 ++METAU2   EXEC PGM=CACMETA,REGION=4M
+        17 ++STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACLOAD
+        18 ++MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACMSGS
+        19 ++SYSOUT   DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        20 ++SYSPRINT DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        21 ++SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACMUCON)
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.USERCONF(CACMUCON)
+        22 ++         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEMPVT)
+           ++*
+           ++***************************************
+           ++*    QUERY SAMPLE TABLES              *
+           ++***************************************
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.USERSAMP(CECEMPVT)
+        23 ++RUNCLNT EXEC PGM=CACSAMP
+        24 ++STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACLOAD
+        25 ++VHSCONF  DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACINIZ)
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.USERCONF(CACINIZ)
+        26 ++SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CACQRSYS)
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.USERSAMP(CACQRSYS)
+        27 ++         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEMPVQ)
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.USERSAMP(CECEMPVQ)
+        28 ++MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACMSGS
+        29 ++CACLOG   DD  DUMMY
+        30 ++SYSOUT   DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        31 ++SYSPRINT DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        32 ++SYSOUT   DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+  STMT NO. MESSAGE
+         3 IEFC001I PROCEDURE CECCDVCD WAS EXPANDED USING INSTREAM PROCEDURE DEFINITION
+ ICH70001I IBM019   LAST ACCESS AT 13:14:59 ON WEDNESDAY, FEBRUARY 7, 2024
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDVCD CACEMP1
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEFA111I CECCDVCD IS USING THE FOLLOWING JOB RELATED SETTINGS:
+          SWA=BELOW,TIOT SIZE=32K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+ IEF236I ALLOC. FOR CECCDVCD CACEMP1 RUNCAC
+ IGD103I SMS ALLOCATED TO DDNAME CACEDATA
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IGD103I SMS ALLOCATED TO DDNAME SYSIN
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.VSAM.EMPLOYEE CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.VSAM.EMPLOYEE CL(DATASET ) VOL(SGS016)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ IGD103I SMS ALLOCATED TO DDNAME SYS00001
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACSAMP CL(DATASET ) VOL(SGS009)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.VSAM.EMPLOYEE CL(DATASET ) VOL(SGS016)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ IGD104I CDV113.CAC.INST1.VSAM.EMPLOYEE               RETAINED,  DDNAME=SYS00001
+ IEF142I CECCDVCD CACEMP1 RUNCAC - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I CDV113.CAC.SCACSAMP                          RETAINED,  DDNAME=CACEDATA
+ IEF285I   IBM019.CECCDVCD.JOB00964.D0000101.?          SYSOUT
+ IGD104I CDV113.CAC.INST1.USERSAMP                    RETAINED,  DDNAME=SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: CACEMP1        Cond Code: 0000         Start: 07-Feb-2024 01:19:37 PM
+ Step  Num: 1              PGM  Name: IDCAMS       End:   07-Feb-2024 01:19:37 PM
+ CPU (TCB): 00:00:00.01                            Storage below 16M:        532k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:        336k
+ Trans Act: 00:00:00.08                            Service Units:             535
+ Tape Mnts: 0                                      Total EXCPs:                72
+
+ Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+ 1126 D CACEDATA            2  27,920        112F D SYSIN               2  27,920
+ 112B D SYS00001            5       0
+
+ Total DASD EXCPs:                  9        Total Tape EXCPs:                  0
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/CACEMP1 /START 2024038.1319
+ IEF032I STEP/CACEMP1 /STOP  2024038.1319
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   532K  SYS:   280K  EXT:      336K  SYS:    11328K
+         ATB- REAL:                  1288K  SLOTS:                     0K
+              VIRT- ALLOC:      17M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDVCD METAU1
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDVCD METAU1 RUNCAC
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IGD103I SMS ALLOCATED TO DDNAME MSGCAT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IGD103I SMS ALLOCATED TO DDNAME SYSIN
+ IGD103I SMS ALLOCATED TO DDNAME
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACMSGS CL(DATASET ) VOL(SGS003)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERCONF CL(DATASET ) VOL(SGS013)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ IEF142I CECCDVCD METAU1 RUNCAC - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I CDV113.CAC.SCACLOAD                          RETAINED,  DDNAME=STEPLIB
+ IEF285I   IBM019.CECCDVCD.JOB00964.D0000102.?          SYSOUT
+ IEF285I   IBM019.CECCDVCD.JOB00964.D0000103.?          SYSOUT
+ IGD104I CDV113.CAC.INST1.USERCONF                    RETAINED,  DDNAME=SYSIN
+ IGD104I CDV113.CAC.INST1.USERSAMP                    RETAINED,  DDNAME=
+ IGD104I CDV113.CAC.SCACMSGS                          RETAINED,  DDNAME=MSGCAT
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: METAU1         Cond Code: 0000         Start: 07-Feb-2024 01:19:37 PM
+ Step  Num: 2              PGM  Name: CACMETA      End:   07-Feb-2024 01:19:37 PM
+ CPU (TCB): 00:00:00.03                            Storage below 16M:         68k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:     35,128k
+ Trans Act: 00:00:00.16                            Service Units:           1,704
+ Tape Mnts: 0                                      Total EXCPs:               841
+
+ Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+ 1125 D STEPLIB           605  32,760        1120 D MSGCAT             42  27,920
+ 112A D SYSIN               2  27,920        112F D SYSIN               2  27,920
+ 1100 D SYS00002            2  27,920        1100 D SYS00005            2  27,920
+ 1100 D SYS00007            4     256        1100 D SYS00008            2  27,920
+ 1100 D SYS00011            2  27,920
+
+ Total DASD EXCPs:                663        Total Tape EXCPs:                  0
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/METAU1  /START 2024038.1319
+ IEF032I STEP/METAU1  /STOP  2024038.1319
+         CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    68K  SYS:   296K  EXT:    35128K  SYS:    11996K
+         ATB- REAL:                  1288K  SLOTS:                     0K
+              VIRT- ALLOC:      19M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDVCD METAU2
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDVCD METAU2 RUNCAC
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IGD103I SMS ALLOCATED TO DDNAME MSGCAT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IGD103I SMS ALLOCATED TO DDNAME SYSIN
+ IGD103I SMS ALLOCATED TO DDNAME
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACMSGS CL(DATASET ) VOL(SGS003)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERCONF CL(DATASET ) VOL(SGS013)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ IEF142I CECCDVCD METAU2 RUNCAC - STEP WAS EXECUTED - COND CODE 0004
+ IGD104I CDV113.CAC.SCACLOAD                          RETAINED,  DDNAME=STEPLIB
+ IEF285I   IBM019.CECCDVCD.JOB00964.D0000104.?          SYSOUT
+ IEF285I   IBM019.CECCDVCD.JOB00964.D0000105.?          SYSOUT
+ IGD104I CDV113.CAC.INST1.USERCONF                    RETAINED,  DDNAME=SYSIN
+ IGD104I CDV113.CAC.INST1.USERSAMP                    RETAINED,  DDNAME=
+ IGD104I CDV113.CAC.SCACMSGS                          RETAINED,  DDNAME=MSGCAT
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: METAU2         Cond Code: 0004         Start: 07-Feb-2024 01:19:37 PM
+ Step  Num: 3              PGM  Name: CACMETA      End:   07-Feb-2024 01:19:37 PM
+ CPU (TCB): 00:00:00.02                            Storage below 16M:         68k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:     35,128k
+ Trans Act: 00:00:00.13                            Service Units:           1,489
+ Tape Mnts: 0                                      Total EXCPs:               851
+
+ Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+ 1125 D STEPLIB           607  32,760        1120 D MSGCAT             42  27,920
+ 112A D SYSIN               2  27,920        112F D SYSIN               2  27,920
+ 1100 D SYS00012            2  27,920        1100 D SYS00015            2  27,920
+ 1100 D SYS00017            4     256        1100 D SYS00018            2  27,920
+ 1100 D SYS00021            2  27,920
+
+ Total DASD EXCPs:                665        Total Tape EXCPs:                  0
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/METAU2  /START 2024038.1319
+ IEF032I STEP/METAU2  /STOP  2024038.1319
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    68K  SYS:   296K  EXT:    35128K  SYS:    12024K
+         ATB- REAL:                  1288K  SLOTS:                     0K
+              VIRT- ALLOC:      19M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDVCD RUNCLNT
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDVCD RUNCLNT RUNCAC
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IGD103I SMS ALLOCATED TO DDNAME VHSCONF
+ IGD103I SMS ALLOCATED TO DDNAME SYSIN
+ IGD103I SMS ALLOCATED TO DDNAME
+ IGD103I SMS ALLOCATED TO DDNAME MSGCAT
+ IEF237I DMY  ALLOCATED TO CACLOG
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERCONF CL(DATASET ) VOL(SGS013)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACMSGS CL(DATASET ) VOL(SGS003)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ CAC00106I LOG: TERMINATING
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERSAMP CL(DATASET ) VOL(SGS018)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ IEF142I CECCDVCD RUNCLNT RUNCAC - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I CDV113.CAC.SCACLOAD                          RETAINED,  DDNAME=STEPLIB
+ IGD104I CDV113.CAC.INST1.USERCONF                    RETAINED,  DDNAME=VHSCONF
+ IGD104I CDV113.CAC.INST1.USERSAMP                    RETAINED,  DDNAME=SYSIN
+ IGD104I CDV113.CAC.INST1.USERSAMP                    RETAINED,  DDNAME=
+ IEF285I   IBM019.CECCDVCD.JOB00964.D0000106.?          SYSOUT
+ IEF285I   IBM019.CECCDVCD.JOB00964.D0000107.?          SYSOUT
+ IEF285I   IBM019.CECCDVCD.JOB00964.D0000108.?          SYSOUT
+ IGD104I CDV113.CAC.SCACMSGS                          RETAINED,  DDNAME=MSGCAT
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: RUNCLNT        Cond Code: 0000         Start: 07-Feb-2024 01:19:37 PM
+ Step  Num: 4              PGM  Name: CACSAMP      End:   07-Feb-2024 01:19:37 PM
+ CPU (TCB): 00:00:00.02                            Storage below 16M:         76k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:      7,436k
+ Trans Act: 00:00:00.16                            Service Units:           1,617
+ Tape Mnts: 0                                      Total EXCPs:               800
+
+ Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+ 1125 D STEPLIB           557  32,760        112A D VHSCONF             2  27,920
+ 112F D SYSIN               4  27,920        1120 D MSGCAT             42  27,920
+ 1100 D SYS00022            2  27,920        1100 D SYS00025            2  27,920
+ 1100 D SYS00027            4     256        1100 D SYS00028            2  27,920
+ 1100 D SYS00031            2  27,920
+
+ Total DASD EXCPs:                617        Total Tape EXCPs:                  0
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/RUNCLNT /START 2024038.1319
+ IEF032I STEP/RUNCLNT /STOP  2024038.1319
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    76K  SYS:   300K  EXT:     7436K  SYS:    12012K
+         ATB- REAL:                  1288K  SLOTS:                     0K
+              VIRT- ALLOC:      19M SHRD:       0M
+ ASG120I ------------------------------------------------------------------------
+                         J o b   E n d   S t a t i s t i c s
+
+ Job  Name: CECCDVCD       System ID: ASG1        Submit: 07-Feb-2024 01:19:37 PM
+ Job JESID: JOB00964       MVS level: SP7.2.5     Start:  07-Feb-2024 01:19:37 PM
+ Job Class: A              Sch. Env:              End:    07-Feb-2024 01:19:37 PM
+ CPU (TCB): 00:00:00.08    Srv Class: BATCH       Storage below 16M:         532k
+ CPU (SRB): 00:00:00.00                           Storage above 16M:      35,128k
+ Trans Act: 00:00:00.54                           Service Units:            5,345
+ Tape Mnts: 0                                     Total EXCPs:              2,564
+
+ ---------------Paging---------------        ---------------Paging---------------
+ VIO In:                            0        VIO Out:                           0
+ Pages In:                          0        Pages Out:                         0
+ Common (LPA+CSA):                  0        Hiperspace:                        0
+ VIO Reclaims:                      0        Pages Stolen:                      0
+
+ RACF User: IBM019                           Programmer: CLASSIC JOB
+ Acct Info: ACCOUNT
+
+ ASG122I ------------------------------------------------------------------------
+ IEF375I  JOB/CECCDVCD/START 2024038.1319
+ IEF033I  JOB/CECCDVCD/STOP  2024038.1319
+         CPU:     0 HR  00 MIN  00.08 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1IDCAMS  SYSTEM SERVICES                                           TIME: 13:19:37        02/07/24     PAGE      1
+0
+  DELETE CDV113.CAC.INST1.VSAM.EMPLOYEE
+0IDC3012I ENTRY CDV113.CAC.INST1.VSAM.EMPLOYEE NOT FOUND
+ IDC3009I ** VSAM CATALOG RETURN CODE IS 8 - REASON CODE IS IGG0CLEG-42
+ IDC0551I ** ENTRY CDV113.CAC.INST1.VSAM.EMPLOYEE NOT DELETED
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 8
+0
+  SET MAXCC = 0
+
+  DEFINE CLUSTER (NAME (CDV113.CAC.INST1.VSAM.EMPLOYEE) -
+                  KEYS       (20 0) -
+                  TRACKS     (1 1) -
+                  RECORDSIZE (80 80) -
+                  FREESPACE  (40 40) -
+                  LOG(ALL) FRLOG(NONE) -
+                  LOGSTREAMID(CDCSRC.IVP.REPLLOG) -
+                  LOGREPLICATE -
+                  ) -
+     DATA    (NAME (CDV113.CAC.INST1.VSAM.EMPLOYEE.DATA) -
+              ) -
+     INDEX   (NAME (CDV113.CAC.INST1.VSAM.EMPLOYEE.INDEX) -
+              )
+0IDC0508I DATA ALLOCATION STATUS FOR VOLUME SGS014 IS 0
+0IDC0509I INDEX ALLOCATION STATUS FOR VOLUME SGS014 IS 0
+ IDC0181I STORAGECLASS USED IS SCSTD
+ IDC0181I MANAGEMENTCLASS USED IS MCSTNDRD
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 0
+0
+  REPRO  INFILE  (CACEDATA) -
+      OUTDATASET (CDV113.CAC.INST1.VSAM.EMPLOYEE)
+0IDC0005I NUMBER OF RECORDS PROCESSED WAS 34
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 0
+0
+0IDC0002I IDCAMS PROCESSING COMPLETE. MAXIMUM CONDITION CODE WAS 0
+   Start     End Processing
+  Line #  Line #     Status Statement                Object
+       1      77         0  CONNECT TO SERVER        SAMPLEVS
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+      78     113         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     114     114         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     115     115         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     116     116         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     117     117         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     118     118         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     119     119         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     120     120         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     121     121         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     122     122         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     123     123         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     124     124         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     125     125         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+ LINE NO.    STATEMENT
+0       1    /****************************************************************
+             ***
+        2    *
+        3    * LICENSED MATERIALS - PROPERTY OF IBM
+               *
+        4    * 5655-IM1
+               *
+        5    * 5655-IM4
+               *
+        6    * 5655-IM5
+               *
+        7    * 5655-Y18
+               *
+        8    *
+               *
+        9    * (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.
+               *
+       10    * US GOVERNMENT USERS RESTRICTED RIGHTS USE,
+               *
+       11    * DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE
+               *
+       12    * CONTRACT WITH IBM CORP.
+               *
+       13    * DISCLAIMER OF WARRANTIES:
+               *
+       14    *
+               *
+       15    * PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND
+               *
+       16    * TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGH
+             T *
+       17    * NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER
+               *
+       18    * APPEAR IN ALL COPIES AND MODIFIED VERSIONS.
+               *
+       19    *
+               *
+       20    * THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.
+               *
+       21    * IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,
+               *
+       22    * EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE
+               *
+       23    * WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF
+               *
+       24    * MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVEN
+             T *
+       25    * WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGE
+             S *
+       26    * ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,
+               *
+       27    * DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE
+               *
+       28    * CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS
+               *
+       29    * LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST
+               *
+       30    * PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIA
+             L,*
+       31    * INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS
+               *
+       32    * OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR
+               *
+       33    * SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+               *
+       34    *
+               *
+       35    *****************************************************************
+             ***
+       36    *
+               *
+       37    *   CACMUCON - SAMPLE SERVER CONNECT STATEMENT
+               *
+       38    *
+               *
+       39    *   THE SAMPLE CONNECT TO SERVER STATMENT NEEDS TO BE MODIFED TO
+               *
+       40    *   SPECIFY THE PORT NUMBER OF THE DATA SERVER THAT IS TO PROCESS
+               *
+       41    *   THE DDL STATEMENTS. THE IP ADDRESS IS SETUP TO CONNECT TO A
+               *
+       42    *   SERVER THAT IS RUNNING ON THE SAME IMAGE WHERE THE METADATA
+               *
+       43    *   UTILITY IS EXECUTED.
+               *
+       44    *
+               *
+       45    *   OTHER CHANGES THAT YOU MAY NEED TO MAKE TO THE CONNECT TO
+               *
+       46    *   SERVER STATEMENT INCLUDE:
+               *
+       47    *
+               *
+       48    *   1) CHANGE CACSAMP TO SPECIFY THE NAME OF A DIFFERENT
+               *
+       49    *      DATASOURCE TO PROCESS THE DDL STATEMENTS
+               *
+       50    *   2) SUPPLY A DIFFERENT USER ID USING THE USERID CLAUSE
+               *
+       51    *   3) PROVIDE A CONNECTION PASSWORD BECAUSE THE SAF EXIT IS
+               *
+       52    *      ACTIVE IN THE DATA SERVER. THE USERID CLAUSE AND PASSWORD
+               *
+       53    *      CLAUSE MUST BE ADDED TO THE CONNECT TO SERVER STATEMENT.
+               *
+       54    *
+               *
+       55    *      PASSWORDS ARE ENCYPTED. USE THE CACENCR UTILITY TO
+               *
+       56    *      GENERATE THE ENCYPTED PASSWORD AND THEN COPY AND PASTE THE
+               *
+       57    *      PASSWORD INTO THE CONNECT TO SERVER STATEMENT.
+               *
+       58    *
+               *
+       59    *   NOTE: IF YOU ARE ENCRYPTING PASSWORDS YOU SHOULD ALSO PROTECT
+               *
+       60    *         THE DDL INPUT FILES USING PASSWORD PROTECTION.
+               *
+       61    *
+               *
+       62    *   NOTE: WHEN EDITING CONFIGURATION MEMBERS ENSURE THAT
+               *
+       63    *         "NUM OFF" IS SPECIFIED. IF THE CONFIGURATION
+               *
+       64    *         CONTAINS SEQUENCE NUMBERS, UNKNOWN CONFIGURATION
+               *
+       65    *         PARAMETERS, OR INVALID SUB-PARAMETER VALUES THE
+               *
+       66    *         CLIENT APPLICATION WILL NOT RUN.
+               *
+       67    *
+               *
+       68    * EXAMPLE CONNECT WITH USERID AND ENCRYPTED PASSWORD:
+               *
+       69    *
+               *
+       70    *  CONNECT TO SERVER "" "TCP//"              *
+       71    *     USERID   PASSWORD                                   *
+       72    *  X'..16 OR 64 BYTE STRING..';
+               *
+       73    *
+               *
+       74    *****************************************************************
+             **/
+       75    CONNECT TO SERVER "SAMPLEVS" "TCP/0.0.0.0/9088"
+       76       USERID IBM019 PASSWORD X'300FC325D1F3427D'
+       77    ;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0      78    /****************************************************************
+             *****
+       79    *
+                 *
+       80    * LICENSED MATERIALS - PROPERTY OF IBM
+                 *
+       81    * 5655-IM1
+                 *
+       82    * 5655-IM4
+                 *
+       83    * 5655-IM5
+                 *
+       84    * 5655-Y18
+                 *
+       85    *
+                 *
+       86    * (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.
+                 *
+       87    * US GOVERNMENT USERS RESTRICTED RIGHTS USE,
+                 *
+       88    * DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE
+                 *
+       89    * CONTRACT WITH IBM CORP.
+                 *
+       90    * DISCLAIMER OF WARRANTIES:
+                 *
+       91    *
+                 *
+       92    * PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND
+                 *
+       93    * TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGH
+             T   *
+       94    * NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER
+                 *
+       95    * APPEAR IN ALL COPIES AND MODIFIED VERSIONS.
+                 *
+       96    *
+                 *
+       97    * THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.
+                 *
+       98    * IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,
+                 *
+       99    * EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE,
+                 *
+      100    * INCLUDING THE WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED
+                 *
+      101    * WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPO
+             SE. *
+      102    * IN NO EVENT WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FO
+             R   *
+      103    * ANY DAMAGES ARISING OUT OF THE USE OF OR INABILITY TO USE THE
+                 *
+      104    * SAMPLE CODE, DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF
+                 *
+      105    * THE SAMPLE CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR
+                 *
+      106    * ITS LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOS
+             T   *
+      107    * PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIA
+             L,  *
+      108    * INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS
+                 *
+      109    * OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR
+                 *
+      110    * SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+                 *
+      111    *
+                 *
+      112    *****************************************************************
+             ****/
+      113    GRANT SELECT ON SYSIBM.SYSCOLUMNS TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     114    GRANT SELECT ON SYSIBM.SYSDBAUTH TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     115    GRANT SELECT ON SYSIBM.SYSINDEXES TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     116    GRANT SELECT ON SYSIBM.SYSKEYS TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     117    GRANT SELECT ON SYSIBM.SYSPARMS TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     118    GRANT SELECT ON SYSIBM.SYSROUTINEAUTH TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     119    GRANT SELECT ON SYSIBM.SYSROUTINES TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     120    GRANT SELECT ON SYSIBM.SYSTABAUTH TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     121    GRANT SELECT ON SYSIBM.SYSTABLES TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     122    GRANT SELECT ON SYSIBM.SYSUSERAUTH TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     123    GRANT SELECT ON SYSIBM.SYSVIEWDEP TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     124    GRANT SELECT ON SYSIBM.SYSVIEWS TO PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     125    GRANT SYSADM TO ADMUSER;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+   Start     End Processing
+  Line #  Line #     Status Statement                Object
+       1      77         0  CONNECT TO SERVER        SAMPLEVS
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+      78      78      -204  DROP TABLE               "CEC"."EMPLVSAM"
+ CACM002I SQLCODE = -204, ERROR:  SQL-Error-Message. -204. The EMPLVSAM is an und
+          efined name.
+
+      79     113         0  CREATE TABLE             "CEC"."EMPLVSAM"
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     114     115         0  GRANT
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+     116     116         0  ALTER TABLE              "CEC"."EMPLVSAM"
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+ LINE NO.    STATEMENT
+0       1    /****************************************************************
+             ***
+        2    *
+        3    * LICENSED MATERIALS - PROPERTY OF IBM
+               *
+        4    * 5655-IM1
+               *
+        5    * 5655-IM4
+               *
+        6    * 5655-IM5
+               *
+        7    * 5655-Y18
+               *
+        8    *
+               *
+        9    * (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.
+               *
+       10    * US GOVERNMENT USERS RESTRICTED RIGHTS USE,
+               *
+       11    * DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE
+               *
+       12    * CONTRACT WITH IBM CORP.
+               *
+       13    * DISCLAIMER OF WARRANTIES:
+               *
+       14    *
+               *
+       15    * PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND
+               *
+       16    * TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGH
+             T *
+       17    * NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER
+               *
+       18    * APPEAR IN ALL COPIES AND MODIFIED VERSIONS.
+               *
+       19    *
+               *
+       20    * THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.
+               *
+       21    * IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,
+               *
+       22    * EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE
+               *
+       23    * WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF
+               *
+       24    * MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVEN
+             T *
+       25    * WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGE
+             S *
+       26    * ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,
+               *
+       27    * DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE
+               *
+       28    * CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS
+               *
+       29    * LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST
+               *
+       30    * PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIA
+             L,*
+       31    * INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS
+               *
+       32    * OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR
+               *
+       33    * SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+               *
+       34    *
+               *
+       35    *****************************************************************
+             ***
+       36    *
+               *
+       37    *   CACMUCON - SAMPLE SERVER CONNECT STATEMENT
+               *
+       38    *
+               *
+       39    *   THE SAMPLE CONNECT TO SERVER STATMENT NEEDS TO BE MODIFED TO
+               *
+       40    *   SPECIFY THE PORT NUMBER OF THE DATA SERVER THAT IS TO PROCESS
+               *
+       41    *   THE DDL STATEMENTS. THE IP ADDRESS IS SETUP TO CONNECT TO A
+               *
+       42    *   SERVER THAT IS RUNNING ON THE SAME IMAGE WHERE THE METADATA
+               *
+       43    *   UTILITY IS EXECUTED.
+               *
+       44    *
+               *
+       45    *   OTHER CHANGES THAT YOU MAY NEED TO MAKE TO THE CONNECT TO
+               *
+       46    *   SERVER STATEMENT INCLUDE:
+               *
+       47    *
+               *
+       48    *   1) CHANGE CACSAMP TO SPECIFY THE NAME OF A DIFFERENT
+               *
+       49    *      DATASOURCE TO PROCESS THE DDL STATEMENTS
+               *
+       50    *   2) SUPPLY A DIFFERENT USER ID USING THE USERID CLAUSE
+               *
+       51    *   3) PROVIDE A CONNECTION PASSWORD BECAUSE THE SAF EXIT IS
+               *
+       52    *      ACTIVE IN THE DATA SERVER. THE USERID CLAUSE AND PASSWORD
+               *
+       53    *      CLAUSE MUST BE ADDED TO THE CONNECT TO SERVER STATEMENT.
+               *
+       54    *
+               *
+       55    *      PASSWORDS ARE ENCYPTED. USE THE CACENCR UTILITY TO
+               *
+       56    *      GENERATE THE ENCYPTED PASSWORD AND THEN COPY AND PASTE THE
+               *
+       57    *      PASSWORD INTO THE CONNECT TO SERVER STATEMENT.
+               *
+       58    *
+               *
+       59    *   NOTE: IF YOU ARE ENCRYPTING PASSWORDS YOU SHOULD ALSO PROTECT
+               *
+       60    *         THE DDL INPUT FILES USING PASSWORD PROTECTION.
+               *
+       61    *
+               *
+       62    *   NOTE: WHEN EDITING CONFIGURATION MEMBERS ENSURE THAT
+               *
+       63    *         "NUM OFF" IS SPECIFIED. IF THE CONFIGURATION
+               *
+       64    *         CONTAINS SEQUENCE NUMBERS, UNKNOWN CONFIGURATION
+               *
+       65    *         PARAMETERS, OR INVALID SUB-PARAMETER VALUES THE
+               *
+       66    *         CLIENT APPLICATION WILL NOT RUN.
+               *
+       67    *
+               *
+       68    * EXAMPLE CONNECT WITH USERID AND ENCRYPTED PASSWORD:
+               *
+       69    *
+               *
+       70    *  CONNECT TO SERVER "" "TCP//"              *
+       71    *     USERID   PASSWORD                                   *
+       72    *  X'..16 OR 64 BYTE STRING..';
+               *
+       73    *
+               *
+       74    *****************************************************************
+             **/
+       75    CONNECT TO SERVER "SAMPLEVS" "TCP/0.0.0.0/9088"
+       76       USERID IBM019 PASSWORD X'300FC325D1F3427D'
+       77    ;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0      78    DROP TABLE "CEC"."EMPLVSAM";
+ CACM002I SQLCODE = -204, ERROR:  SQL-Error-Message. -204. The EMPLVSAM is an und
+          efined name.
+0LINE NO.    STATEMENT
+0      79    CREATE TABLE "CEC"."EMPLVSAM" DBTYPE VSAM
+       80      DS "CDV113.CAC.INST1.VSAM.EMPLOYEE"
+       81    (
+       82      "ENAME" SOURCE DEFINITION
+       83              DATAMAP OFFSET 0 LENGTH 20
+       84              DATATYPE C
+       85              USE AS CHAR(20),
+       86      "PHONE" SOURCE DEFINITION
+       87              DATAMAP OFFSET 20 LENGTH 4
+       88              DATATYPE UF
+       89              USE AS INTEGER,
+       90      "MAILID" SOURCE DEFINITION
+       91              DATAMAP OFFSET 25 LENGTH 6
+       92              DATATYPE C
+       93              USE AS CHAR(6),
+       94      "SALARY" SOURCE DEFINITION
+       95              DATAMAP OFFSET 31 LENGTH 4
+       96              DATATYPE P
+       97              USE AS DECIMAL(7 , 2),
+       98      "JOBID" SOURCE DEFINITION
+       99              DATAMAP OFFSET 35 LENGTH 4
+      100              DATATYPE D
+      101              USE AS REAL,
+      102      "EMPID" SOURCE DEFINITION
+      103              DATAMAP OFFSET 39 LENGTH 4
+      104              DATATYPE UF
+      105              USE AS INTEGER,
+      106      "DEPTID" SOURCE DEFINITION
+      107              DATAMAP OFFSET 43 LENGTH 2
+      108              DATATYPE UH
+      109              USE AS SMALLINT,
+      110      "DEPARTMENT" SOURCE DEFINITION
+      111              DATAMAP OFFSET 47 LENGTH 15
+      112              DATATYPE C
+      113              USE AS CHAR(15) );
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     114    GRANT DELETE, INSERT, UPDATE, SELECT ON TABLE "CEC"."EMPLVSAM" TO
+
+      115          PUBLIC;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+0LINE NO.    STATEMENT
+0     116    ALTER TABLE "CEC"."EMPLVSAM" DATA CAPTURE CHANGES;
+ CACM001I SQLCODE = 0, INFO: Statement execution was successful.
+
+ ==== ============================================= ====
+ ====          Database Integrator for z/OS         ====
+ ====                                               ====
+ ====  Please enter SQL commands terminated with    ====
+ ====  a semi-colon.                                ====
+ ====                                               ====
+ ====  Session Commands:                            ====
+ ====    SHOW   - Display current session control   ====
+ ====             option settings                   ====
+ ====    SET    - Set session control options       ====
+ ====    HELP   - Display command and application   ====
+ ====             help usage information            ====
+ ==== ============================================= ====
+0Please enter User ID:
+ Please enter User Password:
+ Connecting to DataSource 'SAMPLEVS' as User 'IBM019'
+0SQLDemo> SELECT * FROM "SYSIBM"."SYSTABLES" ;
+0NAME                CREATOR   TYPE DBNAME    TSNAME    DBID    OBID    COLCOUNT EDPROC    VALPROC   CLUSTERTYPE CLUSTERRID   CARD
+       NPAGES       PCTPAGES IBMREQD REMARKS
+
+                             PARENTS CHILDREN KEYCOLUMNS RECLENGTH STATUS KEYOBID LABEL                           CHECKFLAG CHECKRID
+ AUDIT CREATEDBY LOCATION          TBCREATOR TBNAME              DATACAPTURE CREATEDTS                   ALTEREDTS
+0SYSTABLES           SYSIBM    T    $CFI                0       0       34                                       0            -1
+       -1           -1       Y
+
+                            0       0        2          576              0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSCOLUMNS          SYSIBM    T    $CFI                0       0       19                                       0            -1
+       -1           -1       Y
+
+                            0       0        0          392              0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSTABAUTH          SYSIBM    T    $CFI                0       0       19                                       0            -1
+       -1           -1       Y
+
+                            0       0        0          116              0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSINDEXES          SYSIBM    T    $CFI                0       0       27                                       0            -1
+       -1           -1       Y
+
+                            0       0        2          616              0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSKEYS             SYSIBM    T    $CFI                0       0       7                                        0            -1
+       -1           -1       Y
+
+                            0       0        0          66               0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSVIEWS            SYSIBM    T    $CFI                0       0       6                                        0            -1
+       -1           -1       Y
+
+                            0       0        2          288              0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSVIEWDEP          SYSIBM    T    $CFI                0       0       6                                        0            -1
+       -1           -1       Y
+
+                            0       0        0          60               0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDBAUTH           SYSIBM    T    $CFI                0       0       18                                       0            -1
+       -1           -1       Y
+
+                            0       0        3          64               0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSROUTINES         SYSIBM    T    $CFI                0       0       39                                       0            -1
+       -1           -1       Y
+
+                            0       0        0          924              0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSPARMS            SYSIBM    T    $CFI                0       0       18                                       0            -1
+       -1           -1       Y
+
+                            0       0        0          120              0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSROUTINEAUTH      SYSIBM    T    $CFI                0       0       10                                       0            -1
+       -1           -1       Y
+
+                            0       0        4          72               0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSUSERAUTH         SYSIBM    T    $CFI                0       0       26                                       0            -1
+       -1           -1       Y
+
+                            0       0        2          64               0
+      SYSIBM                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSMETATABLES       SYSCAC    T    $MDS                0       0       37                                       0            -1
+       -1           -1       N
+
+                            0       0        0          832              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSMETACOLUMNS      SYSCAC    T    $MDS                0       0       47                                       0            -1
+       -1           -1       N
+
+                            0       0        0          960              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSMETAFRAGMENTS    SYSCAC    T    $MDS                0       0       31                                       0            -1
+       -1           -1       N
+
+                            0       0        0          672              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMSTABLES       SYSCAC    T    $MDS                0       0       226                                      0            -1
+       -1           -1       N
+
+                            0       0        0          1982             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMSCOLUMNS      SYSCAC    T    $MDS                0       0       106                                      0            -1
+       -1           -1       N
+
+                            0       0        0          1541             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMSINDEXES      SYSCAC    T    $MDS                0       0       28                                       0            -1
+       -1           -1       N
+
+                            0       0        0          616              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMSKEYS         SYSCAC    T    $MDS                0       0       7                                        0            -1
+       -1           -1       N
+
+                            0       0        0          66               0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMSRECORDS      SYSCAC    T    $MDS                0       0       66                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1984             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMSAREAS        SYSCAC    T    $MDS                0       0       56                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1984             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMSSETS         SYSCAC    T    $MDS                0       0       56                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1984             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMS_INDEXES     SYSCAC    T    $MDS                0       0       59                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1984             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIDMSCOLINDEXES   SYSCAC    T    $MDS                0       0       61                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1544             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIMSTABLES        SYSCAC    T    $MDS                0       0       184                                      0            -1
+       -1           -1       N
+
+                            0       0        0          996              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIMSCOLUMNS       SYSCAC    T    $MDS                0       0       56                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1000             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIMSINDEXES       SYSCAC    T    $MDS                0       0       57                                       0            -1
+       -1           -1       N
+
+                            0       0        0          706              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIMSKEYS          SYSCAC    T    $MDS                0       0       7                                        0            -1
+       -1           -1       N
+
+                            0       0        0          66               0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSIMSSEGMENTS      SYSCAC    T    $MDS                0       0       59                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1984             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSVSAMTABLES       SYSCAC    T    $MDS                0       0       61                                       0            -1
+       -1           -1       N
+
+                            0       0        0          789              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSVSAMCOLUMNS      SYSCAC    T    $MDS                0       0       55                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1064             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSVSAMINDEXES      SYSCAC    T    $MDS                0       0       30                                       0            -1
+       -1           -1       N
+
+                            0       0        0          616              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSVSAMKEYS         SYSCAC    T    $MDS                0       0       7                                        0            -1
+       -1           -1       N
+
+                            0       0        0          66               0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDATACOMTABLES    SYSCAC    T    $MDS                0       0       53                                       0            -1
+       -1           -1       N
+
+                            0       0        0          705              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDATACOMCOLUMNS   SYSCAC    T    $MDS                0       0       58                                       0            -1
+       -1           -1       N
+
+                            0       0        0          980              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDATACOMINDEXES   SYSCAC    T    $MDS                0       0       27                                       0            -1
+       -1           -1       N
+
+                            0       0        0          616              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDATACOMKEYS      SYSCAC    T    $MDS                0       0       7                                        0            -1
+       -1           -1       N
+
+                            0       0        0          66               0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSADABASTABLES     SYSCAC    T    $MDS                0       0       50                                       0            -1
+       -1           -1       N
+
+                            0       0        0          661              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSADABASCOLUMNS    SYSCAC    T    $MDS                0       0       65                                       0            -1
+       -1           -1       N
+
+                            0       0        0          1105             0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSADABASINDEXES    SYSCAC    T    $MDS                0       0       28                                       0            -1
+       -1           -1       N
+
+                            0       0        0          616              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSADABASKEYS       SYSCAC    T    $MDS                0       0       10                                       0            -1
+       -1           -1       N
+
+                            0       0        0          109              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDB2TABLES        SYSCAC    T    $MDS                0       0       44                                       0            -1
+       -1           -1       N
+
+                            0       0        0          845              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDB2COLUMNS       SYSCAC    T    $MDS                0       0       24                                       0            -1
+       -1           -1       N
+
+                            0       0        0          410              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDB2INDEXES       SYSCAC    T    $MDS                0       0       27                                       0            -1
+       -1           -1       N
+
+                            0       0        0          616              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSDB2KEYS          SYSCAC    T    $MDS                0       0       7                                        0            -1
+       -1           -1       N
+
+                            0       0        0          66               0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSSEQTABLES        SYSCAC    T    $MDS                0       0       45                                       0            -1
+       -1           -1       N
+
+                            0       0        0          677              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ SYSSEQCOLUMNS       SYSCAC    T    $MDS                0       0       47                                       0            -1
+       -1           -1       N
+
+                            0       0        0          960              0
+      SYSCAC                                                                2024-02-07-12.56.36.489855  2024-02-07-12.56.36.489855
+ EMPLVSAM            CEC       T    $VSAM               0       0       8                                        0            -1
+       -1           -1       N
+
+                            0       0        0          80               0
+      IBM019                                                    Y           2024-02-07-13.19.37.564695  2024-02-07-13.19.37.572637
+048 Row(s) Fetched
+0SQLDemo> SELECT * FROM "CEC"."EMPLVSAM" ;
+0ENAME                 PHONE        MAILID  SALARY      JOBID           EMPID        DEPTID  DEPARTMENT
+0BARBER, BRUCE         319          BRUCE      9999.44  54.63           32           1       Development
+ BARKER, SIMON         311          SIMON         4.44  723.68          30           1       Development
+ BEAN, CHRIS           317          CHRIS     22333.22  1623.67         8            1       Development
+ BROOK, CHARLIE        315          CHUCK     22312.32  2334.29         10           3       Administration
+ CARTER, BOB           321          BOB       99444.44  1623.67         14           1       Development
+ COOPER, BILL          324          BILL       1239.44  54.63           33           2       Marketing
+ DEAN, TOM             314          TOM       99224.44  9999.99         15           1       Development
+ DEVILLE, DIANE        332          DIANE     34347.44  2334.29         4            2       Marketing
+ DOE, JOHN             307          JOHN      65554.44  2334.29         18           1       Development
+ DYER, DONALD          327          DON       22299.22  123.67          7            1       Development
+ FLEMING, WILMA        312          WILMA     65553.24  54.63           19           1       Development
+ FRANK, MARTIN         318          MARTY     67224.44  6.1             17           1       Development
+ GORDON, CONNER        301          CONNER    48922.24  54.63           23           3       Administration
+ JOHNSON, JANE         335          JANE      99403.32  123.67          13           1       Development
+ LARSON, JOHN          306          JOHN      48952.34  723.68          22           1       Development
+ LEDFORD, FRANK        326          FRANK     34444.44  9999.99         3            1       Development
+ LEWIS, SCOTT          329          SCOTT        21.44  6.1             26           3       Administration
+ MATSON, ANNA          338          ANNA      34002.11  1623.67         2            1       Development
+ MOORE, TED            336          TED       55239.44  123.67          34           1       Development
+ MORRIS, MICHAEL       331          MIKE      34334.44  54.63           5            1       Development
+ MUNSON, PAM           316          PAM       22222.22  723.68          6            3       Administration
+ NORRIS, JAMES         322          JIMMY     48300.24  123.67          24           1       Development
+ PARKER, RAYMOND       325          RAY        1230.44  6.1             31           4       Sales
+ PENNY, LISA           322          LISA      48321.44  2334.29         25           1       Development
+ PETERSON, JACK        320          JACK       1023.44  123.67          28           2       Marketing
+ RONALD, EDWARD        320          ED           23.44  123.67          27           1       Development
+ ROSEN, SAL            302          SAL       12353.24  723.68          20           3       Administration
+ RUSSELL, ANDRE        323          ANDY      99456.32  723.68          12           1       Development
+ SAM, BRENDEN          328          BRENDE    78224.44  6.1             16           1       Development
+ SIMPSON, LISA         330          LISA      99812.32  54.63           11           1       Development
+ SWANSON, RHONDA       313          RHONDA     1444.44  723.68          29           2       Marketing
+ THOMAS, LAWRENCE      309          LARRY     22326.72  9999.99         9            3       Administration
+ WHITE, BRUCE          308          BRUCE     12352.34  123.67          21           1       Development
+ WOODS, JOAN           305          JOAN      34502.11  123.67          1            1       Development
+034 Row(s) Fetched
+0SQLDemo>
+0==== ============================================= ====
+ ====          Database Integrator for z/OS         ====
+ ====                  Complete                     ====
+ ==== ============================================= ====

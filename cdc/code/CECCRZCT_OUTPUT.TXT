@@ -1,0 +1,319 @@
+1                         J E S 2  J O B  L O G  --  S Y S T E M  A S G 1  --  N O D E  N 1
+0
+ 12.49.31 JOB00955 ---- WEDNESDAY, 07 FEB 2024 ----
+ 12.49.31 JOB00955  IRR010I  USERID IBM019   IS ASSIGNED TO THIS JOB.
+ 12.49.31 JOB00955  ICH70001I IBM019   LAST ACCESS AT 12:47:46 ON WEDNESDAY, FEBRUARY 7, 2024
+ 12.49.31 JOB00955  $HASP373 CECCRZCT STARTED - INIT 1    - CLASS A        - SYS ASG1
+ 12.49.31 JOB00955  IEF403I CECCRZCT - STARTED - TIME=12.49.31
+ 12.49.31 JOB00955  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  965
+    965               CDV113.CAC.INST1.ZFS CL(DATASET ) VOL(*BLANK)
+    965               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.49.31 JOB00955  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  966
+    966               CDV113.CAC.INST1.ZFS CL(DATASET ) VOL(SGS016)
+    966               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.49.31 JOB00955  -                                              --TIMINGS (MINS.)--            -----PAGING COUNTS----
+ 12.49.31 JOB00955  -STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 12.49.31 JOB00955  -CACVSDEF             00     39     10    .00    .00     .0    230  BATCH        0     0     0     0
+ 12.49.33 JOB00955  -FORMAT               00    276      5    .00    .00     .0    272  BATCH        0     0     0     0
+ 12.49.33 JOB00955  IEF404I CECCRZCT - ENDED - TIME=12.49.33
+ 12.49.33 JOB00955  -CECCRZCT ENDED.  NAME-CLASSIC JOB          TOTAL TCB CPU TIME=    .00 TOTAL ELAPSED TIME=    .0
+ 12.49.33 JOB00955  ASG107I JOB ENDED:  CECCRZCT CLASSIC JOB
+ 12.49.33 JOB00955  $HASP395 CECCRZCT ENDED - RC=0000
+0------ JES2 JOB STATISTICS ------
+-  07 FEB 2024 JOB EXECUTION DATE
+-          166 CARDS READ
+-          325 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           24 SYSOUT SPOOL KBYTES
+-         0.02 MINUTES EXECUTION TIME
+         1 //CECCRZCT  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,             JOB00955
+           //     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+           //* CECCRZCT TAILOR JOB CARD TO MEET SITE STANDARDS
+           //********************************************************************
+           //*                                                                  *
+           //* LICENSED MATERIALS - PROPERTY OF IBM                             *
+           //* 5655-IM1                                                         *
+           //* 5655-IM4                                                         *
+           //* 5655-IM5                                                         *
+           //* 5655-Y18                                                         *
+           //*                                                                  *
+           //* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+           //* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+           //* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+           //* CONTRACT WITH IBM CORP.                                          *
+           //* DISCLAIMER OF WARRANTIES:                                        *
+           //*                                                                  *
+           //* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+           //* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+           //* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+           //* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+           //*                                                                  *
+           //* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+           //* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+           //* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+           //* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+           //* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+           //* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+           //* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+           //* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+           //* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+           //* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+           //* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+           //* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+           //* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+           //* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+           //*                                                                  *
+           //********************************************************************
+           //*
+           //*   CECCRZCT:  Sample JCL to define and format a zFS aggregate to
+           //*              be used for a USS file system resident version of
+           //*              the system catalogs.
+           //*
+           //*   Perform the following modifications to this JCL stream to
+           //*   satisfy your specific requirements:
+           //*
+           //*    . Update the JCL JOB statement.
+           //*
+           //*    . Update the CAC symbolic parameter value to be the High
+           //*      Level Qualifier set of the product installation data sets.
+           //*
+           //*    . Ensure that the high level qualifier set which references
+           //*      the VSAM LDS to be used for the zFS aggregate is the same
+           //*      string specified as the value of the USRHLQ JCL symbolic
+           //*      parameter.
+           //*
+           //*    . Update the Storage Class and Management Class parameter
+           //*      values.
+           //*
+           //*   Additional Considerations:
+           //*
+           //*    . See topic "Using UNIXPRIV Class Profiles" in "z/OS UNIX
+           //*      System Services Planning" for a discussion of the various
+           //*      SAF resource profiles in the UNIXPRIV class.
+           //*
+           //*    . SAF READ level access authority is required to the
+           //*      SUPERUSER.FILESYS.PFSCTL resource in the UNIXPRIV class in
+           //*      order to perform IOEZADM (zfsadm command) operations.
+           //*
+           //*    . SAF READ level access authority is required to the
+           //*      SUPERUSER.FILESYS.MOUNT resource in the UNIXPRIV class in
+           //*      order to perform MOUNT and UNMOUNT operations against USS
+           //*      file systems.
+           //*
+           //* ------------------------------------------------------------------
+           //*
+           IEFC653I SUBSTITUTION JCL - (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,MSGLEVEL=(1,1),NOTIFY=IBM019
+         2 //DISKU     SET DISKU=SYSALLDA
+           //*                                     DASD unit
+         3 //CAC       SET CAC=CDV113.CAC
+           //*                                     Installed HLQ
+         4 //USRHLQ    SET USRHLQ=CDV113.CAC.INST1
+           //*                                     User HLQ
+         5 //DISKVOL   SET DISKVOL=
+           //*                                     DASD Volume ID
+         6 //STGCL     SET STGCL=
+           //*                                     Storage Class
+         7 //MGTCL     SET MGTCL=
+           //*                                     Management Class
+         8 //SOUT      SET SOUT='*'
+           //*                                     SYSOUT Class
+           //*
+           //* ------------------------------------------------------------------
+           //*
+           //*    . Delete the existing zFS aggregate VSAM LDS
+           //*
+           //*    . Define a new VSAM LDS to be used as the zFS aggregate.
+           //*
+           //* ------------------------------------------------------------------
+           //*
+         9 //CACVSDEF EXEC PGM=IDCAMS,REGION=0M
+        10 //SYSPRINT  DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        11 //SYSIN     DD *
+           //*
+           //* ------------------------------------------------------------------
+           //*
+           //*    . Format the VSAM LDS as a zFS aggregate.
+           //*
+           //*      Note that all parameters for the zFS formatting utility
+           //*      (IOEAGFMT) are Case Sensitive
+           //*
+           //* ------------------------------------------------------------------
+           //*
+        12 //FORMAT EXEC PGM=IOEAGFMT,REGION=0M,
+           //    COND=(0,LT),
+           //    PARM='-aggregate CDV113.CAC.INST1.ZFS  -compat'
+        13 //SYSPRINT  DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        14 //STDOUT    DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        15 //STDERR    DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        16 //CEEDUMP   DD SYSOUT=&SOUT
+           //*
+           //*
+           //* ------------------------------------------------------------------
+           //*
+           //*      At this point the newly created zFS file system is
+           //*      initialized.
+           //*
+           //*      A logical mount point must be created for the new zFS file
+           //*      system.  For example, assuming the default CATPATH value
+           //*      in the product Parameters File is in effect, the following
+           //*      mkdir command could be used in the ISPF ISHELL to create
+           //*      this mount point:
+           //*
+           //*      mkdir '/opt/IBM/isclassic113/catalog'
+           //*
+           //*      Next, the newly created zFS file system must be mounted at
+           //*      the mount point.  The following TSO command is an example:
+           //*
+           //*      MOUNT FILESYSTEM('CDV113.CAC.INST1.ZFS')
+           //*      MOUNTPOINT('/opt/IBM/isclassic113/catalog')
+           //*      TYPE(ZFS) MODE(RDWR) NOSETUID
+           //*
+           //* ------------------------------------------------------------------
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+ ICH70001I IBM019   LAST ACCESS AT 12:47:46 ON WEDNESDAY, FEBRUARY 7, 2024
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCRZCT CACVSDEF
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEFA111I CECCRZCT IS USING THE FOLLOWING JOB RELATED SETTINGS:
+          SWA=BELOW,TIOT SIZE=32K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+ IEF236I ALLOC. FOR CECCRZCT CACVSDEF
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.ZFS CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.ZFS CL(DATASET ) VOL(SGS016)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ IEF142I CECCRZCT CACVSDEF - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCRZCT.JOB00955.D0000102.?          SYSOUT
+ IEF285I   IBM019.CECCRZCT.JOB00955.D0000101.?          SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: CACVSDEF       Cond Code: 0000         Start: 07-Feb-2024 12:49:31 AM
+ Step  Num: 1              PGM  Name: IDCAMS       End:   07-Feb-2024 12:49:31 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:        300k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:        340k
+ Trans Act: 00:00:00.03                            Service Units:             230
+ Tape Mnts: 0                                      Total EXCPs:                39
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/CACVSDEF/START 2024038.1249
+ IEF032I STEP/CACVSDEF/STOP  2024038.1249
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   300K  SYS:   272K  EXT:      340K  SYS:    12048K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCRZCT FORMAT
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCRZCT FORMAT
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO STDOUT
+ IEF237I JES2 ALLOCATED TO STDERR
+ IEF237I JES2 ALLOCATED TO CEEDUMP
+ IEF142I CECCRZCT FORMAT - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCRZCT.JOB00955.D0000103.?          SYSOUT
+ IEF285I   IBM019.CECCRZCT.JOB00955.D0000104.?          SYSOUT
+ IEF285I   IBM019.CECCRZCT.JOB00955.D0000105.?          SYSOUT
+ IEF285I   IBM019.CECCRZCT.JOB00955.D0000106.?          SYSOUT
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: FORMAT         Cond Code: 0000         Start: 07-Feb-2024 12:49:31 AM
+ Step  Num: 2              PGM  Name: IOEAGFMT     End:   07-Feb-2024 12:49:33 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:         64k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:     19,112k
+ Trans Act: 00:00:01.72                            Service Units:             272
+ Tape Mnts: 0                                      Total EXCPs:               276
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/FORMAT  /START 2024038.1249
+ IEF032I STEP/FORMAT  /STOP  2024038.1249
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    64K  SYS:   248K  EXT:    19112K  SYS:    12176K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ ASG120I ------------------------------------------------------------------------
+                         J o b   E n d   S t a t i s t i c s
+
+ Job  Name: CECCRZCT       System ID: ASG1        Submit: 07-Feb-2024 12:49:31 AM
+ Job JESID: JOB00955       MVS level: SP7.2.5     Start:  07-Feb-2024 12:49:31 AM
+ Job Class: A              Sch. Env:              End:    07-Feb-2024 12:49:33 AM
+ CPU (TCB): 00:00:00.00    Srv Class: BATCH       Storage below 16M:         300k
+ CPU (SRB): 00:00:00.00                           Storage above 16M:      19,112k
+ Trans Act: 00:00:01.75                           Service Units:              502
+ Tape Mnts: 0                                     Total EXCPs:                315
+
+ ---------------Paging---------------        ---------------Paging---------------
+ VIO In:                            0        VIO Out:                           0
+ Pages In:                          0        Pages Out:                         0
+ Common (LPA+CSA):                  0        Hiperspace:                        0
+ VIO Reclaims:                      0        Pages Stolen:                      0
+
+ RACF User: IBM019                           Programmer: CLASSIC JOB
+ Acct Info: ACCOUNT
+
+ ASG122I ------------------------------------------------------------------------
+ IEF375I  JOB/CECCRZCT/START 2024038.1249
+ IEF033I  JOB/CECCRZCT/STOP  2024038.1249
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1IDCAMS  SYSTEM SERVICES                                           TIME: 12:49:31        02/07/24     PAGE      1
+0
+  PARM GRAPHICS(CHAIN(TN))
+1IDCAMS  SYSTEM SERVICES                                           TIME: 12:49:31        02/07/24     PAGE      2
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 0
+0
+
+  /* ------------------------------------------------------------- */
+  /*                                                               */
+  /*   Ensure that the high level qualifier set which references   */
+  /*   the VSAM LDS to be used for the zFS aggregate is the same   */
+  /*   string specified as the value of the USRHLQ JCL symbolic    */
+  /*   parameter.                                                  */
+  /*                                                               */
+  /* ------------------------------------------------------------- */
+
+  DELETE (CDV113.CAC.INST1.ZFS) -
+    PURGE CLUSTER
+0IDC3012I ENTRY CDV113.CAC.INST1.ZFS NOT FOUND
+ IDC3009I ** VSAM CATALOG RETURN CODE IS 8 - REASON CODE IS IGG0CLA3-42
+ IDC0551I ** ENTRY CDV113.CAC.INST1.ZFS NOT DELETED
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 8
+0
+
+  SET MAXCC = 0
+
+
+  DEFINE CLUSTER ( -
+    NAME(CDV113.CAC.INST1.ZFS) -
+    LINEAR -
+    MEGABYTES(150 128) -
+    VOLUMES(*) -
+    SHAREOPTIONS(3 3)  -
+    CISZ(4096))
+0IDC0508I DATA ALLOCATION STATUS FOR VOLUME SGS007 IS 0
+0IDC0512I NAME GENERATED-(D) CDV113.CAC.INST1.ZFS.DATA
+ IDC0181I STORAGECLASS USED IS SCSTD
+ IDC0181I MANAGEMENTCLASS USED IS MCSTNDRD
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 0
+0
+0IDC0002I IDCAMS PROCESSING COMPLETE. MAXIMUM CONDITION CODE WAS 0
+ IOEZ00077I HFS-compatibility aggregate CDV113.CAC.INST1.ZFS has been successfully created.

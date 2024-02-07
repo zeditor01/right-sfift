@@ -1,0 +1,218 @@
+***********************************************************************
+**  Installation Customization Parameters
+**
+** The following keyword=value pairs define customization information
+** used to generate JCL and configuration members needed to run and
+** manage the environments for the following products:
+**
+**    Classic CDC for zOS VSAM Access
+**
+** The file format is as follows:
+**     Comments:   An * in column 1 defines the line as a comment line
+**                   and is ignored during processing.
+**                 Anything included after the 1st space after the
+**                   value component is treated as comments.
+**
+**     keyword="value":  The keyword="value" pairs provide values that
+**                          are used during the customization process.
+**                       The keyword component must not be changed.
+**                       The value component can be changed and must be
+**                          delimited with double quotes
+**                       Spaces are allowed before and after the keyword
+**                          and value.
+**                       Values cannot span multiple lines.
+**
+**  NOTE: The minimum required parameters that must be changed for a
+**        successful installation are denoted by "(*)" at the end of
+**        the comment for that keyword
+**
+** Keywords are divided up into the following sections:
+**
+**
+**  Common Installation:
+**     Includes parameters that are common to all installations
+**  Common CDC Server:
+**     Includes parameters that are global to the CDC dataserver
+**  CDC VSAM Source:
+**     Includes Parameters specific to a VSAM Source server
+CDCRLGST="CDCSRC.IVP.REPLLOG"
+**                           Log stream name for the IVP replication log
+**
+**
+***********************************************************************
+**  Common Installation Section
+***********************************************************************
+CACINHLQ="CDV113.CAC"
+*                     HLQ of Classic Product(*)
+CACUSHLQ="CDV113.CAC.INST1"
+*                     HLQ of user sample libs(*)
+CACDUNIT="SYSALLDA"  Default UNIT for DSN creation(*)
+CACDVOLM=""  Default VOLUME for DSN creation(*)
+CACSTGCL=""  Default SMS Storage Class for DSN creation(*)
+CACMGTCL=""  Default SMS Mangement Class for DSN creation(*)
+**
+**
+** The following 2-line jobcard information will be used as a template
+** when generating JCL members.  The CACDJOB1 value will be placed
+** after the job name in each JCL member. The CACDJOB2 value will be
+** provided on the 2nd line of the jobcard in each JCL member.
+**
+CACDJOB1="JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,"
+CACDJOB2="MSGLEVEL=(1,1),NOTIFY=&SYSUID"
+**
+**
+***********************************************************************
+**  Common CDC Server Parameters Section
+**
+**  Note: The CATPATH specification supercedes the usage of the
+**        CDCCATNM and CDCIDXNM specifications.
+**
+***********************************************************************
+CDCPHLQD="CDV113.CAC.INST1.CDCSRC"
+**                            HLQ for Source server data sets
+**
+CATLGMB="150"                   Megabytes for the primary catalog
+**                              allocation
+**
+**                              150 is a default size.  For help in
+**                              determining the actual number of MB you
+**                              require, refer to the InfoCenter topic:
+**                              Estimating the size of the metadata
+**                              catalog
+**
+CATPATH="/opt/IBM/isclassic113/catalog"
+**                              USS file system path to the Metadata
+**                              catalog files. This is a UNIX File
+**                              directory structure that must exist
+**                              and the Classic server must have read
+**                              and write access to it.
+**                              The following file names will be created
+**                              in the named directory during server
+**                              customization:
+**
+**                              caccat       for the Data component
+**                              cacindx      for the Index component
+**
+CDCCATNM="&CPHLQ..CATALOG"
+**                            Server catalog data
+CDCIDXNM="&CPHLQ..CATINDX"
+**                            Server catalog index
+CDCPCFGD="&CPHLQ..CACCFGD"
+**                            Server configuration data
+CDCPCFGX="&CPHLQ..CACCFGX"
+**                            Server configuration index
+CDCPHOST="0.0.0.0"           Server hostname or IP
+CDCPPORT="9088"              Server listen port
+CDCDSRCE="SAMPLEVS"          Query processor data source
+CDCPSUBS="&CPHLQ..SUB"       Server subscriptions data set
+CDCPRMDS="&CPHLQ..RM"        Server Replication mapping data set
+CDCTIMEZ=""                  Olson database timezone name
+HOSTCDPG=" "                 Host Code Page
+CDCADMUS="ADMUSER"           SYSADM User for Metadata catalog
+**
+***********************************************************************
+**  Catalog Migration Parameters Section
+**
+**  Note: The OLDCPATH specification supercedes the usage of the
+**        OLDCATNM and OLDCATIX specifications.
+**
+***********************************************************************
+OLDCPATH="/opt/IBM/isclassic111/catalog"
+**                              USS file system path to the Old
+**                              Metadata catalog files.
+**
+**                              The file names in the named directory
+**                              are:
+**
+**                              caccat       for the Data component
+**                              cacindx      for the Index component
+**
+OLDCAHLQ="CAC.V10R1M00"
+**                              HLQ of Previous Classic Install
+OLDCPHLQ="USER.V10R1M00.CDCSRC"
+**                              HLQ of Previous Source Server Datasets
+**
+OLDCATNM="&OLDCAT..CATALOG"    Previous Catalog data to migrate
+OLDCATIX="&OLDCAT..CATINDX"    Previous Catalog indx to migrate
+NEWCTHLQ="CDV113.CAC.INST1"
+**                              HLQ of new Catalog
+NEWCATNM="&NEWCAT..CATALOG"    New Catalog data data set
+NEWCATIX="&NEWCAT..CATINDX"    New Catalog indx data set
+**
+OLDCFHLQ="CAC.V10R1M00"
+**                              HLQ of Previous Classic Configuration
+**
+OLDCFGNV="&OLDCFG..SCACCONF"   Previous configuration PDS
+**
+OLDCFGNM="&OLDCFG..CACCFGD"    Old configuration data data set
+OLDCFGIX="&OLDCFG..CACCFGX"    Old configuration indx data set
+NEWCFGNM="&NEWCFG..CACCFGD"    New configuration data data set
+NEWCFGIX="&NEWCFG..CACCFGX"    New configuration indx data set
+**
+*************************
+** Security Parameters **
+*************************
+CDCPSQLS=" "                 Operator SQL Security (Y/N)
+CDCPSAFX="CACSX04"           SAF Exit name for all services
+CDCADMVL="N"                 SAF Admin Service Validation (Y/N)
+**                             only applies when SAF Exit name used
+**                             The following Resource Profile and
+**                             Security Class only apply when
+**                             validation = "Y"
+CDCADMPR=" "                 SAF Admin Service Resource Profile
+CDCADMCL=" "                 SAF Admin Service Security Class
+CDCOPRVL="N"                 SAF Operator Service Validation (Y/N)
+**                             only applies when SAF Exit name used
+**                             The following Resource Profile and
+**                             Security Class only apply when
+**                             validation = "Y"
+CDCOPRPR=" "                 SAF Operator Service Resource Profile
+CDCOPRCL=" "                 SAF Operator Service Secuirty Class
+CDCMONVL="N"                 SAF Monitor Service Validation (Y/N)
+**                             only applies when SAF Exit name used
+**                             The following Resource Profile and
+**                             Security Class only apply when
+**                             validation = "Y"
+CDCMONPR=" "                 SAF Monitor Service Resource Profile
+CDCMONCL=" "                 SAF Monitor Service Security Class
+***************************
+** Log Stream Parameters **
+***************************
+CDCPLGST="CDCSRC.INST1.DIAGLOG"
+**                           Diag Log stream name for system log
+CDCPLGDS="Y"                 Diag Log Stream DASD setting
+**                              Y - DASD logstream
+**                              N - Coupling Facility logstream
+CDCPLGRT="7"                 Diag Log stream retention days
+CDCPLGSC="STG1"              Diag Log stream storage class
+CDCPLGSR="CCL1"              Diag Log stream coupling structure
+CDCPEVST="CDCSRC.INST1.EVENTS"    Event Log Stream name
+CDCPEVDS="Y"                 Event log Stream DASD setting
+**                              Y - DASD logstream
+**                              N - Coupling Facility logstream
+CDCPEGRT="14"                Event log stream retention days
+CDCPEVSC="STG1"              Event log stream storage class
+CDCPEVSR="CCP1"              Event log stream coupling structure
+**
+***********************************************************************
+**  CDC WebSphere MQ Delimited Publishing Parameters Section
+**
+**  Note: All values for MQ keywords must be in upper-case
+***********************************************************************
+CDCMQHLQ="   "               HLQ for WebSphere MQ
+CDCMQMGR="    "              z/OS queue manager or queue-sharing group
+**
+** Name of the local queue used to store restart information for
+** delimited publishing. 48 character maximum
+**
+CDCBKMKQ="                                                "
+**
+** Name of a local queue that can be referenced by a subscription
+** to publish delimited mesages to WebSphere MQ
+**
+CDCSUBLQ="                                                "
+***********************************************************************
+**  Compiler Section for Customizing User Exit Compiles
+***********************************************************************
+CECCBHLQ="IGYV2R10"                HLQ for COBOL libraries
+** End of File

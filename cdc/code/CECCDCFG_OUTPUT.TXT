@@ -1,0 +1,953 @@
+1                         J E S 2  J O B  L O G  --  S Y S T E M  A S G 1  --  N O D E  N 1
+0
+ 12.55.52 JOB00956 ---- WEDNESDAY, 07 FEB 2024 ----
+ 12.55.52 JOB00956  IRR010I  USERID IBM019   IS ASSIGNED TO THIS JOB.
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  001
+    001               CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(*BLANK)
+    001               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  002
+    002               CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(*BLANK)
+    002               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  003
+    003               CDV113.CAC.INST1.CDCSRC.SYSMDUMP CL(DATASET ) VOL(*BLANK)
+    003               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.55.52 JOB00956  ICH70001I IBM019   LAST ACCESS AT 12:49:33 ON WEDNESDAY, FEBRUARY 7, 2024
+ 12.55.52 JOB00956  $HASP373 CECCDCFG STARTED - INIT 1    - CLASS A        - SYS ASG1
+ 12.55.52 JOB00956  IEF403I CECCDCFG - STARTED - TIME=12.55.52
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  007
+    007               CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(*BLANK)
+    007               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  008
+    008               CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(SGS005)
+    008               WARNING: RESOURCE NOT PROTECTED
+    008               ACCESS INTENT(ALTER  )  ACCESS ALLOWED(ALTER  )
+ 12.55.52 JOB00956  -                                              --TIMINGS (MINS.)--            -----PAGING COUNTS----
+ 12.55.52 JOB00956  -STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 12.55.52 JOB00956  -ALLOCATE DELETED     00     13      2    .00    .00     .0     20  BATCH        0     0     0     0
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  012
+    012               CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(*BLANK)
+    012               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  013
+    013               CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(SGS009)
+    013               WARNING: RESOURCE NOT PROTECTED
+    013               ACCESS INTENT(ALTER  )  ACCESS ALLOWED(ALTER  )
+ 12.55.52 JOB00956  -ALLOCATE DELETEX     00     12      2    .00    .00     .0     15  BATCH        0     0     0     0
+ 12.55.52 JOB00956  -ALLOCATE CFGALLOC    00     11      0    .00    .00     .0     14  BATCH        0     0     0     0
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  016
+    016               CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+    016               WARNING: RESOURCE NOT PROTECTED
+    016               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  017
+    017               CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(SGS015)
+    017               WARNING: RESOURCE NOT PROTECTED
+    017               ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  018
+    018               CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(SGS009)
+    018               WARNING: RESOURCE NOT PROTECTED
+    018               ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  019
+    019               CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(SGS015)
+    019               WARNING: RESOURCE NOT PROTECTED
+    019               ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  020
+    020               CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(SGS009)
+    020               WARNING: RESOURCE NOT PROTECTED
+    020               ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ 12.55.52 JOB00956  +CAC00261I OPENING FILE 'DDN:IMPORTCF(CECCDXFG)'.
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  022
+    022               CDV113.CAC.INST1.USERCONF CL(DATASET ) VOL(SGS013)
+    022               WARNING: RESOURCE NOT PROTECTED
+    022               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=GLOBAL,MESSAGEPOOLSIZE=536870912
+ 12.55.52 JOB00956  +CAC00242I GLOBAL CONFIGURATION RECORD UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=CNTL,SERVICECLASS=CNTL
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'CNTL' OF SERVICECLASS 'CNTL' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=LOG,SERVICECLASS=LOG
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'LOG' OF SERVICECLASS 'LOG' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=LOG,DISPLAYLOG=TRUE
+ 12.55.52 JOB00956  +CAC00243I SERVICE 'LOG' OF SERVICE CLASS 'LOG' UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=LOG,STREAMNAME=CDCSRC.INST1.DIAGLOG
+ 12.55.52 JOB00956  +CAC00243I SERVICE 'LOG' OF SERVICE CLASS 'LOG' UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=LOG,EVENTLOG=CDCSRC.INST1.EVENTS
+ 12.55.52 JOB00956  +CAC00243I SERVICE 'LOG' OF SERVICE CLASS 'LOG' UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=OPER,SERVICECLASS=OPER
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'OPER' OF SERVICECLASS 'OPER' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=OPER,SAFEXIT='CACSX04 VALIDATE=N'
+ 12.55.52 JOB00956  +CAC00243I SERVICE 'OPER' OF SERVICE CLASS 'OPER' UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=INIT,SERVICECLASS=INIT
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'INIT' OF SERVICECLASS 'INIT' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=INIT,COMMSTRING='TCP/0.0.0.0/9088'
+ 12.55.52 JOB00956  +CAC00243I SERVICE 'INIT' OF SERVICE CLASS 'INIT' UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=ADMIN,SERVICECLASS=PAA
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'ADMIN' OF SERVICECLASS 'PAA' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=ADMIN,SAFEXIT='CACSX04 VALIDATE=N'
+ 12.55.52 JOB00956  +CAC00243I SERVICE 'ADMIN' OF SERVICE CLASS 'PAA' UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=MONITOR,SERVICECLASS=MAA
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'MONITOR' OF SERVICECLASS 'MAA' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=MONITOR,SAFEXIT='CACSX04 VALIDATE=N'
+ 12.55.52 JOB00956  +CAC00243I SERVICE 'MONITOR' OF SERVICE CLASS 'MAA' UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=CAPTURE,SERVICECLASS=CAP
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'CAPTURE' OF SERVICECLASS 'CAP' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=SAMPLEVS,SERVICECLASS=QP
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'SAMPLEVS' OF SERVICECLASS 'QP' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I SET,CONFIG,SERVICE=SAMPLEVS,SAFEXIT='CACSX04'
+ 12.55.52 JOB00956  +CAC00243I SERVICE 'SAMPLEVS' OF SERVICE CLASS 'QP' UPDATED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=REFRESH,SERVICECLASS=QPLD
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'REFRESH' OF SERVICECLASS 'QPLD' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=LRSV,SERVICECLASS=LRSV
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'LRSV' OF SERVICECLASS 'LRSV' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  +CAC00200I ADD,CONFIG,SERVICE=VSAMSRV,SERVICECLASS=VSMS
+ 12.55.52 JOB00956  +CAC00241I SERVICE 'VSAMSRV' OF SERVICECLASS 'VSMS' ADDED SUCCESSFULLY.
+ 12.55.52 JOB00956  -ALLOCATE CFGINIT     00    616     23    .00    .00     .0    755  BATCH        0     0     0     0
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  064
+    064               CDV113.CAC.INST1.CDCSRC.SYSMDUMP CL(DATASET ) VOL(*BLANK)
+    064               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.55.52 JOB00956  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  065
+    065               CDV113.CAC.INST1.CDCSRC.SYSMDUMP CL(DATASET ) VOL(SGS004)
+    065               WARNING: RESOURCE NOT PROTECTED
+    065               ACCESS INTENT(ALTER  )  ACCESS ALLOWED(ALTER  )
+ 12.55.52 JOB00956  -ALLOCATE DELETDMP    00      9      2    .00    .00     .0     14  BATCH        0     0     0     0
+ 12.55.52 JOB00956  -ALLOCATE ALLOCDMP    00      6      0    .00    .00     .0     14  BATCH        0     0     0     0
+ 12.55.52 JOB00956  IEF404I CECCDCFG - ENDED - TIME=12.55.52
+ 12.55.52 JOB00956  -CECCDCFG ENDED.  NAME-CLASSIC JOB          TOTAL TCB CPU TIME=    .00 TOTAL ELAPSED TIME=    .0
+ 12.55.52 JOB00956  ASG107I JOB ENDED:  CECCDCFG CLASSIC JOB
+ 12.55.52 JOB00956  $HASP395 CECCDCFG ENDED - RC=0000
+0------ JES2 JOB STATISTICS ------
+-  07 FEB 2024 JOB EXECUTION DATE
+-          159 CARDS READ
+-          967 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           66 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //CECCDCFG  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,             JOB00956
+           //     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+           //*CECCDCFG TAILOR JOB CARD TO MEET SITE STANDARDS
+           //********************************************************************
+           //*                                                                  *
+           //* LICENSED MATERIALS - PROPERTY OF IBM                             *
+           //* 5655-IM1                                                         *
+           //* 5655-IM4                                                         *
+           //* 5655-IM5                                                         *
+           //* 5655-Y18                                                         *
+           //*                                                                  *
+           //* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+           //* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+           //* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+           //* CONTRACT WITH IBM CORP.                                          *
+           //* DISCLAIMER OF WARRANTIES:                                        *
+           //*                                                                  *
+           //* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+           //* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+           //* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+           //* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+           //*                                                                  *
+           //* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+           //* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+           //* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+           //* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+           //* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+           //* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+           //* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+           //* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+           //* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+           //* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+           //* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+           //* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+           //* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+           //* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+           //*                                                                  *
+           //********************************************************************
+           //*                                                                  *
+           //*   CECCDCFG - - THIS CUSTOMIZATION JCL DOES THE FOLLOWING         *
+           //*     1. ALLOCATES THE CONFIGURATION FILES AND IMPORTS THE         *
+           //*          CDC SOURCE SERVER CONFIGURATION                         *
+           //*     2. ALLOCATES A SYSMDUMP DATA SET TO BE USED BY THE           *
+           //*          CDC SOURCE SERVER JCL                                   *
+           //*                                                                  *
+           //*     THE FOLLOWING CHANGES SHOULD BE MADE:                        *
+           //*                                                                  *
+           //*   - PROVIDE A JOB CARD THAT IS VALID FOR YOUR SITE               *
+           //*   - CHANGE CPHLQ TO THE CAPTURE SERVER SPECIFIC HLQ              *
+           //*   - CHANGE USRHLQ TO THE HLQ FOR THE USERSAMP/USERCONF DATASETS  *
+           //*   - CHANGE CAC PARM TO INSTALLED HIGH LEVEL QUALIFIER            *
+           //*   - CHANGE DISKU PARM TO A VALID DASD UNIT TYPE FOR YOUR SITE    *
+           //*   - CHANGE STGCL PARM TO IDENTIFY THE STORAGE CLASS FOR THE      *
+           //*         THE CONFIGURATION FILES                                  *
+           //*   - CHANGE MGTCL PARM TO IDENTIFY THE MANAGEMENT CLASS FOR THE   *
+           //*         THE CONFIGURATION FILES                                  *
+           //*                                                                  *
+           //********************************************************************
+           IEFC653I SUBSTITUTION JCL - (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,MSGLEVEL=(1,1),NOTIFY=IBM019
+         2 //ALLOCFG   PROC CAC='CDV113.CAC',
+           //*                                     INSTALLED HLQ
+           //             CPHLQ='CDV113.CAC.INST1.CDCSRC',
+           //*                                     CAPTURE SVR SPECIFIC HLQ
+           //             USRHLQ='CDV113.CAC.INST1',
+           //*                                     USER HLQ
+           //             DISKU=SYSALLDA,
+           //*                                     DASD UNIT
+           //             STGCL=,
+           //*                                     STORAGE CLASS
+           //             MGTCL=,
+           //*                                     MANAGEMENT CLASS
+           //             SOUT='*',
+           //*                                     SYSOUT CLASS
+           //             RGN=4M
+           //*                                     REGION SIZE
+           //*
+           //*************************************************
+           //* DELETE CONFIGURATION FILES                    *
+           //*************************************************
+           //DELETED  EXEC PGM=IEFBR14
+           //DELCFGD  DD  DSN=&CPHLQ..CACCFGD,
+           //             UNIT=&DISKU,
+           //             STORCLAS=&STGCL,
+           //             MGMTCLAS=&MGTCL,
+           //             RECFM=FBS,LRECL=64,BLKSIZE=27968,
+           //             SPACE=(TRK,(20,10)),
+           //             DISP=(MOD,DELETE,DELETE)
+           //DELETEX  EXEC PGM=IEFBR14
+           //DELCFGX  DD  DSN=&CPHLQ..CACCFGX,
+           //             UNIT=&DISKU,
+           //             STORCLAS=&STGCL,
+           //             MGMTCLAS=&MGTCL,
+           //             RECFM=FBS,LRECL=64,BLKSIZE=27968,
+           //             SPACE=(TRK,(10,5)),
+           //             DISP=(MOD,DELETE,DELETE)
+           //*
+           //*************************************************
+           //* ALLOCATE CONFIGURATION FILES                  *
+           //*************************************************
+           //CFGALLOC     EXEC PGM=IEFBR14
+           //CACCFGD      DD  DSN=&CPHLQ..CACCFGD,
+           //             UNIT=&DISKU,
+           //             STORCLAS=&STGCL,
+           //             MGMTCLAS=&MGTCL,
+           //             SPACE=(TRK,(20,10)),
+           //             DCB=(RECFM=FBS,LRECL=64,BLKSIZE=27968),
+           //             DISP=(NEW,CATLG,DELETE)
+           //CACCFGX  DD  DSN=&CPHLQ..CACCFGX,
+           //             UNIT=&DISKU,
+           //             STORCLAS=&STGCL,
+           //             MGMTCLAS=&MGTCL,
+           //             SPACE=(TRK,(10,5)),
+           //             DCB=(RECFM=FBS,LRECL=64,BLKSIZE=27968),
+           //             DISP=(NEW,CATLG,DELETE)
+           //*
+           //SYSOUT   DD  SYSOUT=&SOUT
+           //SYSPRINT DD  SYSOUT=&SOUT
+           //********************************************************************
+           //* IMPORT SOURCE CONFIGURATION                                      *
+           //********************************************************************
+           //CFGINIT   EXEC PGM=CACCFGUT,REGION=&RGN
+           //STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           //MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           //*
+           //* CONFIGURATION FILES TO POPULATE
+           //CACCFGD  DD DISP=SHR,DSN=&CPHLQ..CACCFGD
+           //CACCFGX  DD DISP=SHR,DSN=&CPHLQ..CACCFGX
+           //*
+           //* CONFIG DEFINITION TO IMPORT
+           //IMPORTCF DD DSN=&USRHLQ..USERCONF,DISP=SHR
+           //SYSTERM  DD SYSOUT=&SOUT
+           //SYSPRINT DD SYSOUT=&SOUT
+           //SYSOUT   DD SYSOUT=&SOUT
+           //SYSIN    DD DUMMY
+           //********************************************************************
+           //* ALLOCATE SYSMDUMP FILE                                           *
+           //********************************************************************
+           //DELETDMP  EXEC PGM=IEFBR14
+           //DDUMP  DD  DSN=&CPHLQ..SYSMDUMP,
+           //             DISP=(MOD,DELETE,DELETE),
+           //             UNIT=SYSALLDA,
+           //             VOL=(,,,3),
+           //             SPACE=(TRK,(2500,450)),
+           //             DCB=(LRECL=4160,RECFM=FBS,
+           //             DSORG=PS)
+           //ALLOCDMP  EXEC PGM=IEFBR14
+           //MDUMP     DD DSN=&CPHLQ..SYSMDUMP,
+           //             DISP=(NEW,CATLG,DELETE),
+           //             UNIT=SYSALLDA,
+           //             VOL=(,,,3),
+           //             SPACE=(TRK,(2500,450)),
+           //             DCB=(LRECL=4160,RECFM=FBS,
+           //             DSORG=PS)
+           //     PEND
+         3 //ALLOCATE EXEC ALLOCFG
+         4 ++ALLOCFG   PROC CAC='CDV113.CAC',
+           ++*                                     INSTALLED HLQ
+           ++             CPHLQ='CDV113.CAC.INST1.CDCSRC',
+           ++*                                     CAPTURE SVR SPECIFIC HLQ
+           ++             USRHLQ='CDV113.CAC.INST1',
+           ++*                                     USER HLQ
+           ++             DISKU=SYSALLDA,
+           ++*                                     DASD UNIT
+           ++             STGCL=,
+           ++*                                     STORAGE CLASS
+           ++             MGTCL=,
+           ++*                                     MANAGEMENT CLASS
+           ++             SOUT='*',
+           ++*                                     SYSOUT CLASS
+           ++             RGN=4M
+           ++*                                     REGION SIZE
+           ++*
+           ++*************************************************
+           ++* DELETE CONFIGURATION FILES                    *
+           ++*************************************************
+         5 ++DELETED  EXEC PGM=IEFBR14
+         6 ++DELCFGD  DD  DSN=&CPHLQ..CACCFGD,
+           ++             UNIT=&DISKU,
+           ++             STORCLAS=&STGCL,
+           ++             MGMTCLAS=&MGTCL,
+           ++             RECFM=FBS,LRECL=64,BLKSIZE=27968,
+           ++             SPACE=(TRK,(20,10)),
+           ++             DISP=(MOD,DELETE,DELETE)
+           IEFC653I SUBSTITUTION JCL - DSN=CDV113.CAC.INST1.CDCSRC.CACCFGD,UNIT=SYSALLDA,STORCLAS=,MGMTCLAS=,RECFM=FBS,
+           LRECL=64,BLKSIZE=27968,SPACE=(TRK,(20,10)),DISP=(MOD,DELETE,DELETE)
+         7 ++DELETEX  EXEC PGM=IEFBR14
+         8 ++DELCFGX  DD  DSN=&CPHLQ..CACCFGX,
+           ++             UNIT=&DISKU,
+           ++             STORCLAS=&STGCL,
+           ++             MGMTCLAS=&MGTCL,
+           ++             RECFM=FBS,LRECL=64,BLKSIZE=27968,
+           ++             SPACE=(TRK,(10,5)),
+           ++             DISP=(MOD,DELETE,DELETE)
+           ++*
+           ++*************************************************
+           ++* ALLOCATE CONFIGURATION FILES                  *
+           ++*************************************************
+           IEFC653I SUBSTITUTION JCL - DSN=CDV113.CAC.INST1.CDCSRC.CACCFGX,UNIT=SYSALLDA,STORCLAS=,MGMTCLAS=,RECFM=FBS,
+           LRECL=64,BLKSIZE=27968,SPACE=(TRK,(10,5)),DISP=(MOD,DELETE,DELETE)
+         9 ++CFGALLOC     EXEC PGM=IEFBR14
+        10 ++CACCFGD      DD  DSN=&CPHLQ..CACCFGD,
+           ++             UNIT=&DISKU,
+           ++             STORCLAS=&STGCL,
+           ++             MGMTCLAS=&MGTCL,
+           ++             SPACE=(TRK,(20,10)),
+           ++             DCB=(RECFM=FBS,LRECL=64,BLKSIZE=27968),
+           ++             DISP=(NEW,CATLG,DELETE)
+           IEFC653I SUBSTITUTION JCL - DSN=CDV113.CAC.INST1.CDCSRC.CACCFGD,UNIT=SYSALLDA,STORCLAS=,MGMTCLAS=,SPACE=(TRK,
+           (20,10)),DCB=(RECFM=FBS,LRECL=64,BLKSIZE=27968),DISP=(NEW,CATLG,DELETE)
+        11 ++CACCFGX  DD  DSN=&CPHLQ..CACCFGX,
+           ++             UNIT=&DISKU,
+           ++             STORCLAS=&STGCL,
+           ++             MGMTCLAS=&MGTCL,
+           ++             SPACE=(TRK,(10,5)),
+           ++             DCB=(RECFM=FBS,LRECL=64,BLKSIZE=27968),
+           ++             DISP=(NEW,CATLG,DELETE)
+           ++*
+           IEFC653I SUBSTITUTION JCL - DSN=CDV113.CAC.INST1.CDCSRC.CACCFGX,UNIT=SYSALLDA,STORCLAS=,MGMTCLAS=,SPACE=(TRK,
+           (10,5)),DCB=(RECFM=FBS,LRECL=64,BLKSIZE=27968),DISP=(NEW,CATLG,DELETE)
+        12 ++SYSOUT   DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        13 ++SYSPRINT DD  SYSOUT=&SOUT
+           ++********************************************************************
+           ++* IMPORT SOURCE CONFIGURATION                                      *
+           ++********************************************************************
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        14 ++CFGINIT   EXEC PGM=CACCFGUT,REGION=&RGN
+           IEFC653I SUBSTITUTION JCL - PGM=CACCFGUT,REGION=4M
+        15 ++STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACLOAD
+        16 ++MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           ++*
+           ++* CONFIGURATION FILES TO POPULATE
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACMSGS
+        17 ++CACCFGD  DD DISP=SHR,DSN=&CPHLQ..CACCFGD
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.CDCSRC.CACCFGD
+        18 ++CACCFGX  DD DISP=SHR,DSN=&CPHLQ..CACCFGX
+           ++*
+           ++* CONFIG DEFINITION TO IMPORT
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.INST1.CDCSRC.CACCFGX
+        19 ++IMPORTCF DD DSN=&USRHLQ..USERCONF,DISP=SHR
+           IEFC653I SUBSTITUTION JCL - DSN=CDV113.CAC.INST1.USERCONF,DISP=SHR
+        20 ++SYSTERM  DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        21 ++SYSPRINT DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        22 ++SYSOUT   DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        23 //CFGINIT.SYSIN DD *
+           +/SYSIN    DD DUMMY
+           ++********************************************************************
+           ++* ALLOCATE SYSMDUMP FILE                                           *
+           ++********************************************************************
+        24 ++DELETDMP  EXEC PGM=IEFBR14
+        25 ++DDUMP  DD  DSN=&CPHLQ..SYSMDUMP,
+           ++             DISP=(MOD,DELETE,DELETE),
+           ++             UNIT=SYSALLDA,
+           ++             VOL=(,,,3),
+           ++             SPACE=(TRK,(2500,450)),
+           ++             DCB=(LRECL=4160,RECFM=FBS,
+           ++             DSORG=PS)
+           IEFC653I SUBSTITUTION JCL - DSN=CDV113.CAC.INST1.CDCSRC.SYSMDUMP,DISP=(MOD,DELETE,DELETE),UNIT=SYSALLDA,VOL=(,
+           ,,3),SPACE=(TRK,(2500,450)),DCB=(LRECL=4160,RECFM=FBS,DSORG=PS)
+        26 ++ALLOCDMP  EXEC PGM=IEFBR14
+        27 ++MDUMP     DD DSN=&CPHLQ..SYSMDUMP,
+           ++             DISP=(NEW,CATLG,DELETE),
+           ++             UNIT=SYSALLDA,
+           ++             VOL=(,,,3),
+           ++             SPACE=(TRK,(2500,450)),
+           ++             DCB=(LRECL=4160,RECFM=FBS,
+           ++             DSORG=PS)
+           IEFC653I SUBSTITUTION JCL - DSN=CDV113.CAC.INST1.CDCSRC.SYSMDUMP,DISP=(NEW,CATLG,DELETE),UNIT=SYSALLDA,VOL=(,,
+           ,3),SPACE=(TRK,(2500,450)),DCB=(LRECL=4160,RECFM=FBS,DSORG=PS)
+  STMT NO. MESSAGE
+         3 IEFC001I PROCEDURE ALLOCFG WAS EXPANDED USING INSTREAM PROCEDURE DEFINITION
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.SYSMDUMP CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ ICH70001I IBM019   LAST ACCESS AT 12:49:33 ON WEDNESDAY, FEBRUARY 7, 2024
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCFG DELETED
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEFA111I CECCDCFG IS USING THE FOLLOWING JOB RELATED SETTINGS:
+          SWA=BELOW,TIOT SIZE=32K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+ IEF236I ALLOC. FOR CECCDCFG DELETED ALLOCATE
+ IGD101I SMS ALLOCATED TO DDNAME (DELCFGD )
+         DSN (CDV113.CAC.INST1.CDCSRC.CACCFGD             )
+         STORCLAS (SCSTD) MGMTCLAS (MCSTNDRD) DATACLAS (        )
+         VOL SER NOS= SGS005
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(SGS005)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(ALTER  )  ACCESS ALLOWED(ALTER  )
+ IEF142I CECCDCFG DELETED ALLOCATE - STEP WAS EXECUTED - COND CODE 0000
+ IGD105I CDV113.CAC.INST1.CDCSRC.CACCFGD              DELETED,   DDNAME=DELCFGD
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: DELETED        Cond Code: 0000         Start: 07-Feb-2024 12:55:52 AM
+ Step  Num: 1              PGM  Name: IEFBR14      End:   07-Feb-2024 12:55:52 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:          4k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+ Trans Act: 00:00:00.00                            Service Units:              20
+ Tape Mnts: 0                                      Total EXCPs:                13
+
+
+
+ No I/O activity was found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/DELETED /START 2024038.1255
+ IEF032I STEP/DELETED /STOP  2024038.1255
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:     4K  SYS:   252K  EXT:        4K  SYS:    11768K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCFG DELETEX
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDCFG DELETEX ALLOCATE
+ IGD101I SMS ALLOCATED TO DDNAME (DELCFGX )
+         DSN (CDV113.CAC.INST1.CDCSRC.CACCFGX             )
+         STORCLAS (SCSTD) MGMTCLAS (MCSTNDRD) DATACLAS (        )
+         VOL SER NOS= SGS009
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(SGS009)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(ALTER  )  ACCESS ALLOWED(ALTER  )
+ IEF142I CECCDCFG DELETEX ALLOCATE - STEP WAS EXECUTED - COND CODE 0000
+ IGD105I CDV113.CAC.INST1.CDCSRC.CACCFGX              DELETED,   DDNAME=DELCFGX
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: DELETEX        Cond Code: 0000         Start: 07-Feb-2024 12:55:52 AM
+ Step  Num: 2              PGM  Name: IEFBR14      End:   07-Feb-2024 12:55:52 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:          4k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+ Trans Act: 00:00:00.00                            Service Units:              15
+ Tape Mnts: 0                                      Total EXCPs:                12
+
+
+
+ No I/O activity was found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/DELETEX /START 2024038.1255
+ IEF032I STEP/DELETEX /STOP  2024038.1255
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:     4K  SYS:   252K  EXT:        4K  SYS:    11768K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCFG CFGALLOC
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDCFG CFGALLOC ALLOCATE
+ IGD101I SMS ALLOCATED TO DDNAME (CACCFGD )
+         DSN (CDV113.CAC.INST1.CDCSRC.CACCFGD             )
+         STORCLAS (SCSTD) MGMTCLAS (MCSTNDRD) DATACLAS (        )
+         VOL SER NOS= SGS009
+ IGD101I SMS ALLOCATED TO DDNAME (CACCFGX )
+         DSN (CDV113.CAC.INST1.CDCSRC.CACCFGX             )
+         STORCLAS (SCSTD) MGMTCLAS (MCSTNDRD) DATACLAS (        )
+         VOL SER NOS= SGS015
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF142I CECCDCFG CFGALLOC ALLOCATE - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I CDV113.CAC.INST1.CDCSRC.CACCFGD              RETAINED,  DDNAME=CACCFGD
+ IGD104I CDV113.CAC.INST1.CDCSRC.CACCFGX              RETAINED,  DDNAME=CACCFGX
+ IEF285I   IBM019.CECCDCFG.JOB00956.D0000102.?          SYSOUT
+ IEF285I   IBM019.CECCDCFG.JOB00956.D0000103.?          SYSOUT
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: CFGALLOC       Cond Code: 0000         Start: 07-Feb-2024 12:55:52 AM
+ Step  Num: 3              PGM  Name: IEFBR14      End:   07-Feb-2024 12:55:52 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:          4k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+ Trans Act: 00:00:00.00                            Service Units:              14
+ Tape Mnts: 0                                      Total EXCPs:                11
+
+
+
+ No I/O activity was found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/CFGALLOC/START 2024038.1255
+ IEF032I STEP/CFGALLOC/STOP  2024038.1255
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:     4K  SYS:   252K  EXT:        4K  SYS:    11780K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCFG CFGINIT
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDCFG CFGINIT ALLOCATE
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IGD103I SMS ALLOCATED TO DDNAME MSGCAT
+ IGD103I SMS ALLOCATED TO DDNAME CACCFGD
+ IGD103I SMS ALLOCATED TO DDNAME CACCFGX
+ IGD103I SMS ALLOCATED TO DDNAME IMPORTCF
+ IEF237I JES2 ALLOCATED TO SYSTERM
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(SGS015)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(SGS009)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGX CL(DATASET ) VOL(SGS015)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.CACCFGD CL(DATASET ) VOL(SGS009)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(UPDATE )  ACCESS ALLOWED(UPDATE )
+ CAC00261I OPENING FILE 'DDN:IMPORTCF(CECCDXFG)'.
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.USERCONF CL(DATASET ) VOL(SGS013)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ CAC00200I SET,CONFIG,SERVICE=GLOBAL,MESSAGEPOOLSIZE=536870912
+ CAC00242I GLOBAL CONFIGURATION RECORD UPDATED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=CNTL,SERVICECLASS=CNTL
+ CAC00241I SERVICE 'CNTL' OF SERVICECLASS 'CNTL' ADDED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=LOG,SERVICECLASS=LOG
+ CAC00241I SERVICE 'LOG' OF SERVICECLASS 'LOG' ADDED SUCCESSFULLY.
+ CAC00200I SET,CONFIG,SERVICE=LOG,DISPLAYLOG=TRUE
+ CAC00243I SERVICE 'LOG' OF SERVICE CLASS 'LOG' UPDATED SUCCESSFULLY.
+ CAC00200I SET,CONFIG,SERVICE=LOG,STREAMNAME=CDCSRC.INST1.DIAGLOG
+ CAC00243I SERVICE 'LOG' OF SERVICE CLASS 'LOG' UPDATED SUCCESSFULLY.
+ CAC00200I SET,CONFIG,SERVICE=LOG,EVENTLOG=CDCSRC.INST1.EVENTS
+ CAC00243I SERVICE 'LOG' OF SERVICE CLASS 'LOG' UPDATED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=OPER,SERVICECLASS=OPER
+ CAC00241I SERVICE 'OPER' OF SERVICECLASS 'OPER' ADDED SUCCESSFULLY.
+ CAC00200I SET,CONFIG,SERVICE=OPER,SAFEXIT='CACSX04 VALIDATE=N'
+ CAC00243I SERVICE 'OPER' OF SERVICE CLASS 'OPER' UPDATED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=INIT,SERVICECLASS=INIT
+ CAC00241I SERVICE 'INIT' OF SERVICECLASS 'INIT' ADDED SUCCESSFULLY.
+ CAC00200I SET,CONFIG,SERVICE=INIT,COMMSTRING='TCP/0.0.0.0/9088'
+ CAC00243I SERVICE 'INIT' OF SERVICE CLASS 'INIT' UPDATED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=ADMIN,SERVICECLASS=PAA
+ CAC00241I SERVICE 'ADMIN' OF SERVICECLASS 'PAA' ADDED SUCCESSFULLY.
+ CAC00200I SET,CONFIG,SERVICE=ADMIN,SAFEXIT='CACSX04 VALIDATE=N'
+ CAC00243I SERVICE 'ADMIN' OF SERVICE CLASS 'PAA' UPDATED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=MONITOR,SERVICECLASS=MAA
+ CAC00241I SERVICE 'MONITOR' OF SERVICECLASS 'MAA' ADDED SUCCESSFULLY.
+ CAC00200I SET,CONFIG,SERVICE=MONITOR,SAFEXIT='CACSX04 VALIDATE=N'
+ CAC00243I SERVICE 'MONITOR' OF SERVICE CLASS 'MAA' UPDATED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=CAPTURE,SERVICECLASS=CAP
+ CAC00241I SERVICE 'CAPTURE' OF SERVICECLASS 'CAP' ADDED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=SAMPLEVS,SERVICECLASS=QP
+ CAC00241I SERVICE 'SAMPLEVS' OF SERVICECLASS 'QP' ADDED SUCCESSFULLY.
+ CAC00200I SET,CONFIG,SERVICE=SAMPLEVS,SAFEXIT='CACSX04'
+ CAC00243I SERVICE 'SAMPLEVS' OF SERVICE CLASS 'QP' UPDATED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=REFRESH,SERVICECLASS=QPLD
+ CAC00241I SERVICE 'REFRESH' OF SERVICECLASS 'QPLD' ADDED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=LRSV,SERVICECLASS=LRSV
+ CAC00241I SERVICE 'LRSV' OF SERVICECLASS 'LRSV' ADDED SUCCESSFULLY.
+ CAC00200I ADD,CONFIG,SERVICE=VSAMSRV,SERVICECLASS=VSMS
+ CAC00241I SERVICE 'VSAMSRV' OF SERVICECLASS 'VSMS' ADDED SUCCESSFULLY.
+ IEF142I CECCDCFG CFGINIT ALLOCATE - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I CDV113.CAC.SCACLOAD                          RETAINED,  DDNAME=STEPLIB
+ IGD104I CDV113.CAC.SCACMSGS                          RETAINED,  DDNAME=MSGCAT
+ IGD104I CDV113.CAC.INST1.CDCSRC.CACCFGD              RETAINED,  DDNAME=CACCFGD
+ IGD104I CDV113.CAC.INST1.CDCSRC.CACCFGX              RETAINED,  DDNAME=CACCFGX
+ IGD104I CDV113.CAC.INST1.USERCONF                    RETAINED,  DDNAME=IMPORTCF
+ IEF285I   IBM019.CECCDCFG.JOB00956.D0000104.?          SYSOUT
+ IEF285I   IBM019.CECCDCFG.JOB00956.D0000105.?          SYSOUT
+ IEF285I   IBM019.CECCDCFG.JOB00956.D0000106.?          SYSOUT
+ IEF285I   IBM019.CECCDCFG.JOB00956.D0000101.?          SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: CFGINIT        Cond Code: 0000         Start: 07-Feb-2024 12:55:52 AM
+ Step  Num: 4              PGM  Name: CACCFGUT     End:   07-Feb-2024 12:55:52 AM
+ CPU (TCB): 00:00:00.01                            Storage below 16M:         76k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:     18,692k
+ Trans Act: 00:00:00.06                            Service Units:             755
+ Tape Mnts: 0                                      Total EXCPs:               616
+
+ Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+ 1125 D STEPLIB           513  32,760        1126 D CACCFGD            22  27,968
+ 112C D CACCFGX             5  27,968        112A D IMPORTCF            2  27,920
+
+ Total DASD EXCPs:                542        Total Tape EXCPs:                  0
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/CFGINIT /START 2024038.1255
+ IEF032I STEP/CFGINIT /STOP  2024038.1255
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    76K  SYS:   280K  EXT:    18692K  SYS:    12444K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.SYSMDUMP CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCFG DELETDMP
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDCFG DELETDMP ALLOCATE
+ IGD101I SMS ALLOCATED TO DDNAME (DDUMP   )
+         DSN (CDV113.CAC.INST1.CDCSRC.SYSMDUMP            )
+         STORCLAS (SCSTD) MGMTCLAS (MCSTNDRD) DATACLAS (        )
+         VOL SER NOS= SGS004
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.SYSMDUMP CL(DATASET ) VOL(SGS004)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(ALTER  )  ACCESS ALLOWED(ALTER  )
+ IEF142I CECCDCFG DELETDMP ALLOCATE - STEP WAS EXECUTED - COND CODE 0000
+ IGD105I CDV113.CAC.INST1.CDCSRC.SYSMDUMP             DELETED,   DDNAME=DDUMP
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: DELETDMP       Cond Code: 0000         Start: 07-Feb-2024 12:55:52 AM
+ Step  Num: 5              PGM  Name: IEFBR14      End:   07-Feb-2024 12:55:52 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:          4k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+ Trans Act: 00:00:00.00                            Service Units:              14
+ Tape Mnts: 0                                      Total EXCPs:                 9
+
+
+
+ No I/O activity was found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/DELETDMP/START 2024038.1255
+ IEF032I STEP/DELETDMP/STOP  2024038.1255
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:     4K  SYS:   252K  EXT:        4K  SYS:    12144K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCFG ALLOCDMP
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDCFG ALLOCDMP ALLOCATE
+ IGD101I SMS ALLOCATED TO DDNAME (MDUMP   )
+         DSN (CDV113.CAC.INST1.CDCSRC.SYSMDUMP            )
+         STORCLAS (SCSTD) MGMTCLAS (MCSTNDRD) DATACLAS (        )
+         VOL SER NOS= SGS005
+ IEF142I CECCDCFG ALLOCDMP ALLOCATE - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I CDV113.CAC.INST1.CDCSRC.SYSMDUMP             RETAINED,  DDNAME=MDUMP
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: ALLOCDMP       Cond Code: 0000         Start: 07-Feb-2024 12:55:52 AM
+ Step  Num: 6              PGM  Name: IEFBR14      End:   07-Feb-2024 12:55:52 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:          4k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:          4k
+ Trans Act: 00:00:00.00                            Service Units:              14
+ Tape Mnts: 0                                      Total EXCPs:                 6
+
+
+
+ No I/O activity was found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/ALLOCDMP/START 2024038.1255
+ IEF032I STEP/ALLOCDMP/STOP  2024038.1255
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:     4K  SYS:   252K  EXT:        4K  SYS:    12144K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ ASG120I ------------------------------------------------------------------------
+                         J o b   E n d   S t a t i s t i c s
+
+ Job  Name: CECCDCFG       System ID: ASG1        Submit: 07-Feb-2024 12:55:52 AM
+ Job JESID: JOB00956       MVS level: SP7.2.5     Start:  07-Feb-2024 12:55:52 AM
+ Job Class: A              Sch. Env:              End:    07-Feb-2024 12:55:52 AM
+ CPU (TCB): 00:00:00.01    Srv Class: BATCH       Storage below 16M:          76k
+ CPU (SRB): 00:00:00.00                           Storage above 16M:      18,692k
+ Trans Act: 00:00:00.06                           Service Units:              832
+ Tape Mnts: 0                                     Total EXCPs:                667
+
+ ---------------Paging---------------        ---------------Paging---------------
+ VIO In:                            0        VIO Out:                           0
+ Pages In:                          0        Pages Out:                         0
+ Common (LPA+CSA):                  0        Hiperspace:                        0
+ VIO Reclaims:                      0        Pages Stolen:                      0
+
+ RACF User: IBM019                           Programmer: CLASSIC JOB
+ Acct Info: ACCOUNT
+
+ ASG122I ------------------------------------------------------------------------
+ IEF375I  JOB/CECCDCFG/START 2024038.1255
+ IEF033I  JOB/CECCDCFG/STOP  2024038.1255
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+ ==== =========================================================== ====
+ ====     Configuration Migration and Initialization Utility      ====
+ ====                         (CACCFGUT)                          ====
+ ==== =========================================================== ====
+->>>PLEASE ENTER A COMMAND (TYPE QUIT WHEN DONE):
+ CAC00200I IMPORT,CONFIG,FILENAME=DDN:IMPORTCF(CECCDXFG)
+ CAC00263I IMPORT OF CONFIGURATION COMMAND FILE COMPLETE.
+  20 COMMANDS SUCCEEDED. 0 COMMANDS FAILED.
+->>>PLEASE ENTER A COMMAND (TYPE QUIT WHEN DONE):
+ CAC00200I REPORT
+ CONFIGURATION
+ SERVICE NAME: GLOBAL
+ SERVICE CLASS: GLOB
+      MESSAGEPOOLSIZE {CHANGED}=536870912
+       DATACONVERRACT {DEFAULT}=0
+         FETCHBUFSIZE {DEFAULT}=32000
+        DECODEBUFSIZE {DEFAULT}=8192
+       STATICCATALOGS {DEFAULT}=0
+             TASKPARM {DEFAULT}=
+      DATAVALIDATEACT {DEFAULT}=0
+       REPORTLOGCOUNT {DEFAULT}=0
+     COLUMNREPAIREXIT {DEFAULT}=
+     IMSMANAGEDACBHLQ {DEFAULT}=
+     GDPSWORKLOADNAME {DEFAULT}=
+ CONFIGURATION
+ SERVICE NAME: CNTL
+ SERVICE CLASS: CNTL
+ TASK NAME: CACCNTL
+ CRITICAL SERVICE: NO
+           TRACELEVEL {DEFAULT}=4
+             SEQUENCE {CHANGED}=1
+         HOSTCODEPAGE {DEFAULT}=37
+         DBCSCODEPAGE {DEFAULT}=0
+ CONFIGURATION
+ SERVICE NAME: LOG
+ SERVICE CLASS: LOG
+ TASK NAME: CACLOG
+ CRITICAL SERVICE: YES
+           TRACELEVEL {DEFAULT}=1
+             SEQUENCE {CHANGED}=2
+           LOGBUFSIZE {DEFAULT}=65536
+           DISPLAYLOG {CHANGED}=TRUE
+           STREAMNAME {CHANGED}=CDCSRC.INST1.DIAGLOG
+               LOGURL {DEFAULT}=
+         CONSOLELEVEL {DEFAULT}=4
+             EVENTLOG {CHANGED}=CDCSRC.INST1.EVENTS
+ CONFIGURATION
+ SERVICE NAME: OPER
+ SERVICE CLASS: OPER
+ TASK NAME: CACOPER
+ CRITICAL SERVICE: NO
+             MAXUSERS {DEFAULT}=100
+           TRACELEVEL {DEFAULT}=4
+      RESPONSETIMEOUT {DEFAULT}=5M
+          IDLETIMEOUT {DEFAULT}=5M
+              SAFEXIT {CHANGED}=CACSX04 VALIDATE=N
+              SMFEXIT {DEFAULT}=
+             SEQUENCE {CHANGED}=3
+          SQLSECURITY {DEFAULT}=FALSE
+ CONFIGURATION
+ SERVICE NAME: INIT
+ SERVICE CLASS: INIT
+ TASK NAME: CACINIT
+ CRITICAL SERVICE: NO
+             MAXUSERS {DEFAULT}=100
+           TRACELEVEL {DEFAULT}=4
+      RESPONSETIMEOUT {DEFAULT}=5M
+          IDLETIMEOUT {DEFAULT}=5M
+             SEQUENCE {CHANGED}=4
+           COMMSTRING {CHANGED}=TCP/0.0.0.0/9088
+ CONFIGURATION
+ SERVICE NAME: ADMIN
+ SERVICE CLASS: PAA
+ TASK NAME: CECPAA
+ CRITICAL SERVICE: YES
+             MAXUSERS {DEFAULT}=100
+           TRACELEVEL {DEFAULT}=4
+              SAFEXIT {CHANGED}=CACSX04 VALIDATE=N
+             SEQUENCE {CHANGED}=5
+       ADMINQPOLLTIME {DEFAULT}=0H
+       ADMINQSTOPWAIT {DEFAULT}=1M
+ CONFIGURATION
+ SERVICE NAME: MONITOR
+ SERVICE CLASS: MAA
+ TASK NAME: CECMAA
+ CRITICAL SERVICE: NO
+             MAXUSERS {DEFAULT}=100
+           TRACELEVEL {DEFAULT}=4
+              SAFEXIT {CHANGED}=CACSX04 VALIDATE=N
+              SMFEXIT {DEFAULT}=
+             SEQUENCE {CHANGED}=6
+        NMICOMMSTRING {DEFAULT}=
+      TRUNCATEWTOMSGS {DEFAULT}=0
+          SMFINTERVAL {DEFAULT}=0H
+ CONFIGURATION
+ SERVICE NAME: CAPTURE
+ SERVICE CLASS: CAP
+ TASK NAME: CECCAP
+ CRITICAL SERVICE: YES
+           TRACELEVEL {DEFAULT}=4
+             SEQUENCE {CHANGED}=7
+         MAXTRANSSIZE {DEFAULT}=0
+     HEARTBEATTIMEOUT {DEFAULT}=15M
+     CSDATAVALIDATEAC {DEFAULT}=0
+     CSREPORTLOGCOUNT {DEFAULT}=0
+             TIMEZONE {DEFAULT}=Atlantic/Reykjavik
+        UORGROUPCOUNT {DEFAULT}=1
+      APPLYBUFFERSIZE {DEFAULT}=258048
+       STREAMMGRDELAY {DEFAULT}=0H
+         QUEUEMGRNAME {DEFAULT}=
+        BOOKMARKQUEUE {DEFAULT}=
+         ROWDELIMITER {DEFAULT}=\n
+         COLDELIMITER {DEFAULT}=,
+      STRINGDELIMITER {DEFAULT}="
+              PUBUTF8 {DEFAULT}=FALSE
+       COMMITINTERVAL {DEFAULT}=500MS
+       PUBBDDIAGLIMIT {DEFAULT}=100
+        PUBBDWTOLIMIT {DEFAULT}=1000
+          PUBBDCOMPAT {DEFAULT}=0
+          PUBBDACTION {DEFAULT}=TRUE
+         IMSRECSELECT {DEFAULT}=
+        VSAMRECSELECT {DEFAULT}=
+             IMSRECID {DEFAULT}=
+            VSAMRECID {DEFAULT}=
+       CACHEINDICATOR {DEFAULT}=2
+           PUBBINASIS {DEFAULT}=FALSE
+       STARTUPTIMEOUT {DEFAULT}=30S
+      SHUTDOWNTIMEOUT {DEFAULT}=30S
+        UORDISCARDOPT {DEFAULT}=0
+      CONNECTRETRYLMT {DEFAULT}=0
+     DELIMITEDFMTOPTS {DEFAULT}=0
+        IMSJCFOPTIONS {DEFAULT}=0
+ CONFIGURATION
+ SERVICE NAME: SAMPLEVS
+ SERVICE CLASS: QP
+ TASK NAME: CACQP
+ CRITICAL SERVICE: NO
+       INITIALTHREADS {DEFAULT}=5
+           MAXTHREADS {DEFAULT}=10
+             MAXUSERS {DEFAULT}=20
+           TRACELEVEL {DEFAULT}=4
+      RESPONSETIMEOUT {DEFAULT}=5M
+          IDLETIMEOUT {DEFAULT}=5M
+           BTREEBUFFS {DEFAULT}=4
+       USERSUBPOOLMAX {DEFAULT}=8192
+        TEMPFILESPACE {DEFAULT}=HIPERSPACE,INIT=8M,MAX=2048M,EXTEND=8M
+          VSAMAMPARMS {DEFAULT}=
+              SAFEXIT {CHANGED}=CACSX04
+              SMFEXIT {DEFAULT}=
+             SEQUENCE {CHANGED}=8
+           JOINTABLES {DEFAULT}=4
+     MAXROWSEXCACTION {DEFAULT}=1
+      MAXROWSEXAMINED {DEFAULT}=0
+      MAXROWSRETURNED {DEFAULT}=0
+        STMTRETENTION {DEFAULT}=0
+          CPUGOVERNOR {DEFAULT}=
+               WLMUOW {DEFAULT}=
+         SEQBUFNOCALC {DEFAULT}=0
+             SEQBUFNO {DEFAULT}=0
+      CALLCAPTUREXITS {DEFAULT}=FALSE
+ CONFIGURATION
+ SERVICE NAME: REFRESH
+ SERVICE CLASS: QPLD
+ TASK NAME: CACQP
+ CRITICAL SERVICE: NO
+           TRACELEVEL {DEFAULT}=4
+      RESPONSETIMEOUT {DEFAULT}=5M
+          IDLETIMEOUT {DEFAULT}=5M
+           BTREEBUFFS {DEFAULT}=4
+       USERSUBPOOLMAX {DEFAULT}=8192
+        TEMPFILESPACE {DEFAULT}=HIPERSPACE,INIT=8M,MAX=2048M,EXTEND=8M
+             SEQUENCE {CHANGED}=9
+               WLMUOW {DEFAULT}=
+ CONFIGURATION
+ SERVICE NAME: LRSV
+ SERVICE CLASS: LRSV
+ TASK NAME: CECLRS
+ CRITICAL SERVICE: YES
+       INITIALTHREADS {DEFAULT}=1
+           TRACELEVEL {DEFAULT}=4
+             SEQUENCE {CHANGED}=10
+         IGNORETRANID {DEFAULT}=CFC2
+      RMTSESSIONLIMIT {DEFAULT}=128
+     HEARTBEATINTRVAL {DEFAULT}=3M
+         LOGTIEUPRECS {DEFAULT}=FALSE
+ CONFIGURATION
+ SERVICE NAME: VSAMSRV
+ SERVICE CLASS: VSMS
+ TASK NAME: CACVSMS
+ CRITICAL SERVICE: NO
+       INITIALTHREADS {DEFAULT}=1
+           MAXTHREADS {DEFAULT}=1
+             MAXUSERS {DEFAULT}=50
+           TRACELEVEL {DEFAULT}=4
+      RESPONSETIMEOUT {DEFAULT}=5M
+          IDLETIMEOUT {DEFAULT}=5M
+             SEQUENCE {CHANGED}=11
+          CLOSEONIDLE {DEFAULT}=FALSE
+->>>PLEASE ENTER A COMMAND (TYPE QUIT WHEN DONE):
+ ==== =========================================================== ====
+ ====                CACCFGUT PROCESSING COMPLETE                 ====
+ ==== =========================================================== ====

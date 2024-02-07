@@ -1,0 +1,302 @@
+1                         J E S 2  J O B  L O G  --  S Y S T E M  A S G 1  --  N O D E  N 1
+0
+ 12.56.36 JOB00957 ---- WEDNESDAY, 07 FEB 2024 ----
+ 12.56.36 JOB00957  IRR010I  USERID IBM019   IS ASSIGNED TO THIS JOB.
+ 12.56.36 JOB00957  ICH70001I IBM019   LAST ACCESS AT 12:55:52 ON WEDNESDAY, FEBRUARY 7, 2024
+ 12.56.36 JOB00957  $HASP373 CECCDCAT STARTED - INIT 1    - CLASS A        - SYS ASG1
+ 12.56.36 JOB00957  IEF403I CECCDCAT - STARTED - TIME=12.56.36
+ 12.56.36 JOB00957  -                                              --TIMINGS (MINS.)--            -----PAGING COUNTS----
+ 12.56.36 JOB00957  -STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 12.56.36 JOB00957  -RESETCTD             00     94      3    .00    .00     .0    152  BATCH        0     0     0     0
+ 12.56.36 JOB00957  -RESETCTX             00     86      3    .00    .00     .0    139  BATCH        0     0     0     0
+ 12.56.36 JOB00957  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  084
+    084               CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+    084               WARNING: RESOURCE NOT PROTECTED
+    084               ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ 12.56.36 JOB00957  -INIT                 00  17421     14    .00    .00     .0   4104  BATCH        0     0     0     0
+ 12.56.36 JOB00957  IEF404I CECCDCAT - ENDED - TIME=12.56.36
+ 12.56.36 JOB00957  -CECCDCAT ENDED.  NAME-CLASSIC JOB          TOTAL TCB CPU TIME=    .00 TOTAL ELAPSED TIME=    .0
+ 12.56.36 JOB00957  ASG107I JOB ENDED:  CECCDCAT CLASSIC JOB
+ 12.56.36 JOB00957  $HASP395 CECCDCAT ENDED - RC=0000
+0------ JES2 JOB STATISTICS ------
+-  07 FEB 2024 JOB EXECUTION DATE
+-          114 CARDS READ
+-          310 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           28 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //CECCDCAT  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,             JOB00957
+           //     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+           //*CECCDCAT TAILOR JOB CARD TO MEET SITE STANDARDS
+           //********************************************************************
+           //*                                                                  *
+           //* LICENSED MATERIALS - PROPERTY OF IBM                             *
+           //* 5655-IM1                                                         *
+           //* 5655-IM4                                                         *
+           //* 5655-IM5                                                         *
+           //* 5655-Y18                                                         *
+           //*                                                                  *
+           //* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+           //* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+           //* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+           //* CONTRACT WITH IBM CORP.                                          *
+           //* DISCLAIMER OF WARRANTIES:                                        *
+           //*                                                                  *
+           //* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+           //* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+           //* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+           //* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+           //*                                                                  *
+           //* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+           //* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+           //* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+           //* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+           //* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+           //* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+           //* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+           //* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+           //* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+           //* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+           //* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+           //* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+           //* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+           //* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+           //*                                                                  *
+           //********************************************************************
+           //*
+           //*   CECCDCAT - SAMPLE JCL TO ALLOCATE AND INITIALIZE THE
+           //*              METADATA CATALOG FOR A CDC SOURCE SERVER
+           //*
+           //*   - PROVIDE A JOB CARD THAT IS VALID FOR YOUR SITE
+           //*   - CHANGE CPHLQ TO THE CAPTURE SERVER SPECIFIC HLQ
+           //*   - CHANGE CAC PARM TO INSTALLED HIGH LEVEL QUALIFIER
+           //*   - CHANGE DISKU PARM TO A VALID DASD UNIT TYPE FOR YOUR SITE
+           //*   - CHANGE VOLSER PARM TO IDENTIFY THE VOLUME WHERE YOU WANT
+           //*      THE CONFIGURATION FILES LOCATED
+           //*   - CHANGE STGCL PARM TO IDENTIFY THE STORAGE CLASS FOR THE
+           //*         THE CONFIGURATION FILES
+           //*   - CHANGE MGTCL PARM TO IDENTIFY THE MANAGEMENT CLASS FOR THE
+           //*         THE CONFIGURATION FILES
+           //*
+           //********************************************************************
+           IEFC653I SUBSTITUTION JCL - (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,MSGLEVEL=(1,1),NOTIFY=IBM019
+         2 //DISKU     SET DISKU=SYSALLDA
+           //*                                     DASD UNIT
+         3 //CAC       SET CAC=CDV113.CAC
+           //*                                     INSTALLED HLQ
+         4 //CPHLQ     SET CPHLQ='CDV113.CAC.INST1.CDCSRC'
+           //*                                     CAPTURE SVR SPECIFIC HLQ
+         5 //USRHLQ    SET USRHLQ=CDV113.CAC.INST1
+           //*                                     USER HLQ
+         6 //DISKVOL   SET DISKVOL=
+           //*                                     DASD VOLSER
+         7 //STGCL     SET STGCL=
+           //*                                     STORAGE CLASS
+         8 //MGTCL     SET MGTCL=
+           //*                                     MANAGEMENT CLASS
+         9 //RGN       SET RGN=144M
+           //*                                     REGION SIZE
+        10 //SOUT      SET SOUT='*'
+           //*                                     SYSOUT CLASS
+           //*
+           //*
+           //* ------------------------------------------------------------------
+           //* Reset the USS file system resident catalog files to an
+           //* empty state.
+           //* ------------------------------------------------------------------
+           //*
+        11 //RESETCTD  EXEC  PGM=IEBGENER,REGION=0M
+        12 //SYSPRINT  DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        13 //SYSIN     DD DUMMY
+        14 //SYSUT1    DD DUMMY,
+           //             DCB=(RECFM=FBS,LRECL=1,BLKSIZE=5120)
+        15 //SYSUT2    DD PATHDISP=(KEEP,KEEP),
+           //             PATHMODE=(SIRWXU,SIRWXG),
+           //             PATHOPTS=(ORDWR,OCREAT,OTRUNC),
+           //             PATH='/opt/IBM/isclassic113/catalog/caccat'
+           //*
+        16 //RESETCTX  EXEC  PGM=IEBGENER,REGION=0M
+        17 //SYSPRINT  DD SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        18 //SYSIN     DD DUMMY
+        19 //SYSUT1    DD DUMMY,
+           //             DCB=(RECFM=FBS,LRECL=1,BLKSIZE=5120)
+        20 //SYSUT2    DD PATHDISP=(KEEP,KEEP),
+           //             PATHMODE=(SIRWXU,SIRWXG),
+           //             PATHOPTS=(ORDWR,OCREAT,OTRUNC),
+           //             PATH='/opt/IBM/isclassic113/catalog/cacindx'
+           //*
+           //* -----------------------------------------------------------------
+           //*
+           //* Initialize the catalog files
+           //*
+           //* -----------------------------------------------------------------
+           //*
+        21 //INIT     EXEC PGM=CACCATUT,PARM='INIT',REGION=&RGN
+           IEFC653I SUBSTITUTION JCL - PGM=CACCATUT,PARM='INIT',REGION=144M
+        22 //STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACLOAD
+        23 //SYSOUT   DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        24 //SYSPRINT DD  SYSOUT=&SOUT
+           IEFC653I SUBSTITUTION JCL - SYSOUT=*
+        25 //MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+           IEFC653I SUBSTITUTION JCL - DISP=SHR,DSN=CDV113.CAC.SCACMSGS
+        26 //CACCAT   DD  PATHDISP=(KEEP,KEEP),
+           //             PATH='/opt/IBM/isclassic113/catalog/caccat'
+        27 //CACINDX  DD  PATHDISP=(KEEP,KEEP),
+           //             PATH='/opt/IBM/isclassic113/catalog/cacindx'
+ ICH70001I IBM019   LAST ACCESS AT 12:55:52 ON WEDNESDAY, FEBRUARY 7, 2024
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCAT RESETCTD
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEFA111I CECCDCAT IS USING THE FOLLOWING JOB RELATED SETTINGS:
+          SWA=BELOW,TIOT SIZE=32K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+ IEF236I ALLOC. FOR CECCDCAT RESETCTD
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I DMY  ALLOCATED TO SYSIN
+ IEF237I DMY  ALLOCATED TO SYSUT1
+ IGD103I SMS UNIX FILE ALLOCATED TO DDNAME SYSUT2
+ IEF142I CECCDCAT RESETCTD - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCDCAT.JOB00957.D0000101.?          SYSOUT
+ IGD104I UNIX FILE WAS RETAINED, DDNAME IS (SYSUT2  )
+ FILENAME IS (/opt/IBM/isclassic113/catalog/caccat)
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: RESETCTD       Cond Code: 0000         Start: 07-Feb-2024 12:56:36 AM
+ Step  Num: 1              PGM  Name: IEBGENER     End:   07-Feb-2024 12:56:36 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:        116k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:         80k
+ Trans Act: 00:00:00.01                            Service Units:             152
+ Tape Mnts: 0                                      Total EXCPs:                94
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/RESETCTD/START 2024038.1256
+ IEF032I STEP/RESETCTD/STOP  2024038.1256
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   116K  SYS:   260K  EXT:       80K  SYS:    11924K
+         ATB- REAL:                  1256K  SLOTS:                     0K
+              VIRT- ALLOC:      14M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCAT RESETCTX
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDCAT RESETCTX
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I DMY  ALLOCATED TO SYSIN
+ IEF237I DMY  ALLOCATED TO SYSUT1
+ IGD103I SMS UNIX FILE ALLOCATED TO DDNAME SYSUT2
+ IEF142I CECCDCAT RESETCTX - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCDCAT.JOB00957.D0000102.?          SYSOUT
+ IGD104I UNIX FILE WAS RETAINED, DDNAME IS (SYSUT2  )
+ FILENAME IS (/opt/IBM/isclassic113/catalog/cacindx)
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: RESETCTX       Cond Code: 0000         Start: 07-Feb-2024 12:56:36 AM
+ Step  Num: 2              PGM  Name: IEBGENER     End:   07-Feb-2024 12:56:36 AM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:        116k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:         80k
+ Trans Act: 00:00:00.01                            Service Units:             139
+ Tape Mnts: 0                                      Total EXCPs:                86
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/RESETCTX/START 2024038.1256
+ IEF032I STEP/RESETCTX/STOP  2024038.1256
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   116K  SYS:   260K  EXT:       80K  SYS:    11928K
+         ATB- REAL:                  1256K  SLOTS:                     0K
+              VIRT- ALLOC:      14M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDCAT INIT
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDCAT INIT
+ IGD103I SMS ALLOCATED TO DDNAME STEPLIB
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IGD103I SMS ALLOCATED TO DDNAME MSGCAT
+ IGD103I SMS UNIX FILE ALLOCATED TO DDNAME CACCAT
+ IGD103I SMS UNIX FILE ALLOCATED TO DDNAME CACINDX
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.SCACLOAD CL(DATASET ) VOL(SGS008)
+   WARNING: RESOURCE NOT PROTECTED
+   ACCESS INTENT(READ   )  ACCESS ALLOWED(READ   )
+ IEF142I CECCDCAT INIT - STEP WAS EXECUTED - COND CODE 0000
+ IGD104I CDV113.CAC.SCACLOAD                          RETAINED,  DDNAME=STEPLIB
+ IEF285I   IBM019.CECCDCAT.JOB00957.D0000103.?          SYSOUT
+ IEF285I   IBM019.CECCDCAT.JOB00957.D0000104.?          SYSOUT
+ IGD104I CDV113.CAC.SCACMSGS                          RETAINED,  DDNAME=MSGCAT
+ IGD104I UNIX FILE WAS RETAINED, DDNAME IS (CACCAT  )
+ FILENAME IS (/opt/IBM/isclassic113/catalog/caccat)
+ IGD104I UNIX FILE WAS RETAINED, DDNAME IS (CACINDX )
+ FILENAME IS (/opt/IBM/isclassic113/catalog/cacindx)
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: INIT           Cond Code: 0000         Start: 07-Feb-2024 12:56:36 AM
+ Step  Num: 3              PGM  Name: CACCATUT     End:   07-Feb-2024 12:56:36 AM
+ CPU (TCB): 00:00:00.06                            Storage below 16M:         64k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:    136,212k
+ Trans Act: 00:00:00.12                            Service Units:           4,104
+ Tape Mnts: 0                                      Total EXCPs:            17,421
+
+ Unit-- DDName-- EXCP Count-- Blksize        Unit-- DDName-- EXCP Count-- Blksize
+ 1125 D STEPLIB           842  32,760
+
+ Total DASD EXCPs:                842        Total Tape EXCPs:                  0
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/INIT    /START 2024038.1256
+ IEF032I STEP/INIT    /STOP  2024038.1256
+         CPU:     0 HR  00 MIN  00.06 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    64K  SYS:   264K  EXT:   136212K  SYS:    12392K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      15M SHRD:       0M
+ ASG120I ------------------------------------------------------------------------
+                         J o b   E n d   S t a t i s t i c s
+
+ Job  Name: CECCDCAT       System ID: ASG1        Submit: 07-Feb-2024 12:56:35 AM
+ Job JESID: JOB00957       MVS level: SP7.2.5     Start:  07-Feb-2024 12:56:36 AM
+ Job Class: A              Sch. Env:              End:    07-Feb-2024 12:56:36 AM
+ CPU (TCB): 00:00:00.06    Srv Class: BATCH       Storage below 16M:         116k
+ CPU (SRB): 00:00:00.00                           Storage above 16M:     136,212k
+ Trans Act: 00:00:00.13                           Service Units:            4,395
+ Tape Mnts: 0                                     Total EXCPs:             17,601
+
+ ---------------Paging---------------        ---------------Paging---------------
+ VIO In:                            0        VIO Out:                           0
+ Pages In:                          0        Pages Out:                         0
+ Common (LPA+CSA):                  0        Hiperspace:                        0
+ VIO Reclaims:                      0        Pages Stolen:                      0
+
+ RACF User: IBM019                           Programmer: CLASSIC JOB
+ Acct Info: ACCOUNT
+
+ ASG122I ------------------------------------------------------------------------
+ IEF375I  JOB/CECCDCAT/START 2024038.1256
+ IEF033I  JOB/CECCDCAT/STOP  2024038.1256
+         CPU:     0 HR  00 MIN  00.06 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1DATA SET UTILITY - GENERATE                                                                       PAGE 0001
+-IEB352I WARNING: ONE OR MORE OF THE OUTPUT DCB PARMS COPIED FROM INPUT
+
+ PROCESSING ENDED AT EOD
+1DATA SET UTILITY - GENERATE                                                                       PAGE 0001
+-IEB352I WARNING: ONE OR MORE OF THE OUTPUT DCB PARMS COPIED FROM INPUT
+
+ PROCESSING ENDED AT EOD

@@ -1,0 +1,395 @@
+1                         J E S 2  J O B  L O G  --  S Y S T E M  A S G 1  --  N O D E  N 1
+0
+ 13.09.50 JOB00961 ---- WEDNESDAY, 07 FEB 2024 ----
+ 13.09.50 JOB00961  IRR010I  USERID IBM019   IS ASSIGNED TO THIS JOB.
+ 13.09.50 JOB00961  ICH70001I IBM019   LAST ACCESS AT 12:57:50 ON WEDNESDAY, FEBRUARY 7, 2024
+ 13.09.50 JOB00961  $HASP373 CECCDSLS STARTED - INIT 1    - CLASS A        - SYS ASG1
+ 13.09.50 JOB00961  IEF403I CECCDSLS - STARTED - TIME=13.09.50
+ 13.09.50 JOB00961  -                                              --TIMINGS (MINS.)--            -----PAGING COUNTS----
+ 13.09.50 JOB00961  -STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 13.09.50 JOB00961  -DELETEVL             00     45      9    .00    .00     .0     86  BATCH        0     0     0     0
+ 13.09.50 JOB00961  -ALLOCEV              00     47      9    .00    .00     .0     69  BATCH        0     0     0     0
+ 13.09.50 JOB00961  -DELETEDG             00     49      8    .00    .00     .0     69  BATCH        0     0     0     0
+ 13.09.50 JOB00961  -ALLOCDG              00     47      8    .00    .00     .0     68  BATCH        0     0     0     0
+ 13.09.50 JOB00961  -DELETEDG             00     44      8    .00    .00     .0     65  BATCH        0     0     0     0
+ 13.09.50 JOB00961  IEF404I CECCDSLS - ENDED - TIME=13.09.50
+ 13.09.50 JOB00961  -CECCDSLS ENDED.  NAME-CLASSIC JOB          TOTAL TCB CPU TIME=    .00 TOTAL ELAPSED TIME=    .0
+ 13.09.50 JOB00961  ASG107I JOB ENDED:  CECCDSLS CLASSIC JOB
+ 13.09.50 JOB00961  $HASP395 CECCDSLS ENDED - RC=0000
+0------ JES2 JOB STATISTICS ------
+-  07 FEB 2024 JOB EXECUTION DATE
+-          116 CARDS READ
+-          407 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           35 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //CECCDSLS JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,              JOB00961
+           //     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+           //*CECCDSLS TAILOR JOB CARD TO MEET SITE STANDARDS
+           //********************************************************************
+           //*                                                                  *
+           //* LICENSED MATERIALS - PROPERTY OF IBM                             *
+           //* 5655-IM1                                                         *
+           //* 5655-IM4                                                         *
+           //* 5655-IM5                                                         *
+           //* 5655-Y18                                                         *
+           //*                                                                  *
+           //* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+           //* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+           //* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+           //* CONTRACT WITH IBM CORP.                                          *
+           //* DISCLAIMER OF WARRANTIES:                                        *
+           //*                                                                  *
+           //* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+           //* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+           //* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+           //* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+           //*                                                                  *
+           //* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+           //* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+           //* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+           //* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+           //* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+           //* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+           //* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+           //* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+           //* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+           //* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+           //* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+           //* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+           //* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+           //* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+           //*                                                                  *
+           //********************************************************************
+           //*                                                                  *
+           //*   CECCDSLS - SAMPLE JCL TO DEFINE MVS SYSTEM LOGGER LOG STREAMS  *
+           //*              FOR USE BY THE CDC SERVER LOGGER SERVICE            *
+           //*                                                                  *
+           //*   -  PROVIDE A JOB CARD THAT IS VALID FOR YOUR SITE              *
+           //*   -  PROVIDE A VALID EVENT LOGTSTREAM NAME                       *
+           //*   -  PROVIDE A VALID STORAGE CLASS (STG_DATACLAS) VALUE          *
+           //*        FOR THE EVENT LOG STREAM                                  *
+           //*   -  PROVIDE A VALID RETENTION PERIOD (RETPD) VALUE              *
+           //*        FOR THE EVENT LOG STREAM                                  *
+           //*   -  PROVIDE A VALID DIAGNOSTIC LOG LOGTSTREAM NAME              *
+           //*   -  PROVIDE A VALID STORAGE CLASS (STG_DATACLAS) VALUE          *
+           //*        FOR THE DIAGNOSTIC LOG LOGSTREAM                          *
+           //*   -  PROVIDE A VALID RETENTION PERIOD (RETPD) VALUE              *
+           //*        FOR THE DIAGNOSTIC LOG LOGSTREAM                          *
+           //*                                                                  *
+           //********************************************************************
+           //********************************************************************
+           //* UNCOMMENT THE DELETE LOG STREAM STEP TO DELETE THE LOG WHEN      *
+           //* THE EVENT LOG STREAM NEEDS TO BE DELETED AND RECREATED           *
+           //********************************************************************
+           IEFC653I SUBSTITUTION JCL - (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,MSGLEVEL=(1,1),NOTIFY=IBM019
+         2 //DELETEVL  EXEC  PGM=IXCMIAPU
+         3 //SYSPRINT DD SYSOUT=*
+         4 //SYSOUT   DD SYSOUT=*
+         5 //SYSIN    DD *
+           //*********************************************
+           //* ALLOCATE THE LOG STREAM FOR THE EVENT LOG *
+           //*********************************************
+         6 //ALLOCEV    EXEC  PGM=IXCMIAPU
+         7 //SYSPRINT DD SYSOUT=*
+         8 //SYSOUT   DD SYSOUT=*
+         9 //SYSIN    DD *
+           //********************************************************************
+           //* UNCOMMENT THE DELETE LOG STREAM STEP TO DELETE THE LOG WHEN      *
+           //* THE DIAGNOSTIC LOG STREAM NEEDS TO BE DELETED AND RECREATED      *
+           //********************************************************************
+        10 //DELETEDG  EXEC  PGM=IXCMIAPU
+        11 //SYSPRINT DD SYSOUT=*
+        12 //SYSOUT   DD SYSOUT=*
+        13 //SYSIN    DD *
+           //********************************************************************
+           //* ALLOCATE THE LOG STREAM FOR THE DIAGNOSTIC LOG                   *
+           //********************************************************************
+        14 //ALLOCDG    EXEC  PGM=IXCMIAPU
+        15 //SYSPRINT DD SYSOUT=*
+        16 //SYSOUT   DD SYSOUT=*
+        17 //SYSIN    DD *
+           //********************************************************************
+           //* UNCOMMENT THE DELETE LOG STREAM STEP TO DELETE THE LOG WHEN      *
+           //* THE REPLICATION LOG STREAM NEEDS TO BE DELETED AND RECREATED     *
+           //********************************************************************
+        18 //DELETEDG  EXEC  PGM=IXCMIAPU
+        19 //SYSPRINT DD SYSOUT=*
+        20 //SYSOUT   DD SYSOUT=*
+        21 //SYSIN    DD *
+ ICH70001I IBM019   LAST ACCESS AT 12:57:50 ON WEDNESDAY, FEBRUARY 7, 2024
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDSLS DELETEVL
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEFA111I CECCDSLS IS USING THE FOLLOWING JOB RELATED SETTINGS:
+          SWA=BELOW,TIOT SIZE=32K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+ IEF236I ALLOC. FOR CECCDSLS DELETEVL
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I CECCDSLS DELETEVL - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000106.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000107.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000101.?          SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: DELETEVL       Cond Code: 0000         Start: 07-Feb-2024 01:09:50 PM
+ Step  Num: 1              PGM  Name: IXCMIAPU     End:   07-Feb-2024 01:09:50 PM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:        204k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:        172k
+ Trans Act: 00:00:00.04                            Service Units:              86
+ Tape Mnts: 0                                      Total EXCPs:                45
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/DELETEVL/START 2024038.1309
+ IEF032I STEP/DELETEVL/STOP  2024038.1309
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   204K  SYS:   260K  EXT:      172K  SYS:    11888K
+         ATB- REAL:                  1256K  SLOTS:                     0K
+              VIRT- ALLOC:      14M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDSLS ALLOCEV
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDSLS ALLOCEV
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I CECCDSLS ALLOCEV - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000108.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000109.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000102.?          SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: ALLOCEV        Cond Code: 0000         Start: 07-Feb-2024 01:09:50 PM
+ Step  Num: 2              PGM  Name: IXCMIAPU     End:   07-Feb-2024 01:09:50 PM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:        204k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:        172k
+ Trans Act: 00:00:00.05                            Service Units:              69
+ Tape Mnts: 0                                      Total EXCPs:                47
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/ALLOCEV /START 2024038.1309
+ IEF032I STEP/ALLOCEV /STOP  2024038.1309
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   204K  SYS:   260K  EXT:      172K  SYS:    11888K
+         ATB- REAL:                  1256K  SLOTS:                     0K
+              VIRT- ALLOC:      14M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDSLS DELETEDG
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDSLS DELETEDG
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I CECCDSLS DELETEDG - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000110.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000111.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000103.?          SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: DELETEDG       Cond Code: 0000         Start: 07-Feb-2024 01:09:50 PM
+ Step  Num: 3              PGM  Name: IXCMIAPU     End:   07-Feb-2024 01:09:50 PM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:        204k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:        172k
+ Trans Act: 00:00:00.04                            Service Units:              69
+ Tape Mnts: 0                                      Total EXCPs:                49
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/DELETEDG/START 2024038.1309
+ IEF032I STEP/DELETEDG/STOP  2024038.1309
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   204K  SYS:   260K  EXT:      172K  SYS:    11892K
+         ATB- REAL:                  1256K  SLOTS:                     0K
+              VIRT- ALLOC:      14M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDSLS ALLOCDG
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDSLS ALLOCDG
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I CECCDSLS ALLOCDG - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000112.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000113.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000104.?          SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: ALLOCDG        Cond Code: 0000         Start: 07-Feb-2024 01:09:50 PM
+ Step  Num: 4              PGM  Name: IXCMIAPU     End:   07-Feb-2024 01:09:50 PM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:        204k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:        172k
+ Trans Act: 00:00:00.05                            Service Units:              68
+ Tape Mnts: 0                                      Total EXCPs:                47
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/ALLOCDG /START 2024038.1309
+ IEF032I STEP/ALLOCDG /STOP  2024038.1309
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   204K  SYS:   260K  EXT:      172K  SYS:    11888K
+         ATB- REAL:                  1256K  SLOTS:                     0K
+              VIRT- ALLOC:      14M SHRD:       0M
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDSLS DELETEDG
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEF236I ALLOC. FOR CECCDSLS DELETEDG
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSOUT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ IEF142I CECCDSLS DELETEDG - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000114.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000115.?          SYSOUT
+ IEF285I   IBM019.CECCDSLS.JOB00961.D0000105.?          SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: DELETEDG       Cond Code: 0000         Start: 07-Feb-2024 01:09:50 PM
+ Step  Num: 5              PGM  Name: IXCMIAPU     End:   07-Feb-2024 01:09:50 PM
+ CPU (TCB): 00:00:00.00                            Storage below 16M:        204k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:        172k
+ Trans Act: 00:00:00.04                            Service Units:              65
+ Tape Mnts: 0                                      Total EXCPs:                44
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/DELETEDG/START 2024038.1309
+ IEF032I STEP/DELETEDG/STOP  2024038.1309
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   204K  SYS:   260K  EXT:      172K  SYS:    11888K
+         ATB- REAL:                  1256K  SLOTS:                     0K
+              VIRT- ALLOC:      14M SHRD:       0M
+ ASG120I ------------------------------------------------------------------------
+                         J o b   E n d   S t a t i s t i c s
+
+ Job  Name: CECCDSLS       System ID: ASG1        Submit: 07-Feb-2024 01:09:50 PM
+ Job JESID: JOB00961       MVS level: SP7.2.5     Start:  07-Feb-2024 01:09:50 PM
+ Job Class: A              Sch. Env:              End:    07-Feb-2024 01:09:50 PM
+ CPU (TCB): 00:00:00.00    Srv Class: BATCH       Storage below 16M:         204k
+ CPU (SRB): 00:00:00.00                           Storage above 16M:         172k
+ Trans Act: 00:00:00.21                           Service Units:              357
+ Tape Mnts: 0                                     Total EXCPs:                232
+
+ ---------------Paging---------------        ---------------Paging---------------
+ VIO In:                            0        VIO Out:                           0
+ Pages In:                          0        Pages Out:                         0
+ Common (LPA+CSA):                  0        Hiperspace:                        0
+ VIO Reclaims:                      0        Pages Stolen:                      0
+
+ RACF User: IBM019                           Programmer: CLASSIC JOB
+ Acct Info: ACCOUNT
+
+ ASG122I ------------------------------------------------------------------------
+ IEF375I  JOB/CECCDSLS/START 2024038.1309
+ IEF033I  JOB/CECCDSLS/STOP  2024038.1309
+         CPU:     0 HR  00 MIN  00.00 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1ADMINISTRATIVE DATA UTILITY:  INPUT                        DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   1
++____________________________________________________________________________________________________________________________________
+
+ LINE #     CONTROL CARDS
+
+      1       DATA TYPE(LOGR) REPORT(NO)
+      2       DELETE LOGSTREAM NAME(CDCSRC.INST1.EVENTS)
+1ADMINISTRATIVE DATA UTILITY:  MESSAGES                     DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   2
++____________________________________________________________________________________________________________________________________
+
+
+
+ IXG005I LOGR POLICY PROCESSING LINE# 2
+ IXG004I LOGR POLICY PROCESSING ENDED WITHOUT ERROR
+1ADMINISTRATIVE DATA UTILITY:  INPUT                        DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   1
++____________________________________________________________________________________________________________________________________
+
+ LINE #     CONTROL CARDS
+
+      1       DATA TYPE(LOGR) REPORT(NO)
+      2       DEFINE LOGSTREAM NAME(CDCSRC.INST1.EVENTS)
+      3              DASDONLY(YES)
+      4              MAXBUFSIZE(4096)
+      5              LS_SIZE(1024)
+      6              STG_SIZE(512)
+      7              RETPD(14) AUTODELETE(YES)
+1ADMINISTRATIVE DATA UTILITY:  MESSAGES                     DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   2
++____________________________________________________________________________________________________________________________________
+
+
+
+ IXG005I LOGR POLICY PROCESSING LINE# 2
+ IXG004I LOGR POLICY PROCESSING ENDED WITHOUT ERROR
+1ADMINISTRATIVE DATA UTILITY:  INPUT                        DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   1
++____________________________________________________________________________________________________________________________________
+
+ LINE #     CONTROL CARDS
+
+      1        DATA TYPE(LOGR) REPORT(NO)
+      2        DELETE LOGSTREAM NAME(CDCSRC.INST1.DIAGLOG)
+1ADMINISTRATIVE DATA UTILITY:  MESSAGES                     DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   2
++____________________________________________________________________________________________________________________________________
+
+
+
+ IXG005I LOGR POLICY PROCESSING LINE# 2
+ IXG004I LOGR POLICY PROCESSING ENDED WITHOUT ERROR
+1ADMINISTRATIVE DATA UTILITY:  INPUT                        DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   1
++____________________________________________________________________________________________________________________________________
+
+ LINE #     CONTROL CARDS
+
+      1       DATA TYPE(LOGR) REPORT(NO)
+      2       DEFINE LOGSTREAM NAME(CDCSRC.INST1.DIAGLOG)
+      3              DASDONLY(YES)
+      4              LS_SIZE(1024)
+      5              STG_SIZE(512)
+      6              RETPD(7) AUTODELETE(YES)
+1ADMINISTRATIVE DATA UTILITY:  MESSAGES                     DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   2
++____________________________________________________________________________________________________________________________________
+
+
+
+ IXG005I LOGR POLICY PROCESSING LINE# 2
+ IXG004I LOGR POLICY PROCESSING ENDED WITHOUT ERROR
+1ADMINISTRATIVE DATA UTILITY:  INPUT                        DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   1
++____________________________________________________________________________________________________________________________________
+
+ LINE #     CONTROL CARDS
+
+      1       DATA TYPE(LOGR) REPORT(NO)
+      2       DELETE LOGSTREAM NAME(CDCSRC.IVP.REPLLOG)
+1ADMINISTRATIVE DATA UTILITY:  MESSAGES                     DATA TYPE = LOGR              02/07/2024 13:09:50                PAGE   2
++____________________________________________________________________________________________________________________________________
+
+
+
+ IXG005I LOGR POLICY PROCESSING LINE# 2
+ IXG004I LOGR POLICY PROCESSING ENDED WITHOUT ERROR

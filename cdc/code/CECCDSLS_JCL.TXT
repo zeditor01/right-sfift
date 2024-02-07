@@ -1,0 +1,131 @@
+//CECCDSLS JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,
+//     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+//*CECCDSLS TAILOR JOB CARD TO MEET SITE STANDARDS
+//********************************************************************
+//*                                                                  *
+//* LICENSED MATERIALS - PROPERTY OF IBM                             *
+//* 5655-IM1                                                         *
+//* 5655-IM4                                                         *
+//* 5655-IM5                                                         *
+//* 5655-Y18                                                         *
+//*                                                                  *
+//* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+//* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+//* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+//* CONTRACT WITH IBM CORP.                                          *
+//* DISCLAIMER OF WARRANTIES:                                        *
+//*                                                                  *
+//* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+//* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+//* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+//* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+//*                                                                  *
+//* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+//* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+//* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+//* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+//* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+//* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+//* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+//* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+//* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+//* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+//* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+//* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+//* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+//* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*   CECCDSLS - SAMPLE JCL TO DEFINE MVS SYSTEM LOGGER LOG STREAMS  *
+//*              FOR USE BY THE CDC SERVER LOGGER SERVICE            *
+//*                                                                  *
+//*   -  PROVIDE A JOB CARD THAT IS VALID FOR YOUR SITE              *
+//*   -  PROVIDE A VALID EVENT LOGTSTREAM NAME                       *
+//*   -  PROVIDE A VALID STORAGE CLASS (STG_DATACLAS) VALUE          *
+//*        FOR THE EVENT LOG STREAM                                  *
+//*   -  PROVIDE A VALID RETENTION PERIOD (RETPD) VALUE              *
+//*        FOR THE EVENT LOG STREAM                                  *
+//*   -  PROVIDE A VALID DIAGNOSTIC LOG LOGTSTREAM NAME              *
+//*   -  PROVIDE A VALID STORAGE CLASS (STG_DATACLAS) VALUE          *
+//*        FOR THE DIAGNOSTIC LOG LOGSTREAM                          *
+//*   -  PROVIDE A VALID RETENTION PERIOD (RETPD) VALUE              *
+//*        FOR THE DIAGNOSTIC LOG LOGSTREAM                          *
+//*                                                                  *
+//********************************************************************
+//********************************************************************
+//* UNCOMMENT THE DELETE LOG STREAM STEP TO DELETE THE LOG WHEN      *
+//* THE EVENT LOG STREAM NEEDS TO BE DELETED AND RECREATED           *
+//********************************************************************
+//DELETEVL  EXEC  PGM=IXCMIAPU
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD *
+   DATA TYPE(LOGR) REPORT(NO)
+   DELETE LOGSTREAM NAME(CDCSRC.INST1.EVENTS)
+/*
+//*********************************************
+//* ALLOCATE THE LOG STREAM FOR THE EVENT LOG *
+//*********************************************
+//ALLOCEV    EXEC  PGM=IXCMIAPU
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD *
+   DATA TYPE(LOGR) REPORT(NO)
+   DEFINE LOGSTREAM NAME(CDCSRC.INST1.EVENTS)
+          DASDONLY(YES)
+          MAXBUFSIZE(4096)
+          LS_SIZE(1024)
+          STG_SIZE(512)
+          RETPD(14) AUTODELETE(YES)
+/*
+//********************************************************************
+//* UNCOMMENT THE DELETE LOG STREAM STEP TO DELETE THE LOG WHEN      *
+//* THE DIAGNOSTIC LOG STREAM NEEDS TO BE DELETED AND RECREATED      *
+//********************************************************************
+//DELETEDG  EXEC  PGM=IXCMIAPU
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD *
+    DATA TYPE(LOGR) REPORT(NO)
+    DELETE LOGSTREAM NAME(CDCSRC.INST1.DIAGLOG)
+/*
+//********************************************************************
+//* ALLOCATE THE LOG STREAM FOR THE DIAGNOSTIC LOG                   *
+//********************************************************************
+//ALLOCDG    EXEC  PGM=IXCMIAPU
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD *
+   DATA TYPE(LOGR) REPORT(NO)
+   DEFINE LOGSTREAM NAME(CDCSRC.INST1.DIAGLOG)
+          DASDONLY(YES)
+          LS_SIZE(1024)
+          STG_SIZE(512)
+          RETPD(7) AUTODELETE(YES)
+/*
+//********************************************************************
+//* UNCOMMENT THE DELETE LOG STREAM STEP TO DELETE THE LOG WHEN      *
+//* THE REPLICATION LOG STREAM NEEDS TO BE DELETED AND RECREATED     *
+//********************************************************************
+//DELETEDG  EXEC  PGM=IXCMIAPU
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD *
+   DATA TYPE(LOGR) REPORT(NO)
+   DELETE LOGSTREAM NAME(CDCSRC.IVP.REPLLOG)
+//
+//********************************************************************
+//* ALLOCATE THE LOG STREAM FOR THE IVP REPLICATION LOG STREAM       *
+//********************************************************************
+//ALLOCDG    EXEC  PGM=IXCMIAPU
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//SYSIN    DD *
+   DATA TYPE(LOGR) REPORT(NO)
+   DEFINE LOGSTREAM NAME(CDCSRC.IVP.REPLLOG)
+          DASDONLY(YES)
+          LS_SIZE(1024)
+          STG_SIZE(512)
+          RETPD(1) AUTODELETE(YES)
+/*

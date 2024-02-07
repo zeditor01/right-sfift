@@ -1,0 +1,157 @@
+//CECCDSRC JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,
+//    MSGLEVEL=(1,1),NOTIFY=&SYSUID
+//*CECCDSRC TAILOR JOB CARD TO MEET SITE STANDARDS OR REMOVE FOR AN STC
+//********************************************************************
+//*                                                                  *
+//* LICENSED MATERIALS - PROPERTY OF IBM                             *
+//* 5655-IM1                                                         *
+//* 5655-IM4                                                         *
+//* 5655-IM5                                                         *
+//* 5655-Y18                                                         *
+//*                                                                  *
+//* (C) COPYRIGHT IBM CORP.  2003, 2017.  ALL RIGHTS RESERVED.       *
+//* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+//* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+//* CONTRACT WITH IBM CORP.                                          *
+//* DISCLAIMER OF WARRANTIES:                                        *
+//*                                                                  *
+//* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+//* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+//* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+//* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+//*                                                                  *
+//* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+//* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+//* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+//* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+//* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+//* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+//* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+//* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+//* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+//* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+//* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+//* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+//* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+//* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*   NAME:  CECCDSRC                                                *
+//*   SAMPLE SOURCE SERVER JCL FOR CLASSIC CDC                       *
+//*                                                                  *
+//*   - IF THIS DATA SERVER IS TO BE RUN AS A BATCH JOB:             *
+//*      PROVIDE A JOB CARD THAT IS VALID FOR YOUR SITE.             *
+//*   - CHANGE CAC PARM TO INSTALLED HIGH LEVEL QUALIFIER            *
+//*   - CHANGE CPHLQ TO THE CAPTURE SERVER SPECIFIC HLQ              *
+//*   - CHANGE DISKU PARM TO A VALID DASD UNIT TYPE FOR YOUR SITE    *
+//*       USED FOR TEMPORARY FILE ALLOCATION                         *
+//*   -  The MODE PARAMETER CAN BE USED TO DISABLE CRITICAL          *
+//*      SERVICES PROCESSING UPON START UP. BY DEFAULT CRITICAL      *
+//*      SERVICES PROCESSING IN ENABLED                              *
+//*   - SEE NOTE REGARDING REGION PARM                               *
+//*                                                                  *
+//********************************************************************
+//CDCPROC  PROC CAC='CDV113.CAC',
+//*                                     INSTALLED HLQ
+//             CPHLQ='CDV113.CAC.INST1.CDCSRC',
+//*                                     CAPTURE SVR SPECIFIC HLQ
+//             DISKU=SYSALLDA,
+//*                                     DASD UNIT
+//             SOUT='*',
+//*                                     SYSOUT CLASS
+//             MODE=0,
+//*                                     CRITICAL SERVICES SETTING
+//             RGN=768M
+//*                                     REGION SIZE
+//********************************************************************
+//*   THE REGION SIZE MUST BE COORDINATED WITH THE MESSAGE POOL SIZE *
+//*   PARAMETER.  THE RECOMMENDATION IS TO SET THE REGION SIZE AT    *
+//*   LEAST 4MB GREATER THAN THE MESSAGE POOL SIZE.                  *
+//********************************************************************
+//*
+//DUMMY1   SET  USEP1=&DISKU
+//*
+//CACPROC EXEC PGM=CACCNTL,TIME=1440,REGION=&RGN,
+//  PARM='MODE=&MODE',MEMLIMIT=NOLIMIT
+//*
+//STEPLIB  DD DISP=SHR,DSN=&CAC..SCACLOAD
+//*
+//* CONFIGURATION FILES
+//CACCFGD  DD DISP=SHR,DSN=&CPHLQ..CACCFGD
+//CACCFGX  DD DISP=SHR,DSN=&CPHLQ..CACCFGX
+//*
+//* MESSAGE CATALOG
+//MSGCAT   DD DISP=SHR,DSN=&CAC..SCACMSGS
+//*
+//* VSAM CONTROL TABLES
+//CECSUB   DD DISP=SHR,DSN=&CPHLQ..SUB
+//CECRM    DD DISP=SHR,DSN=&CPHLQ..RM
+//*
+//* META DATA CATALOGS
+//CACCAT   DD  PATHDISP=(KEEP,KEEP),
+//             PATH='/opt/IBM/isclassic113/catalog/caccat'
+//CACINDX  DD  PATHDISP=(KEEP,KEEP),
+//             PATH='/opt/IBM/isclassic113/catalog/cacindx'
+//*
+//*
+//SYSOUT   DD SYSOUT=&SOUT
+//SYSTERM  DD SYSOUT=&SOUT
+//SYSPRINT DD SYSOUT=&SOUT
+//SYSMDUMP DD DSN=&CPHLQ..SYSMDUMP,
+//            DISP=SHR,FREE=CLOSE
+//********************************************************************
+//*   PRINT LOG SUMMARY REPORT                                       *
+//*                                                                  *
+//*   CHANGE SYSIN DD TO POINT AT FILTERING MEMBER IF DESIRED        *
+//*   EXAMPLE IN SCACSAMP MEMBER CACLGFLT                            *
+//********************************************************************
+//LOGPRINT EXEC PGM=CACPRTLG,
+//         PARM='SUMMARY=N STREAM=CDCSRC.INST1.DIAGLOG',
+//         COND=EVEN
+//STEPLIB  DD DISP=SHR,DSN=&CAC..SCACLOAD
+//*
+//* CONFIGURATION FILES
+//CACCFGD  DD DISP=SHR,DSN=&CPHLQ..CACCFGD
+//CACCFGX  DD DISP=SHR,DSN=&CPHLQ..CACCFGX
+//*
+//* MESSAGE CATALOG
+//MSGCAT   DD DISP=SHR,DSN=&CAC..SCACMSGS
+//*
+//SYSOUT   DD SYSOUT=&SOUT
+//SYSOUT   DD SYSOUT=&SOUT
+//SYSTERM  DD SYSOUT=&SOUT
+//SYSPRINT DD SYSOUT=&SOUT
+//SYSIN    DD DUMMY
+//*
+//********************************************************************
+//*   PRINT LOG DETAIL REPORT                                        *
+//*                                                                  *
+//*   CHANGE SYSIN DD TO POINT AT FILTERING MEMBER IF DESIRED        *
+//*   EXAMPLE IN SCACSAMP MEMBER CACLGFLT                            *
+//********************************************************************
+//LOGPRINT EXEC PGM=CACPRTLG,
+//         PARM='SUMMARY=N STREAM=CDCSRC.INST1.DIAGLOG',
+//         COND=EVEN
+//STEPLIB  DD DISP=SHR,DSN=&CAC..SCACLOAD
+//*
+//* CONFIGURATION FILES
+//CACCFGD  DD DISP=SHR,DSN=&CPHLQ..CACCFGD
+//CACCFGX  DD DISP=SHR,DSN=&CPHLQ..CACCFGX
+//*
+//* MESSAGE CATALOG
+//MSGCAT   DD DISP=SHR,DSN=&CAC..SCACMSGS
+//*
+//SYSOUT   DD SYSOUT=&SOUT
+//SYSTERM  DD SYSOUT=&SOUT
+//SYSPRINT DD SYSOUT=&SOUT
+//SYSIN    DD DUMMY
+//*
+//         PEND
+//*
+//CDCEXEC  EXEC CDCPROC
+//CACPROC.CEEOPTS  DD *
+TERMTHDACT(UAIMM),TRAP(ON,NOSPIE),
+ALL31(ON),STACK(,,ANYWHERE),THREADSTACK(,,,ANYWHERE),
+ANYHEAP(,,ANYWHERE),HEAP(,,ANYWHERE),THREADHEAP(,,ANYWHERE)
+/*

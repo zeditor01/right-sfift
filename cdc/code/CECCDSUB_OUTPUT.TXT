@@ -1,0 +1,225 @@
+1                         J E S 2  J O B  L O G  --  S Y S T E M  A S G 1  --  N O D E  N 1
+0
+ 12.57.03 JOB00958 ---- WEDNESDAY, 07 FEB 2024 ----
+ 12.57.03 JOB00958  IRR010I  USERID IBM019   IS ASSIGNED TO THIS JOB.
+ 12.57.03 JOB00958  ICH70001I IBM019   LAST ACCESS AT 12:56:36 ON WEDNESDAY, FEBRUARY 7, 2024
+ 12.57.03 JOB00958  $HASP373 CECCDSUB STARTED - INIT 1    - CLASS A        - SYS ASG1
+ 12.57.03 JOB00958  IEF403I CECCDSUB - STARTED - TIME=12.57.03
+ 12.57.03 JOB00958  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  100
+    100               CDV113.CAC.INST1.CDCSRC.SUB CL(DATASET ) VOL(*BLANK)
+    100               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.57.03 JOB00958  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  101
+    101               CDV113.CAC.INST1.CDCSRC.SUB CL(DATASET ) VOL(SGS016)
+    101               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.57.03 JOB00958  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  102
+    102               CDV113.CAC.INST1.CDCSRC.RM CL(DATASET ) VOL(*BLANK)
+    102               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.57.03 JOB00958  ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )  103
+    103               CDV113.CAC.INST1.CDCSRC.RM CL(DATASET ) VOL(SGS016)
+    103               DEFINE - WARNING: RESOURCE NOT PROTECTED
+ 12.57.03 JOB00958  -                                              --TIMINGS (MINS.)--            -----PAGING COUNTS----
+ 12.57.03 JOB00958  -STEPNAME PROCSTEP    RC   EXCP   CONN    TCB    SRB  CLOCK   SERV  WORKLOAD  PAGE  SWAP   VIO SWAPS
+ 12.57.03 JOB00958  -ALLOC001             00     44      8    .00    .00     .0    385  BATCH        0     0     0     0
+ 12.57.03 JOB00958  IEF404I CECCDSUB - ENDED - TIME=12.57.03
+ 12.57.03 JOB00958  -CECCDSUB ENDED.  NAME-CLASSIC JOB          TOTAL TCB CPU TIME=    .00 TOTAL ELAPSED TIME=    .0
+ 12.57.03 JOB00958  ASG107I JOB ENDED:  CECCDSUB CLASSIC JOB
+ 12.57.03 JOB00958  $HASP395 CECCDSUB ENDED - RC=0000
+0------ JES2 JOB STATISTICS ------
+-  07 FEB 2024 JOB EXECUTION DATE
+-           92 CARDS READ
+-          229 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           17 SYSOUT SPOOL KBYTES
+-         0.00 MINUTES EXECUTION TIME
+         1 //CECCDSUB  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,             JOB00958
+           //     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+           //*CECCDSUB TAILOR JOB CARD TO MEET SITE STANDARDS
+           //********************************************************************
+           //*                                                                  *
+           //* LICENSED MATERIALS - PROPERTY OF IBM                             *
+           //* 5655-IM1                                                         *
+           //* 5655-IM4                                                         *
+           //* 5655-IM5                                                         *
+           //* 5655-Y18                                                         *
+           //*                                                                  *
+           //* (C) COPYRIGHT IBM CORP.  2003, 2016.  ALL RIGHTS RESERVED.       *
+           //* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+           //* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+           //* CONTRACT WITH IBM CORP.                                          *
+           //* DISCLAIMER OF WARRANTIES:                                        *
+           //*                                                                  *
+           //* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+           //* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+           //* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+           //* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+           //*                                                                  *
+           //* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+           //* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+           //* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+           //* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+           //* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+           //* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+           //* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+           //* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+           //* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+           //* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+           //* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+           //* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+           //* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+           //* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+           //*                                                                  *
+           //********************************************************************
+           //*                                                                  *
+           //*   CECCDSUB - SAMPLE JCL TO ALLOCATE THE CDC SOURCE               *
+           //*              SERVER SUBSCRIPTION AND REPLICATION MAPPING DATA    *
+           //*              SETS                                                *
+           //*                                                                  *
+           //*   THIS SAMPLE CHECKS THE ECVTPSEQ VALUE AGAINST VALUE 01020100   *
+           //* TO DETERMINE WHETHER SYMBOLIC REPLACEMENT FOR IN-STREAM DATA     *
+           //* IS POSSIBLE.  JCL IS GENERATED DIFFERENTLY FOR Z/OS V2.1 AND     *
+           //* LATER.  FOR EARLIER SYSTEMS, THE CECSUB AND CECRM CLUSTER NAMES  *
+           //* WILL CONTAIN HARD-CODED LOW-LEVEL QUALIFIERS OF "SUB" AND "RM"   *
+           //* THAT WILL WORK WITH THE SHIPPED PARAMETER FILES.                 *
+           //*                                                                  *
+           //********************************************************************
+           //*
+           IEFC653I SUBSTITUTION JCL - (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,MSGLEVEL=(1,1),NOTIFY=IBM019
+         2 // EXPORT SYMLIST=(CPHLQ)
+         3 // SET CPHLQ='CDV113.CAC.INST1.CDCSRC'
+         4 //CPHLQ    EXPORT EXPSET=CDV113.CAC.INST1.CDCSRC     GENERATED STATEMENT
+           //*
+         5 //ALLOC001 EXEC PGM=IDCAMS
+         6 //SYSPRINT DD   SYSOUT=*
+         7 //SYSIN    DD   *,SYMBOLS=JCLONLY
+ ICH70001I IBM019   LAST ACCESS AT 12:56:36 ON WEDNESDAY, FEBRUARY 7, 2024
+ IEF043I Actions taken by SMFLIMxx parmlib policy for CECCDSUB ALLOC001
+         Step region below changed to NOLIMIT by policy - SMFLIM00 0001
+         Step region above changed to   640M  by policy - SMFLIM00 0001
+         Step system reserved below set to   512K by policy - SMFLIM00 0001
+         Step system reserved above set to    80M by policy - SMFLIM00 0001
+         Step MEMLIMIT set to    10T  by policy - SMFLIM00 0001
+ IEFA111I CECCDSUB IS USING THE FOLLOWING JOB RELATED SETTINGS:
+          SWA=BELOW,TIOT SIZE=32K,DSENQSHR=DISALLOW,GDGBIAS=JOB
+ IEF236I ALLOC. FOR CECCDSUB ALLOC001
+ IEF237I JES2 ALLOCATED TO SYSPRINT
+ IEF237I JES2 ALLOCATED TO SYSIN
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.SUB CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.SUB CL(DATASET ) VOL(SGS016)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.RM CL(DATASET ) VOL(*BLANK)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ ICH408I USER(IBM019  ) GROUP(MVSMNT  ) NAME(NEALE ARMSTRONG     )
+   CDV113.CAC.INST1.CDCSRC.RM CL(DATASET ) VOL(SGS016)
+   DEFINE - WARNING: RESOURCE NOT PROTECTED
+ IEF142I CECCDSUB ALLOC001 - STEP WAS EXECUTED - COND CODE 0000
+ IEF285I   IBM019.CECCDSUB.JOB00958.D0000102.?          SYSOUT
+ IEF285I   IBM019.CECCDSUB.JOB00958.D0000101.?          SYSIN
+ ASG120I ------------------------------------------------------------------------
+                        S t e p   E n d   S t a t i s t i c s
+
+ Step Name: ALLOC001       Cond Code: 0000         Start: 07-Feb-2024 12:57:03 AM
+ Step  Num: 1              PGM  Name: IDCAMS       End:   07-Feb-2024 12:57:03 AM
+ CPU (TCB): 00:00:00.01                            Storage below 16M:        384k
+ CPU (SRB): 00:00:00.00                            Storage above 16M:        336k
+ Trans Act: 00:00:00.05                            Service Units:             385
+ Tape Mnts: 0                                      Total EXCPs:                44
+
+ No device entries were found
+
+
+ ASG121I ------------------------------------------------------------------------
+ IEF373I STEP/ALLOC001/START 2024038.1257
+ IEF032I STEP/ALLOC001/STOP  2024038.1257
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   384K  SYS:   272K  EXT:      336K  SYS:    12056K
+         ATB- REAL:                  1264K  SLOTS:                     0K
+              VIRT- ALLOC:      17M SHRD:       0M
+ ASG120I ------------------------------------------------------------------------
+                         J o b   E n d   S t a t i s t i c s
+
+ Job  Name: CECCDSUB       System ID: ASG1        Submit: 07-Feb-2024 12:57:03 AM
+ Job JESID: JOB00958       MVS level: SP7.2.5     Start:  07-Feb-2024 12:57:03 AM
+ Job Class: A              Sch. Env:              End:    07-Feb-2024 12:57:03 AM
+ CPU (TCB): 00:00:00.01    Srv Class: BATCH       Storage below 16M:         384k
+ CPU (SRB): 00:00:00.00                           Storage above 16M:         336k
+ Trans Act: 00:00:00.05                           Service Units:              385
+ Tape Mnts: 0                                     Total EXCPs:                 44
+
+ ---------------Paging---------------        ---------------Paging---------------
+ VIO In:                            0        VIO Out:                           0
+ Pages In:                          0        Pages Out:                         0
+ Common (LPA+CSA):                  0        Hiperspace:                        0
+ VIO Reclaims:                      0        Pages Stolen:                      0
+
+ RACF User: IBM019                           Programmer: CLASSIC JOB
+ Acct Info: ACCOUNT
+
+ ASG122I ------------------------------------------------------------------------
+ IEF375I  JOB/CECCDSUB/START 2024038.1257
+ IEF033I  JOB/CECCDSUB/STOP  2024038.1257
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1IDCAMS  SYSTEM SERVICES                                           TIME: 12:57:03        02/07/24     PAGE      1
+0
+  DELETE CDV113.CAC.INST1.CDCSRC.SUB PURGE
+0IDC3012I ENTRY CDV113.CAC.INST1.CDCSRC.SUB NOT FOUND
+ IDC3009I ** VSAM CATALOG RETURN CODE IS 8 - REASON CODE IS IGG0CLEG-42
+ IDC0551I ** ENTRY CDV113.CAC.INST1.CDCSRC.SUB NOT DELETED
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 8
+0
+  IF LASTCC=8 THEN SET MAXCC=0
+
+  /**/
+  DELETE CDV113.CAC.INST1.CDCSRC.RM PURGE
+0IDC3012I ENTRY CDV113.CAC.INST1.CDCSRC.RM NOT FOUND
+ IDC3009I ** VSAM CATALOG RETURN CODE IS 8 - REASON CODE IS IGG0CLEG-42
+ IDC0551I ** ENTRY CDV113.CAC.INST1.CDCSRC.RM NOT DELETED
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 8
+0
+  IF LASTCC=8 THEN SET MAXCC=0
+
+  /**/
+  DEFINE CLUSTER                  -
+     (NAME(CDV113.CAC.INST1.CDCSRC.SUB) -
+      RECSZ(1024 2048)            -
+      KEY(80 12)                  -
+      CYL(2 1)                    -
+      SPEED REUSE)                -
+   DATA                           -
+     (NAME(CDV113.CAC.INST1.CDCSRC.SUB.DATA) -
+      CISZ(8192)                  -
+      FSPC(20 5))                 -
+   INDEX                          -
+     (NAME(CDV113.CAC.INST1.CDCSRC.SUB.INDEX) -
+      CISZ(6144))
+0IDC0508I DATA ALLOCATION STATUS FOR VOLUME SGS009 IS 0
+0IDC0509I INDEX ALLOCATION STATUS FOR VOLUME SGS009 IS 0
+ IDC0181I STORAGECLASS USED IS SCSTD
+ IDC0181I MANAGEMENTCLASS USED IS MCSTNDRD
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 0
+0
+  /**/
+  DEFINE CLUSTER                  -
+     (NAME(CDV113.CAC.INST1.CDCSRC.RM) -
+      RECSZ(512 2432)             -
+      KEY(20 12)                  -
+1IDCAMS  SYSTEM SERVICES                                           TIME: 12:57:03        02/07/24     PAGE      2
+0     CYL(15 5)                   -
+      SPEED REUSE)                -
+    DATA                          -
+      (NAME(CDV113.CAC.INST1.CDCSRC.RM.DATA) -
+       CISZ(8192)                 -
+       FSPC(20 5))                -
+    INDEX                         -
+      (NAME(CDV113.CAC.INST1.CDCSRC.RM.INDEX) -
+       CISZ(2048))
+0IDC0508I DATA ALLOCATION STATUS FOR VOLUME SGS008 IS 0
+0IDC0509I INDEX ALLOCATION STATUS FOR VOLUME SGS008 IS 0
+ IDC0181I STORAGECLASS USED IS SCSTD
+ IDC0181I MANAGEMENTCLASS USED IS MCSTNDRD
+0IDC0001I FUNCTION COMPLETED, HIGHEST CONDITION CODE WAS 0
+0
+0IDC0002I IDCAMS PROCESSING COMPLETE. MAXIMUM CONDITION CODE WAS 0

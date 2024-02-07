@@ -1,0 +1,114 @@
+//CECCDCAT  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,
+//     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+//*CECCDCAT TAILOR JOB CARD TO MEET SITE STANDARDS
+//********************************************************************
+//*                                                                  *
+//* LICENSED MATERIALS - PROPERTY OF IBM                             *
+//* 5655-IM1                                                         *
+//* 5655-IM4                                                         *
+//* 5655-IM5                                                         *
+//* 5655-Y18                                                         *
+//*                                                                  *
+//* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+//* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+//* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+//* CONTRACT WITH IBM CORP.                                          *
+//* DISCLAIMER OF WARRANTIES:                                        *
+//*                                                                  *
+//* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+//* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+//* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+//* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+//*                                                                  *
+//* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+//* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+//* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+//* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+//* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+//* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+//* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+//* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+//* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+//* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+//* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+//* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+//* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+//* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+//*                                                                  *
+//********************************************************************
+//*
+//*   CECCDCAT - SAMPLE JCL TO ALLOCATE AND INITIALIZE THE
+//*              METADATA CATALOG FOR A CDC SOURCE SERVER
+//*
+//*   - PROVIDE A JOB CARD THAT IS VALID FOR YOUR SITE
+//*   - CHANGE CPHLQ TO THE CAPTURE SERVER SPECIFIC HLQ
+//*   - CHANGE CAC PARM TO INSTALLED HIGH LEVEL QUALIFIER
+//*   - CHANGE DISKU PARM TO A VALID DASD UNIT TYPE FOR YOUR SITE
+//*   - CHANGE VOLSER PARM TO IDENTIFY THE VOLUME WHERE YOU WANT
+//*      THE CONFIGURATION FILES LOCATED
+//*   - CHANGE STGCL PARM TO IDENTIFY THE STORAGE CLASS FOR THE
+//*         THE CONFIGURATION FILES
+//*   - CHANGE MGTCL PARM TO IDENTIFY THE MANAGEMENT CLASS FOR THE
+//*         THE CONFIGURATION FILES
+//*
+//********************************************************************
+//DISKU     SET DISKU=SYSALLDA
+//*                                     DASD UNIT
+//CAC       SET CAC=CDV113.CAC
+//*                                     INSTALLED HLQ
+//CPHLQ     SET CPHLQ='CDV113.CAC.INST1.CDCSRC'
+//*                                     CAPTURE SVR SPECIFIC HLQ
+//USRHLQ    SET USRHLQ=CDV113.CAC.INST1
+//*                                     USER HLQ
+//DISKVOL   SET DISKVOL=
+//*                                     DASD VOLSER
+//STGCL     SET STGCL=
+//*                                     STORAGE CLASS
+//MGTCL     SET MGTCL=
+//*                                     MANAGEMENT CLASS
+//RGN       SET RGN=144M
+//*                                     REGION SIZE
+//SOUT      SET SOUT='*'
+//*                                     SYSOUT CLASS
+//*
+//*
+//* ------------------------------------------------------------------
+//* Reset the USS file system resident catalog files to an
+//* empty state.
+//* ------------------------------------------------------------------
+//*
+//RESETCTD  EXEC  PGM=IEBGENER,REGION=0M
+//SYSPRINT  DD SYSOUT=&SOUT
+//SYSIN     DD DUMMY
+//SYSUT1    DD DUMMY,
+//             DCB=(RECFM=FBS,LRECL=1,BLKSIZE=5120)
+//SYSUT2    DD PATHDISP=(KEEP,KEEP),
+//             PATHMODE=(SIRWXU,SIRWXG),
+//             PATHOPTS=(ORDWR,OCREAT,OTRUNC),
+//             PATH='/opt/IBM/isclassic113/catalog/caccat'
+//*
+//RESETCTX  EXEC  PGM=IEBGENER,REGION=0M
+//SYSPRINT  DD SYSOUT=&SOUT
+//SYSIN     DD DUMMY
+//SYSUT1    DD DUMMY,
+//             DCB=(RECFM=FBS,LRECL=1,BLKSIZE=5120)
+//SYSUT2    DD PATHDISP=(KEEP,KEEP),
+//             PATHMODE=(SIRWXU,SIRWXG),
+//             PATHOPTS=(ORDWR,OCREAT,OTRUNC),
+//             PATH='/opt/IBM/isclassic113/catalog/cacindx'
+//*
+//* -----------------------------------------------------------------
+//*
+//* Initialize the catalog files
+//*
+//* -----------------------------------------------------------------
+//*
+//INIT     EXEC PGM=CACCATUT,PARM='INIT',REGION=&RGN
+//STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+//SYSOUT   DD  SYSOUT=&SOUT
+//SYSPRINT DD  SYSOUT=&SOUT
+//MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+//CACCAT   DD  PATHDISP=(KEEP,KEEP),
+//             PATH='/opt/IBM/isclassic113/catalog/caccat'
+//CACINDX  DD  PATHDISP=(KEEP,KEEP),
+//             PATH='/opt/IBM/isclassic113/catalog/cacindx'

@@ -1,0 +1,106 @@
+//CECCDVCD  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,
+//     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+//********************************************************************
+//*                                                                  *
+//* LICENSED MATERIALS - PROPERTY OF IBM                             *
+//* 5655-IM1                                                         *
+//* 5655-IM4                                                         *
+//* 5655-IM5                                                         *
+//* 5655-Y18                                                         *
+//*                                                                  *
+//* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+//* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+//* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+//* CONTRACT WITH IBM CORP.                                          *
+//* DISCLAIMER OF WARRANTIES:                                        *
+//*                                                                  *
+//* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+//* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+//* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+//* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+//*                                                                  *
+//* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+//* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+//* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+//* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+//* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+//* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+//* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+//* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+//* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+//* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+//* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+//* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+//* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+//* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*   CECCDVCD                                                       *
+//*                                                                  *
+//*   CLASSIC CDC VALIDATION PROCESS                                 *
+//*                                                                  *
+//*      THIS JOB EXECUTES THE FOLLOWING STEPS.  A COMPLETION CODE   *
+//*      OF 4 OR LESS FOR EACH STEP INDICATES THAT THE SERVER IS     *
+//*      INSTALLED AND FUNCTIONING PROPERLY.                         *
+//*                                                                  *
+//*      *  RUNS THE METADATA UTILITY TO GRANT SYSADM TO THE USER    *
+//*          SPECIFIED FOR THE KEYWORD CDCADMUS IN THE CACCUSPC      *
+//*          FILE                                                    *
+//*      *  CREATE AND POPULATE SAMPLE VSAM DATASET                  *
+//*      *  RUNS THE METADATA UTILTIY TO CREATE THE SAMPLE           *
+//*          NATIVE VSAM TABLE                                       *
+//*      *  RUNS THE CACSAMP CLIENT TO ACCESS THE DATASERVER AND     *
+//*          DISPLAY THE CONTENTS OF THE SYSIBM.SYSTABLES            *
+//*          AND THE SAMPLE VSAM TABLE                               *
+//*                                                                  *
+//********************************************************************
+//CECCDVCD  PROC CAC='CDV113.CAC',
+//             USRHLQ='CDV113.CAC.INST1',
+//             SOUT='*'
+//*
+//***************************************
+//*    CREATE SAMPLE VSAM DATASET       *
+//***************************************
+//CACEMP1 EXEC PGM=IDCAMS
+//CACEDATA DD DISP=SHR,DSN=&CAC..SCACSAMP(CACEDATA)
+//SYSPRINT  DD SYSOUT=&SOUT
+//SYSIN    DD DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEVSAM)
+//*
+//***************************************
+//*    GRANT SYSADM                     *
+//***************************************
+//METAU1   EXEC PGM=CACMETA,REGION=4M
+//STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+//MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+//SYSOUT   DD  SYSOUT=&SOUT
+//SYSPRINT DD  SYSOUT=&SOUT
+//SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACMUCON)
+//         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CACGRSYS)
+//*
+//***************************************
+//*    CREATE SAMPLE TABLE              *
+//***************************************
+//METAU2   EXEC PGM=CACMETA,REGION=4M
+//STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+//MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+//SYSOUT   DD  SYSOUT=&SOUT
+//SYSPRINT DD  SYSOUT=&SOUT
+//SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACMUCON)
+//         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEMPVT)
+//*
+//***************************************
+//*    QUERY SAMPLE TABLES              *
+//***************************************
+//RUNCLNT EXEC PGM=CACSAMP
+//STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+//VHSCONF  DD  DISP=SHR,DSN=&USRHLQ..USERCONF(CACINIZ)
+//SYSIN    DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CACQRSYS)
+//         DD  DISP=SHR,DSN=&USRHLQ..USERSAMP(CECEMPVQ)
+//MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+//CACLOG   DD  DUMMY
+//SYSOUT   DD  SYSOUT=&SOUT
+//SYSPRINT DD  SYSOUT=&SOUT
+//SYSOUT   DD  SYSOUT=&SOUT
+//         PEND
+//RUNCAC   EXEC CECCDVCD

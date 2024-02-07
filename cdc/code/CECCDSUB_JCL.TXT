@@ -1,0 +1,92 @@
+//CECCDSUB  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,
+//     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+//*CECCDSUB TAILOR JOB CARD TO MEET SITE STANDARDS
+//********************************************************************
+//*                                                                  *
+//* LICENSED MATERIALS - PROPERTY OF IBM                             *
+//* 5655-IM1                                                         *
+//* 5655-IM4                                                         *
+//* 5655-IM5                                                         *
+//* 5655-Y18                                                         *
+//*                                                                  *
+//* (C) COPYRIGHT IBM CORP.  2003, 2016.  ALL RIGHTS RESERVED.       *
+//* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+//* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+//* CONTRACT WITH IBM CORP.                                          *
+//* DISCLAIMER OF WARRANTIES:                                        *
+//*                                                                  *
+//* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+//* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+//* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+//* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+//*                                                                  *
+//* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+//* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+//* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+//* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+//* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+//* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+//* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+//* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+//* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+//* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+//* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+//* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+//* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+//* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*   CECCDSUB - SAMPLE JCL TO ALLOCATE THE CDC SOURCE               *
+//*              SERVER SUBSCRIPTION AND REPLICATION MAPPING DATA    *
+//*              SETS                                                *
+//*                                                                  *
+//*   THIS SAMPLE CHECKS THE ECVTPSEQ VALUE AGAINST VALUE 01020100   *
+//* TO DETERMINE WHETHER SYMBOLIC REPLACEMENT FOR IN-STREAM DATA     *
+//* IS POSSIBLE.  JCL IS GENERATED DIFFERENTLY FOR Z/OS V2.1 AND     *
+//* LATER.  FOR EARLIER SYSTEMS, THE CECSUB AND CECRM CLUSTER NAMES  *
+//* WILL CONTAIN HARD-CODED LOW-LEVEL QUALIFIERS OF "SUB" AND "RM"   *
+//* THAT WILL WORK WITH THE SHIPPED PARAMETER FILES.                 *
+//*                                                                  *
+//********************************************************************
+//*
+// EXPORT SYMLIST=(CPHLQ)
+// SET CPHLQ='CDV113.CAC.INST1.CDCSRC'
+//*
+//ALLOC001 EXEC PGM=IDCAMS
+//SYSPRINT DD   SYSOUT=*
+//SYSIN    DD   *,SYMBOLS=JCLONLY
+ DELETE &CPHLQ..SUB PURGE
+ IF LASTCC=8 THEN SET MAXCC=0
+ /**/
+ DELETE &CPHLQ..RM PURGE
+ IF LASTCC=8 THEN SET MAXCC=0
+ /**/
+ DEFINE CLUSTER                  -
+    (NAME(&CPHLQ..SUB)        -
+     RECSZ(1024 2048)            -
+     KEY(80 12)                  -
+     CYL(2 1)                    -
+     SPEED REUSE)                -
+  DATA                           -
+    (NAME(&CPHLQ..SUB.DATA)   -
+     CISZ(8192)                  -
+     FSPC(20 5))                 -
+  INDEX                          -
+    (NAME(&CPHLQ..SUB.INDEX)  -
+     CISZ(6144))
+ /**/
+ DEFINE CLUSTER                  -
+    (NAME(&CPHLQ..RM)        -
+     RECSZ(512 2432)             -
+     KEY(20 12)                  -
+     CYL(15 5)                   -
+     SPEED REUSE)                -
+   DATA                          -
+     (NAME(&CPHLQ..RM.DATA)   -
+      CISZ(8192)                 -
+      FSPC(20 5))                -
+   INDEX                         -
+     (NAME(&CPHLQ..RM.INDEX)  -
+      CISZ(2048))
+/*

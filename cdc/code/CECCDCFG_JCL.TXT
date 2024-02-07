@@ -1,0 +1,159 @@
+//CECCDCFG  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,
+//     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+//*CECCDCFG TAILOR JOB CARD TO MEET SITE STANDARDS
+//********************************************************************
+//*                                                                  *
+//* LICENSED MATERIALS - PROPERTY OF IBM                             *
+//* 5655-IM1                                                         *
+//* 5655-IM4                                                         *
+//* 5655-IM5                                                         *
+//* 5655-Y18                                                         *
+//*                                                                  *
+//* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+//* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+//* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+//* CONTRACT WITH IBM CORP.                                          *
+//* DISCLAIMER OF WARRANTIES:                                        *
+//*                                                                  *
+//* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+//* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+//* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+//* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+//*                                                                  *
+//* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+//* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+//* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+//* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+//* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+//* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+//* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+//* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+//* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+//* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+//* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+//* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+//* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+//* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+//*                                                                  *
+//********************************************************************
+//*                                                                  *
+//*   CECCDCFG - - THIS CUSTOMIZATION JCL DOES THE FOLLOWING         *
+//*     1. ALLOCATES THE CONFIGURATION FILES AND IMPORTS THE         *
+//*          CDC SOURCE SERVER CONFIGURATION                         *
+//*     2. ALLOCATES A SYSMDUMP DATA SET TO BE USED BY THE           *
+//*          CDC SOURCE SERVER JCL                                   *
+//*                                                                  *
+//*     THE FOLLOWING CHANGES SHOULD BE MADE:                        *
+//*                                                                  *
+//*   - PROVIDE A JOB CARD THAT IS VALID FOR YOUR SITE               *
+//*   - CHANGE CPHLQ TO THE CAPTURE SERVER SPECIFIC HLQ              *
+//*   - CHANGE USRHLQ TO THE HLQ FOR THE USERSAMP/USERCONF DATASETS  *
+//*   - CHANGE CAC PARM TO INSTALLED HIGH LEVEL QUALIFIER            *
+//*   - CHANGE DISKU PARM TO A VALID DASD UNIT TYPE FOR YOUR SITE    *
+//*   - CHANGE STGCL PARM TO IDENTIFY THE STORAGE CLASS FOR THE      *
+//*         THE CONFIGURATION FILES                                  *
+//*   - CHANGE MGTCL PARM TO IDENTIFY THE MANAGEMENT CLASS FOR THE   *
+//*         THE CONFIGURATION FILES                                  *
+//*                                                                  *
+//********************************************************************
+//ALLOCFG   PROC CAC='CDV113.CAC',
+//*                                     INSTALLED HLQ
+//             CPHLQ='CDV113.CAC.INST1.CDCSRC',
+//*                                     CAPTURE SVR SPECIFIC HLQ
+//             USRHLQ='CDV113.CAC.INST1',
+//*                                     USER HLQ
+//             DISKU=SYSALLDA,
+//*                                     DASD UNIT
+//             STGCL=,
+//*                                     STORAGE CLASS
+//             MGTCL=,
+//*                                     MANAGEMENT CLASS
+//             SOUT='*',
+//*                                     SYSOUT CLASS
+//             RGN=4M
+//*                                     REGION SIZE
+//*
+//*************************************************
+//* DELETE CONFIGURATION FILES                    *
+//*************************************************
+//DELETED  EXEC PGM=IEFBR14
+//DELCFGD  DD  DSN=&CPHLQ..CACCFGD,
+//             UNIT=&DISKU,
+//             STORCLAS=&STGCL,
+//             MGMTCLAS=&MGTCL,
+//             RECFM=FBS,LRECL=64,BLKSIZE=27968,
+//             SPACE=(TRK,(20,10)),
+//             DISP=(MOD,DELETE,DELETE)
+//DELETEX  EXEC PGM=IEFBR14
+//DELCFGX  DD  DSN=&CPHLQ..CACCFGX,
+//             UNIT=&DISKU,
+//             STORCLAS=&STGCL,
+//             MGMTCLAS=&MGTCL,
+//             RECFM=FBS,LRECL=64,BLKSIZE=27968,
+//             SPACE=(TRK,(10,5)),
+//             DISP=(MOD,DELETE,DELETE)
+//*
+//*************************************************
+//* ALLOCATE CONFIGURATION FILES                  *
+//*************************************************
+//CFGALLOC     EXEC PGM=IEFBR14
+//CACCFGD      DD  DSN=&CPHLQ..CACCFGD,
+//             UNIT=&DISKU,
+//             STORCLAS=&STGCL,
+//             MGMTCLAS=&MGTCL,
+//             SPACE=(TRK,(20,10)),
+//             DCB=(RECFM=FBS,LRECL=64,BLKSIZE=27968),
+//             DISP=(NEW,CATLG,DELETE)
+//CACCFGX  DD  DSN=&CPHLQ..CACCFGX,
+//             UNIT=&DISKU,
+//             STORCLAS=&STGCL,
+//             MGMTCLAS=&MGTCL,
+//             SPACE=(TRK,(10,5)),
+//             DCB=(RECFM=FBS,LRECL=64,BLKSIZE=27968),
+//             DISP=(NEW,CATLG,DELETE)
+//*
+//SYSOUT   DD  SYSOUT=&SOUT
+//SYSPRINT DD  SYSOUT=&SOUT
+//********************************************************************
+//* IMPORT SOURCE CONFIGURATION                                      *
+//********************************************************************
+//CFGINIT   EXEC PGM=CACCFGUT,REGION=&RGN
+//STEPLIB  DD  DISP=SHR,DSN=&CAC..SCACLOAD
+//MSGCAT   DD  DISP=SHR,DSN=&CAC..SCACMSGS
+//*
+//* CONFIGURATION FILES TO POPULATE
+//CACCFGD  DD DISP=SHR,DSN=&CPHLQ..CACCFGD
+//CACCFGX  DD DISP=SHR,DSN=&CPHLQ..CACCFGX
+//*
+//* CONFIG DEFINITION TO IMPORT
+//IMPORTCF DD DSN=&USRHLQ..USERCONF,DISP=SHR
+//SYSTERM  DD SYSOUT=&SOUT
+//SYSPRINT DD SYSOUT=&SOUT
+//SYSOUT   DD SYSOUT=&SOUT
+//SYSIN    DD DUMMY
+//********************************************************************
+//* ALLOCATE SYSMDUMP FILE                                           *
+//********************************************************************
+//DELETDMP  EXEC PGM=IEFBR14
+//DDUMP  DD  DSN=&CPHLQ..SYSMDUMP,
+//             DISP=(MOD,DELETE,DELETE),
+//             UNIT=SYSALLDA,
+//             VOL=(,,,3),
+//             SPACE=(TRK,(2500,450)),
+//             DCB=(LRECL=4160,RECFM=FBS,
+//             DSORG=PS)
+//ALLOCDMP  EXEC PGM=IEFBR14
+//MDUMP     DD DSN=&CPHLQ..SYSMDUMP,
+//             DISP=(NEW,CATLG,DELETE),
+//             UNIT=SYSALLDA,
+//             VOL=(,,,3),
+//             SPACE=(TRK,(2500,450)),
+//             DCB=(LRECL=4160,RECFM=FBS,
+//             DSORG=PS)
+//     PEND
+//ALLOCATE EXEC ALLOCFG
+//CFGINIT.SYSIN DD *
+IMPORT,CONFIG,FILENAME=DDN:IMPORTCF(CECCDXFG)
+REPORT
+QUIT
+/*

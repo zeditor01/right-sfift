@@ -1,0 +1,166 @@
+//CECCRZCT  JOB (ACCOUNT),'CLASSIC JOB',MSGCLASS=X,CLASS=A,
+//     MSGLEVEL=(1,1),NOTIFY=&SYSUID
+//* CECCRZCT TAILOR JOB CARD TO MEET SITE STANDARDS
+//********************************************************************
+//*                                                                  *
+//* LICENSED MATERIALS - PROPERTY OF IBM                             *
+//* 5655-IM1                                                         *
+//* 5655-IM4                                                         *
+//* 5655-IM5                                                         *
+//* 5655-Y18                                                         *
+//*                                                                  *
+//* (C) COPYRIGHT IBM CORP.  2003, 2015.  ALL RIGHTS RESERVED.       *
+//* US GOVERNMENT USERS RESTRICTED RIGHTS USE,                       *
+//* DUPLICATION OR DISCLOSURE RESTRICTED BY GSA ADP SCHEDULE         *
+//* CONTRACT WITH IBM CORP.                                          *
+//* DISCLAIMER OF WARRANTIES:                                        *
+//*                                                                  *
+//* PERMISSION IS GRANTED TO COPY AND MODIFY THIS SAMPLE CODE, AND   *
+//* TO DISTRIBUTE MODIFIED VERSIONS PROVIDED THAT BOTH THE COPYRIGHT *
+//* NOTICE, - AND THIS PERMISSION NOTICE AND WARRANTY DISCLAIMER     *
+//* APPEAR IN ALL COPIES AND MODIFIED VERSIONS.                      *
+//*                                                                  *
+//* THIS SAMPLE CODE IS LICENSED TO YOU AS-IS.                       *
+//* IBM AND ITS SUPPLIERS AND LICENSORS DISCLAIM ALL WARRANTIES,     *
+//* EITHER EXPRESS OR IMPLIED, IN SUCH SAMPLE CODE, INCLUDING THE    *
+//* WARRANTY OF NON-INFRINGEMENT AND THE IMPLIED WARRANTIES OF       *
+//* MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT *
+//* WILL IBM OR ITS LICENSORS OR SUPPLIERS BE LIABLE FOR ANY DAMAGES *
+//* ARISING OUT OF THE USE OF OR INABILITY TO USE THE SAMPLE CODE,   *
+//* DISTRIBUTION OF THE SAMPLE CODE, OR COMBINATION OF THE SAMPLE    *
+//* CODE WITH ANY OTHER CODE. IN NO EVENT SHALL IBM OR ITS           *
+//* LICENSORS AND SUPPLIERS BE LIABLE FOR ANY LOST REVENUE, LOST     *
+//* PROFITS OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL,*
+//* INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND REGARDLESS    *
+//* OF THE THEORY OF LIABILITY, EVEN IF IBM OR ITS LICENSORS OR      *
+//* SUPPLIERS HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  *
+//*                                                                  *
+//********************************************************************
+//*
+//*   CECCRZCT:  Sample JCL to define and format a zFS aggregate to
+//*              be used for a USS file system resident version of
+//*              the system catalogs.
+//*
+//*   Perform the following modifications to this JCL stream to
+//*   satisfy your specific requirements:
+//*
+//*    . Update the JCL JOB statement.
+//*
+//*    . Update the CAC symbolic parameter value to be the High
+//*      Level Qualifier set of the product installation data sets.
+//*
+//*    . Ensure that the high level qualifier set which references
+//*      the VSAM LDS to be used for the zFS aggregate is the same
+//*      string specified as the value of the USRHLQ JCL symbolic
+//*      parameter.
+//*
+//*    . Update the Storage Class and Management Class parameter
+//*      values.
+//*
+//*   Additional Considerations:
+//*
+//*    . See topic "Using UNIXPRIV Class Profiles" in "z/OS UNIX
+//*      System Services Planning" for a discussion of the various
+//*      SAF resource profiles in the UNIXPRIV class.
+//*
+//*    . SAF READ level access authority is required to the
+//*      SUPERUSER.FILESYS.PFSCTL resource in the UNIXPRIV class in
+//*      order to perform IOEZADM (zfsadm command) operations.
+//*
+//*    . SAF READ level access authority is required to the
+//*      SUPERUSER.FILESYS.MOUNT resource in the UNIXPRIV class in
+//*      order to perform MOUNT and UNMOUNT operations against USS
+//*      file systems.
+//*
+//* ------------------------------------------------------------------
+//*
+//DISKU     SET DISKU=SYSALLDA
+//*                                     DASD unit
+//CAC       SET CAC=CDV113.CAC
+//*                                     Installed HLQ
+//USRHLQ    SET USRHLQ=CDV113.CAC.INST1
+//*                                     User HLQ
+//DISKVOL   SET DISKVOL=
+//*                                     DASD Volume ID
+//STGCL     SET STGCL=
+//*                                     Storage Class
+//MGTCL     SET MGTCL=
+//*                                     Management Class
+//SOUT      SET SOUT='*'
+//*                                     SYSOUT Class
+//*
+//* ------------------------------------------------------------------
+//*
+//*    . Delete the existing zFS aggregate VSAM LDS
+//*
+//*    . Define a new VSAM LDS to be used as the zFS aggregate.
+//*
+//* ------------------------------------------------------------------
+//*
+//CACVSDEF EXEC PGM=IDCAMS,REGION=0M
+//SYSPRINT  DD SYSOUT=&SOUT
+//SYSIN     DD *
+ PARM GRAPHICS(CHAIN(TN))
+
+ /* ------------------------------------------------------------- */
+ /*                                                               */
+ /*   Ensure that the high level qualifier set which references   */
+ /*   the VSAM LDS to be used for the zFS aggregate is the same   */
+ /*   string specified as the value of the USRHLQ JCL symbolic    */
+ /*   parameter.                                                  */
+ /*                                                               */
+ /* ------------------------------------------------------------- */
+
+ DELETE (CDV113.CAC.INST1.ZFS) -
+   PURGE CLUSTER
+
+ SET MAXCC = 0
+
+ DEFINE CLUSTER ( -
+   NAME(CDV113.CAC.INST1.ZFS) -
+   LINEAR -
+   MEGABYTES(150 128) -
+   VOLUMES(*) -
+   SHAREOPTIONS(3 3)  -
+   CISZ(4096))
+/*
+//*
+//* ------------------------------------------------------------------
+//*
+//*    . Format the VSAM LDS as a zFS aggregate.
+//*
+//*      Note that all parameters for the zFS formatting utility
+//*      (IOEAGFMT) are Case Sensitive
+//*
+//* ------------------------------------------------------------------
+//*
+//FORMAT EXEC PGM=IOEAGFMT,REGION=0M,
+//    COND=(0,LT),
+//    PARM='-aggregate CDV113.CAC.INST1.ZFS  -compat'
+//SYSPRINT  DD SYSOUT=&SOUT
+//STDOUT    DD SYSOUT=&SOUT
+//STDERR    DD SYSOUT=&SOUT
+//CEEDUMP   DD SYSOUT=&SOUT
+//*
+//*
+//* ------------------------------------------------------------------
+//*
+//*      At this point the newly created zFS file system is
+//*      initialized.
+//*
+//*      A logical mount point must be created for the new zFS file
+//*      system.  For example, assuming the default CATPATH value
+//*      in the product Parameters File is in effect, the following
+//*      mkdir command could be used in the ISPF ISHELL to create
+//*      this mount point:
+//*
+//*      mkdir '/opt/IBM/isclassic113/catalog'
+//*
+//*      Next, the newly created zFS file system must be mounted at
+//*      the mount point.  The following TSO command is an example:
+//*
+//*      MOUNT FILESYSTEM('CDV113.CAC.INST1.ZFS')
+//*      MOUNTPOINT('/opt/IBM/isclassic113/catalog')
+//*      TYPE(ZFS) MODE(RDWR) NOSETUID
+//*
+//* ------------------------------------------------------------------
